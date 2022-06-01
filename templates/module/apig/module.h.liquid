@@ -1,0 +1,101 @@
+{% comment %} Copyright Epic Games, Inc. All Rights Reserved {% endcomment -%}
+/**
+Copyright 2021 ApiGear UG
+Copyright 2021 Epic Games, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+#pragma once
+
+#include <cinttypes>
+#include <string>
+#include <list>
+#include "UObject/Interface.h"
+
+#include "{{module.name|capital}}_data.h"
+#include "{{module.name|capital}}_apig.generated.h"
+
+{% comment %} 
+*****************************************************************
+*** INTERFACES                                                ***
+*****************************************************************
+{% endcomment %}
+{%- for interface in module.interfaces %}
+{% assign class_capital = module.name | capital | append: interface.name | capital -%}
+{% assign class = "U" | append: class_capital | append: "Interface" %}
+
+/**
+ * Interface {{class}} only for Unreal Engine's reflection system
+ */
+UINTERFACE(MinimalAPI)
+class {{class}} : public UInterface
+{
+    GENERATED_BODY()
+};
+
+{% assign class = "I" | append: class_capital | append: "Interface" %}
+
+/**
+ * Interface {{class}}
+ */
+class {{ module.name | constant }}_API {{class}}
+{
+    GENERATED_BODY()
+
+public:
+// methods
+{% for operation in interface.operations %}
+    virtual {{operation|unrealReturn}} {{operation.name|capital}}({{operation|unrealParams}}) = 0;
+{% endfor %}
+// properties
+{% for property in interface.properties %}
+    virtual {{property|unrealTypeName}} Get{{property.name | capital}}() const = 0;
+    virtual void Set{{property.name | capital}}({{property|unrealTypeName: true}} Value) = 0;
+{% endfor %}
+};
+
+{% assign sub_class = "I" | append: class_capital | append: "SubscriberInterface" %}
+/**
+ * Interface {{sub_class}}
+ */
+class {{ module.name | constant }}_API {{sub_class}}
+{
+public:
+{% for signal in interface.signals %}
+    virtual void On{{signal|unrealVarName}}(
+        {%- for param in signal.params -%}
+            {{param|unrealReturn: true}} {{param|unrealVarName}}{% unless forloop.last %},{% endunless -%}
+        {%- endfor -%}
+        ) = 0;
+{% endfor %}
+{% for property in interface.properties %}
+    virtual void On{{property|unrealVarName}}Changed({{property|unrealTypeName: true}} Value) = 0;
+{% endfor %}
+};
+
+{% assign pub_class = "I" | append: class_capital | append: "PublisherInterface" %}
+/**
+ * Interface {{pub_class}}
+ */
+class {{ module.name | constant }}_API {{pub_class}}: public {{class}}
+{
+public:
+    virtual void SubscribeTo{{class_capital}}StateChanged({{sub_class}}& Subscriber) = 0;
+    virtual void UnsubscribeFrom{{class_capital}}StateChanged({{sub_class}}& Subscriber) = 0;
+{% for signal in interface.signals %}
+    virtual void SubscribeTo{{signal|unrealVarName}}({{sub_class}}& Subscriber) = 0;
+    virtual void UnsubscribeFrom{{signal|unrealVarName}}({{sub_class}}& Subscriber) = 0;
+{% endfor %}
+};
+
+{% endfor %}

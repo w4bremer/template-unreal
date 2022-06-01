@@ -1,0 +1,108 @@
+{% comment %} Copyright Epic Games, Inc. All Rights Reserved {% endcomment -%}
+{% assign class_name_capital = module.name | capital | append: interface.name | capital -%}
+{% assign class = "U" | append: class_name_capital | append: "Proxy" %}
+{% capture category %}ApiGear|{{module.name | capital}}|{{interface.name | capital}}{% endcapture -%}
+{% capture nl %}
+{% endcapture %}
+/**
+Copyright 2021 ApiGear UG
+Copyright 2021 Epic Games, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "apig/{{module.name|capital}}_apig.h"
+#include "{{module.name|capital}}{{interface.name|capital}}Proxy.generated.h"
+
+UCLASS(BlueprintType, Blueprintable, DisplayName="{{class_name_capital}}")
+class {{ module.name | constant }}_API {{class}} : public UObject, public I{{module.name | capital}}{{interface.name | capital}}Interface, public I{{module.name | capital}}{{interface.name | capital}}SubscriberInterface
+{
+	GENERATED_BODY()
+
+public:
+    explicit {{class}}();
+    virtual ~{{class}}();
+
+    // signal delegates
+{% for signal in interface.signals %}
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE{{signal.params.length|unrealDelegateNameAppendix}}(F{{signal|unrealVarName}}Delegate
+{%- for param in signal.params -%}
+        , {{param|unrealTypeName: true}}, {{param|unrealVarName}}
+{%- endfor -%}
+    );
+    {{nl}}
+{% endfor %}
+    //property delegates
+{% for property in interface.properties %}
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(F{{property|unrealVarName}}ChangedDelegate, {{property|unrealTypeName: true}}, {{property|unrealVarName}});
+{{nl}}
+{% endfor %}
+    // signals
+{% for signal in interface.signals %}
+	UPROPERTY(BlueprintAssignable, Category = "{{category}}")
+    F{{signal|unrealVarName}}Delegate {{signal|unrealVarName}}Signal;
+    void On{{signal|unrealVarName}}(
+        {%- for param in signal.params -%}
+            {{param|unrealReturn: true}} {{param|unrealVarName}}{% unless forloop.last %},{% endunless -%}
+        {%- endfor -%}
+        );
+    {{nl}}
+{% endfor %}
+{% for property in interface.properties %}
+	UPROPERTY(BlueprintAssignable, Category = "{{category}}")
+    F{{property|unrealVarName}}ChangedDelegate {{property|unrealVarName}}Changed;
+    void On{{property|unrealVarName}}Changed({{property|unrealTypeName: true}} Value);
+{{nl}}
+{% endfor %}
+    // properties
+{% for property in interface.properties %}
+{% if property.description != nil %}
+    /** {{property.description}} */
+{% endif %}
+	UFUNCTION(BlueprintCallable, Category = "{{category}}")
+    {{property|unrealTypeName}} Get{{property.name | capital}}() const override;
+
+	UFUNCTION(BlueprintCallable, Category = "{{category}}")
+    void Set{{property.name | capital}}({{property|unrealTypeName: true}} Value) override;
+{{nl}}
+{% endfor %}
+    // operations
+{% for operation in interface.operations %}
+{% assign returnVal = operation|unrealReturn %}
+    {% if returnVal == "void" %}
+	UFUNCTION(BlueprintCallable, Category = "{{category}}")
+    {{operation|unrealReturn}} {{operation.name | capital}}({{operation|unrealParams}}) override;
+    {% else %}
+	UFUNCTION(BlueprintCallable, Category = "{{category}}", meta=(Latent, LatentInfo="LatentInfo", HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject"))
+    void {{operation.name | capital}}(UObject* WorldContextObject, struct FLatentActionInfo LatentInfo, {{operation|unrealReturn}}& Result{% if operation.params.size > 0 %}, {%endif%}{{operation|unrealParams}});
+    {{operation|unrealReturn}} {{operation.name | capital}}({{operation|unrealParams}}) override;
+    {% endif %}
+{{nl}}
+{% endfor %}
+private:
+	/** The connection to the service backend. */
+	TSharedPtr<I{{module.name | capital}}{{interface.name|capital}}PublisherInterface, ESPMode::ThreadSafe> service;
+
+    // properties - local copy
+{% for property in interface.properties %}
+{% if property.description != nil %}
+    /** {{property.description}} */
+{% endif %}
+	UPROPERTY(EditAnywhere, BlueprintGetter=Get{{property.name | capital}}, BlueprintSetter=Set{{property.name | capital}}, Category = "{{category}}")
+    {{property|unrealTypeName}} {{property|unrealVarName}};
+{{nl}}
+{% endfor %}
+};

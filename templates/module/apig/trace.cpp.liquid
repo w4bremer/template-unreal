@@ -1,0 +1,54 @@
+{% comment %} Copyright Epic Games, Inc. All Rights Reserved {% endcomment -%}
+#include "{{module.name|capital}}.trace.h"
+#include "{{module.name|capital}}.json.adapter.h"
+#include "tracer.h"
+
+{% for interface in module.interfaces %}
+{% assign class = module.name | capital | append: interface.name | capital | append: "Tracer" %}
+
+{{class}}::{{class}}()
+{
+}
+
+void {{class}}::capture_state(I{{module.name | capital}}{{interface.name|capital}}Interface* obj)
+{
+    nlohmann::json fields_;
+    {% for property in interface.properties %}
+    fields_["{{property.name}}"] = obj->Get{{property.name | capital}}();
+    {% endfor %}
+    Tracer::instance()->state("{{module.name}}/{{interface.name}}", fields_);
+}
+
+{% for property in interface.properties %}
+void {{class}}::trace_callSet{{property.name | capital}}({{property|unrealTypeName: true}} Value)
+{
+    nlohmann::json fields_;
+    fields_["{{property.name}}"] = Value;
+    Tracer::instance()->call("{{module.name}}/{{interface.name}}#_set", fields_);
+}
+{% endfor %}
+
+{% for signal in interface.signals %}
+
+void {{class}}::trace_signal{{signal.name|capital}}({{signal|unrealParams}})
+{
+    nlohmann::json fields_;
+    {% for param in signal.params %}
+    fields_["{{param.name}}"] = {{param|unrealVarName}};
+    {% endfor %}
+    Tracer::instance()->signal("{{module.name}}/{{interface.name}}#{{signal.name}}", fields_);
+}
+{% endfor %}
+
+{% for operation in interface.operations %}
+
+void {{class}}::trace_call{{operation.name|capital}}({{operation|unrealParams}})
+{
+    nlohmann::json fields_;
+    {% for param in operation.params %}
+    fields_["{{param.name}}"] = {{param|unrealVarName}};
+    {% endfor %}
+    Tracer::instance()->call("{{module.name}}/{{interface.name}}#{{operation.name}}", fields_);
+}
+{% endfor %}
+{% endfor %}
