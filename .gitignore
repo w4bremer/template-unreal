@@ -1,0 +1,7 @@
+build/
+
+# goldenmaster test folder
+test
+
+# objectapi tooling dependencies
+node_modules
