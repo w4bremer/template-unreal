@@ -13,4 +13,6 @@ layers:
       - testbed.struct.module.yaml
     output: ../goldenmaster
     template: ..
+    force: true
+    features: [ "all" ]
       

@@ -14,4 +14,5 @@ layers:
     output: ../tmp
     template: ..
     features: [ "all" ]
+    force: true
       
