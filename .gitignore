@@ -5,3 +5,7 @@ test
 
 # objectapi tooling dependencies
 node_modules
+.DS_Store
+.air.toml
+tmp/
+tmp2/

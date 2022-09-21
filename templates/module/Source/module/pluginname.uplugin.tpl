@@ -1,0 +1,41 @@
+{{- /* Copyright Epic Games, Inc. All Rights Reserved */ -}}
+{{- $ModuleName := Camel .Module.Name}}
+{{- $API_MACRO := printf "%s_API" $ModuleName }}
+{{- $Category := printf "ApiGear%s" $ModuleName }}
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "{{.Module.Version}}",
+	"FriendlyName": "{{$ModuleName}}",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"EnabledByDefault" : true,
+	"Modules": [
+		{
+			"Name": "{{$ModuleName}}",
+			"Type": "Runtime",
+			"LoadingPhase": "PostEngineInit"
+		},
+		{
+			"Name" : "{{$ModuleName}}Editor",
+			"Type" : "Editor",
+			"LoadingPhase" : "PostEngineInit",
+			"WhitelistPlatforms" : [ "Win64", "Mac", "Linux" ]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ApiGear",
+			"Enabled": true
+		}
+	]	
+}

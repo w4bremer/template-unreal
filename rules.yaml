@@ -1,290 +1,297 @@
 features:
-  api:
-    module:
-      documents:
-        - source: "module/Source/module/Public/apig/module.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Public/apig/{{module.name|capital}}_apig.h"
-          overwrite: true
-        - source: "module/Source/module/Private/apig/module.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/apig/{{module.name|capital}}_apig.cpp"
-          overwrite: true
-        - source: "module/Source/module/Private/apig/trace.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/apig/{{module.name|capital}}.trace.h"
-          overwrite: true
-        - source: "module/Source/module/Private/apig/trace.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/apig/{{module.name|capital}}.trace.cpp"
-          overwrite: true
-        - source: "module/Source/module/Private/apig/json.adapter.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/apig/{{module.name|capital}}.json.adapter.h"
-          overwrite: true
-        - source: "module/Source/module/Public/apig/data.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Public/apig/{{module.name|capital}}_data.h"
-          overwrite: true
-        - source: "module/Source/module/Private/apig/data.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/apig/{{module.name|capital}}_data.cpp"
-          overwrite: true
-  scaffold:
-    system:
-      documents:
-        - source: "build.bat.liquid"
-          target: "build.bat"
-          overwrite: true
-        - source: "build.sh.liquid"
-          target: "build.sh"
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/apigear.Build.cs"
-          target: "Plugins/ApiGear/Source/ApiGear/apigear.Build.cs"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/apigear.uplugin"
-          target: "Plugins/ApiGear/apigear.uplugin"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Config/FilterPlugin.ini"
-          target: "Plugins/ApiGear/Config/FilterPlugin.ini"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/tracer.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/tracer.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Private/tracer.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/tracer.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/apigear.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/apigear.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/ApiGearConnection.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearConnection.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Private/ApiGearConnection.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearConnection.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/apigear.json.adapter.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/apigear.json.adapter.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/Private/unrealsimulation.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/unrealsimulation.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/unrealsimulation.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/unrealsimulation.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Private/apigear.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/apigear.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditor.h"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditor.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditor.cpp"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditor.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Resources/Icon40.png"
-          target: "Plugins/ApiGear/Resources/Icon40.png"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Resources/Icon128.png"
-          target: "Plugins/ApiGear/Resources/Icon128.png"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditorStyle.h"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditorStyle.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditorStyle.cpp"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditorStyle.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditorCommands.h"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditorCommands.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditorCommands.cpp"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditorCommands.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/ApiGearSettings.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearSettings.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Private/ApiGearSettings.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearSettings.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/ApiGearConnectionManager.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearConnectionManager.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Private/ApiGearConnectionManager.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearConnectionManager.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGearEditor/ApiGearEditor.Build.cs"
-          target: "Plugins/ApiGear/Source/ApiGearEditor/ApiGearEditor.Build.cs"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/nlohmann/json.hpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/nlohmann/json.hpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpc.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpc.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpc.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpc.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/rpcprotocol.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/rpcprotocol.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/rpcprotocol.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/rpcprotocol.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/stdoutlogger.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/stdoutlogger.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpctypes.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpctypes.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpctypes.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpctypes.h"
-          raw: true
-          overwrite: true
-    module:
-      documents:
-        - source: "module/Config/FilterPlugin.ini"
-          target: "Plugins/{{module.name|capital}}/Config/FilterPlugin.ini"
-          overwrite: true
-          raw: true
-        - source: "module/Source/module/pluginname.Build.cs.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/{{module.name|capital}}.Build.cs"
-          overwrite: true
-        - source: "module/Source/module/Public/pluginname.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Public/{{module.name|capital}}.h"
-          overwrite: true
-        - source: "module/Source/module/Private/pluginname.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{module.name|capital}}.cpp"
-          overwrite: true
-        - source: "module/Source/module/Private/pluginfactory.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{module.name|capital}}Factory.h"
-          overwrite: true
-        - source: "module/Source/module/Private/pluginfactory.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{module.name|capital}}Factory.cpp"
-          overwrite: true
-        - source: "module/Source/module/pluginname.uplugin.liquid"
-          target: "Plugins/{{module.name|capital}}/{{module.name|capital}}.uplugin"
-          overwrite: true
-        - source: "module/Source/moduleeditor/Public/pluginnameeditor.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}Editor/Public/{{module.name|capital}}Editor.h"
-          overwrite: true
-        - source: "module/Source/moduleeditor/Private/pluginnameeditor.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}Editor/Private/{{module.name|capital}}Editor.cpp"
-          overwrite: true
-        - source: "module/Source/module/Public/pluginnamesettings.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Public/{{module.name|capital}}Settings.h"
-          overwrite: true
-        - source: "module/Source/module/Private/pluginnamesettings.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{module.name|capital}}Settings.cpp"
-          overwrite: true
-        - source: "module/Source/moduleeditor/pluginnameeditor.Build.cs.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}Editor/{{module.name|capital}}Editor.Build.cs"
-          overwrite: true
-    interface:
-      documents:
-        - source: "module/Source/module/Public/proxy.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Public/{{module.name|capital}}{{interface.name|capital}}Proxy.h"
-          overwrite: true
-        - source: "module/Source/module/Private/proxy.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{module.name|capital}}{{interface.name|capital}}Proxy.cpp"
-          overwrite: true
-        - source: "module/Source/module/Private/interface/local.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}Local.h"
-        - source: "module/Source/module/Private/interface/local.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}Local.cpp"
-        - source: "module/Source/module/Private/interface/simulation.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}Simulation.h"
-          overwrite: true
-        - source: "module/Source/module/Private/interface/simulation.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}Simulation.cpp"
-          overwrite: true
-  olink:
-    interface:
-      documents:
-        - source: "module/Source/module/Private/interface/olink.h.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}OLink.h"
-          overwrite: true
-        - source: "module/Source/module/Private/interface/olink.cpp.liquid"
-          target: "Plugins/{{module.name|capital}}/Source/{{module.name|capital}}/Private/{{interface.name|capital}}/{{module.name|capital}}{{interface.name|capital}}OLink.cpp"
-          overwrite: true
-    system:
-      documents:
-        - source: "ApiGear/Source/ApiGear/Private/unrealolink.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/Private/unrealolink.cpp"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/Public/unrealolink.h"
-          target: "Plugins/ApiGear/Source/ApiGear/Public/unrealolink.h"
-          overwrite: true
-          raw: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/clientnode.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/clientnode.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/clientnode.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/clientnode.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/remotenode.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/remotenode.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/remotenode.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/remotenode.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/consolelogger.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/consolelogger.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/consolelogger.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/consolelogger.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/node.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/node.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/node.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/node.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinkprotocol.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinkprotocol.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinkprotocol.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinkprotocol.cpp"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinktypes.h"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinktypes.h"
-          raw: true
-          overwrite: true
-        - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinktypes.cpp"
-          target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinktypes.cpp"
-          raw: true
-          overwrite: true
+  - name: api
+    scopes:
+      - match: module
+        prefix: "Plugins/{{Camel .Module.Name}}/Source/{{Camel .Module.Name}}/"
+        documents:
+          - source: "module/Source/module/Public/apig/module.h.tpl"
+            target: "Public/apig/{{Camel .Module.Name}}_apig.h"
+            force: true
+          - source: "module/Source/module/Public/apig/data.h.tpl"
+            target: "Public/apig/{{Camel .Module.Name}}_data.h"
+            force: true
+          - source: "module/Source/module/Private/apig/module.cpp.tpl"
+            target: "Private/apig/{{Camel .Module.Name}}_apig.cpp"
+            force: true
+          - source: "module/Source/module/Private/apig/trace.h.tpl"
+            target: "Private/apig/{{Camel .Module.Name}}.trace.h"
+            force: true
+          - source: "module/Source/module/Private/apig/trace.cpp.tpl"
+            target: "Private/apig/{{Camel .Module.Name}}.trace.cpp"
+            force: true
+          - source: "module/Source/module/Private/apig/json.adapter.h.tpl"
+            target: "Private/apig/{{Camel .Module.Name}}.json.adapter.h"
+            force: true
+          - source: "module/Source/module/Private/apig/data.cpp.tpl"
+            target: "Private/apig/{{Camel .Module.Name}}_data.cpp"
+            force: true
+  - name: scaffold
+    scopes:
+      - match: system
+        documents:
+          - source: "build.bat.tpl"
+            target: "build.bat"
+            force: true
+          - source: "build.sh.tpl"
+            target: "build.sh"
+            force: true
+          - source: "ApiGear/Source/ApiGear/apigear.Build.cs"
+            target: "Plugins/ApiGear/Source/ApiGear/apigear.Build.cs"
+            force: true
+            raw: true
+          - source: "ApiGear/apigear.uplugin"
+            target: "Plugins/ApiGear/apigear.uplugin"
+            force: true
+            raw: true
+          - source: "ApiGear/Config/FilterPlugin.ini"
+            target: "Plugins/ApiGear/Config/FilterPlugin.ini"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/tracer.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/tracer.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Private/tracer.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/tracer.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/apigear.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/apigear.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/ApiGearConnection.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearConnection.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Private/ApiGearConnection.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearConnection.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/apigear.json.adapter.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/apigear.json.adapter.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/Private/unrealsimulation.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/unrealsimulation.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/unrealsimulation.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/unrealsimulation.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Private/apigear.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/apigear.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditor.h"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditor.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditor.cpp"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditor.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Resources/Icon40.png"
+            target: "Plugins/ApiGear/Resources/Icon40.png"
+            force: true
+            raw: true
+          - source: "ApiGear/Resources/Icon128.png"
+            target: "Plugins/ApiGear/Resources/Icon128.png"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditorStyle.h"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditorStyle.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditorStyle.cpp"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditorStyle.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Public/ApiGearEditorCommands.h"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Public/ApiGearEditorCommands.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/Private/ApiGearEditorCommands.cpp"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/Private/ApiGearEditorCommands.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/ApiGearSettings.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearSettings.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Private/ApiGearSettings.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearSettings.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/ApiGearConnectionManager.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/ApiGearConnectionManager.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Private/ApiGearConnectionManager.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/ApiGearConnectionManager.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGearEditor/ApiGearEditor.Build.cs"
+            target: "Plugins/ApiGear/Source/ApiGearEditor/ApiGearEditor.Build.cs"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/nlohmann/json.hpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/nlohmann/json.hpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpc.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpc.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpc.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpc.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/rpcprotocol.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/rpcprotocol.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/rpcprotocol.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/rpcprotocol.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/stdoutlogger.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/stdoutlogger.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpctypes.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/jsonrpc/jsonrpctypes.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpctypes.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/jsonrpc/jsonrpctypes.h"
+            raw: true
+            force: true
+      - match: module
+        prefix: "Plugins/{{Camel .Module.Name}}/"
+        documents:
+          - source: "module/Config/FilterPlugin.ini"
+            target: "Config/FilterPlugin.ini"
+            force: true
+            raw: true
+          - source: "module/Source/module/pluginname.uplugin.tpl"
+            target: "{{Camel .Module.Name}}.uplugin"
+            force: true
+          - source: "module/Source/moduleeditor/Public/pluginnameeditor.h.tpl"
+            target: "Source/{{Camel .Module.Name}}Editor/Public/{{Camel .Module.Name}}Editor.h"
+            force: true
+          - source: "module/Source/moduleeditor/Private/pluginnameeditor.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}Editor/Private/{{Camel .Module.Name}}Editor.cpp"
+            force: true
+          - source: "module/Source/moduleeditor/pluginnameeditor.Build.cs.tpl"
+            target: "Source/{{Camel .Module.Name}}Editor/{{Camel .Module.Name}}Editor.Build.cs"
+            force: true
+          - source: "module/Source/module/pluginname.Build.cs.tpl"
+            target: "Source/{{Camel .Module.Name}}/{{Camel .Module.Name}}.Build.cs"
+            force: true
+          - source: "module/Source/module/Public/pluginname.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Public/{{Camel .Module.Name}}.h"
+            force: true
+          - source: "module/Source/module/Private/pluginname.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Module.Name}}.cpp"
+            force: true
+          - source: "module/Source/module/Private/pluginfactory.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Module.Name}}Factory.h"
+            force: true
+          - source: "module/Source/module/Private/pluginfactory.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Module.Name}}Factory.cpp"
+            force: true
+          - source: "module/Source/module/Public/pluginnamesettings.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Public/{{Camel .Module.Name}}Settings.h"
+            force: true
+          - source: "module/Source/module/Private/pluginnamesettings.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Module.Name}}Settings.cpp"
+            force: true
+      - match: interface
+        prefix: "Plugins/{{Camel .Module.Name}}/"
+        documents:
+          - source: "module/Source/module/Public/proxy.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Public/{{Camel .Module.Name}}{{Camel .Interface.Name}}Proxy.h"
+            force: true
+          - source: "module/Source/module/Private/proxy.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Module.Name}}{{Camel .Interface.Name}}Proxy.cpp"
+            force: true
+          - source: "module/Source/module/Private/interface/local.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}Local.h"
+          - source: "module/Source/module/Private/interface/local.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}Local.cpp"
+          - source: "module/Source/module/Private/interface/simulation.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}Simulation.h"
+            force: true
+          - source: "module/Source/module/Private/interface/simulation.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}Simulation.cpp"
+            force: true
+  - name: olink
+    scopes:
+      - match: interface
+        prefix: "Plugins/{{Camel .Module.Name}}/"
+        documents:
+          - source: "module/Source/module/Private/interface/olink.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}OLink.h"
+            force: true
+          - source: "module/Source/module/Private/interface/olink.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/{{Camel .Interface.Name}}/{{Camel .Module.Name}}{{Camel .Interface.Name}}OLink.cpp"
+            force: true
+      - match: system
+        documents:
+          - source: "ApiGear/Source/ApiGear/Private/unrealolink.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/Private/unrealolink.cpp"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/Public/unrealolink.h"
+            target: "Plugins/ApiGear/Source/ApiGear/Public/unrealolink.h"
+            force: true
+            raw: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/clientnode.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/clientnode.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/clientnode.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/clientnode.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/remotenode.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/remotenode.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/remotenode.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/remotenode.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/consolelogger.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/consolelogger.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/consolelogger.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/consolelogger.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/node.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/node.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/node.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/node.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinkprotocol.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinkprotocol.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinkprotocol.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinkprotocol.cpp"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinktypes.h"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Public/olink/core/olinktypes.h"
+            raw: true
+            force: true
+          - source: "ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinktypes.cpp"
+            target: "Plugins/ApiGear/Source/ApiGear/ThirdParty/Private/olink/core/olinktypes.cpp"
+            raw: true
+            force: true

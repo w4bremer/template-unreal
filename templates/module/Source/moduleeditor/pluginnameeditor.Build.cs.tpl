@@ -1,0 +1,36 @@
+{{/* Copyright Epic Games, Inc. All Rights Reserved */}}
+{{- $ModuleName := Camel .Module.Name}}
+{{- $API_MACRO := printf "%s_API" $ModuleName }}
+{{- $Category := printf "ApiGear%s" $ModuleName -}}
+{{- $ModulePath := (path .Module.Name)}}
+{{- $class := printf "%sEditor" $ModuleName -}}
+namespace UnrealBuildTool.Rules
+{
+	public class {{$class}} : ModuleRules
+	{
+		public {{$class}}(ReadOnlyTargetRules Target) : base(Target)
+		{
+			PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+			bEnforceIWYU = true;
+			
+			PrivateDependencyModuleNames.AddRange(
+				new string[] {
+					"Core",
+					"CoreUObject",
+					"UnrealEd",
+				});
+
+			PrivateIncludePaths.AddRange(
+				new string[] {
+					"{{$class}}/Private",
+				});		
+				
+			PrivateDependencyModuleNames.AddRange(
+				new string[]
+				{
+					"{{$ModuleName}}"
+				}
+				);
+			}
+	}
+}

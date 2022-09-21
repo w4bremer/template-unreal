@@ -1,3 +1,4 @@
+
 @Echo off
 SET script_path=%~dp0
 echo Script is in %script_path:~0,-1%
@@ -48,12 +49,12 @@ if !buildresult! GEQ 1 exit /b !buildresult!
 xcopy /E /Y "%script_path%build\Plugins\ApiGear" "%ApiGearPluginTarget_path%\"  >nul
 if %ERRORLEVEL% GEQ 1 call :cleanup %ERRORLEVEL%
 if %ERRORLEVEL% GEQ 1 exit /b %ERRORLEVEL%
-{% for module in system.modules %}
-@REM Building and testing {{module.name|capital}} module
-call :buildUEplugin "%script_path%\Plugins\{{module.name|capital}}\{{module.name|capital}}.uplugin" , "%script_path%build\Plugins\{{module.name|capital}}"
+{{ range .System.Modules}}
+@REM Building and testing {{Camel .Name}} module
+call :buildUEplugin "%script_path%\Plugins\{{Camel .Name}}\{{Camel .Name}}.uplugin" , "%script_path%build\Plugins\{{Camel .Name}}"
 if !buildresult! GEQ 1 call :cleanup !buildresult!
 if !buildresult! GEQ 1 exit /b !buildresult!
-{% endfor %}
+{{ end }}
 
 call :cleanup 0
 exit /b 0
