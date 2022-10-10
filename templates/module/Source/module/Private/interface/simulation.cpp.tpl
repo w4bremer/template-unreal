@@ -113,6 +113,7 @@ namespace Private
 	{
 		AGCM->GetSimulationConnection()->onNotify("{{$ifaceId}}#{{.Name}}", {{.Name}}Func);
 	}
+{{ else }}
 {{ end -}}
 }
 

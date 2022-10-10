@@ -93,5 +93,6 @@ private:
 {{- end }}
 	UPROPERTY(EditAnywhere, BlueprintGetter = Get{{Camel .Name}}, BlueprintSetter = Set{{Camel .Name}}, Category = "{{$Category}}")
 	{{ueReturn "" .}} {{ueVar "" .}};
+{{ else }}
 {{ end -}}
 };

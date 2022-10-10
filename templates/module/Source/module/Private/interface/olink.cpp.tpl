@@ -34,7 +34,7 @@ namespace Private
 
 {{- if .Interface.Description }}
 /**
-   \brief {{.Description}}
+   \brief {{.Interface.Description}}
 */
 {{- end }}
 {{$Class}}::{{$Class}}()
