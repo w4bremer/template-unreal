@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/TbEnumEnumInterfaceLoggingDecorator.h"
 #include "TbEnum.trace.h"
-#include "TbEnumFactory.h"
+#include "Generated/TbEnumFactory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTbEnumEnumInterfaceLoggingDecorator);

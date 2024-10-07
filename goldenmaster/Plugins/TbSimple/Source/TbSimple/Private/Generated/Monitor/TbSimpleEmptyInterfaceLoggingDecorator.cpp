@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/TbSimpleEmptyInterfaceLoggingDecorator.h"
 #include "TbSimple.trace.h"
-#include "TbSimpleFactory.h"
+#include "Generated/TbSimpleFactory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTbSimpleEmptyInterfaceLoggingDecorator);

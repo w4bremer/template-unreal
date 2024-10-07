@@ -27,7 +27,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/{{$Iface}}LoggingDecorator.h"
 #include "{{$ModuleName}}.trace.h"
-#include "{{$ModuleName}}Factory.h"
+#include "Generated/{{$ModuleName}}Factory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(Log{{$DisplayName}});

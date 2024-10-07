@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/TbNamesNamEsLoggingDecorator.h"
 #include "TbNames.trace.h"
-#include "TbNamesFactory.h"
+#include "Generated/TbNamesFactory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTbNamesNamEsLoggingDecorator);

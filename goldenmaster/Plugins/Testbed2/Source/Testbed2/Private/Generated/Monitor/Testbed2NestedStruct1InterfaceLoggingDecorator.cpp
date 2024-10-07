@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/Testbed2NestedStruct1InterfaceLoggingDecorator.h"
 #include "Testbed2.trace.h"
-#include "Testbed2Factory.h"
+#include "Generated/Testbed2Factory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTestbed2NestedStruct1InterfaceLoggingDecorator);

@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/TbSame1SameEnum2InterfaceLoggingDecorator.h"
 #include "TbSame1.trace.h"
-#include "TbSame1Factory.h"
+#include "Generated/TbSame1Factory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTbSame1SameEnum2InterfaceLoggingDecorator);

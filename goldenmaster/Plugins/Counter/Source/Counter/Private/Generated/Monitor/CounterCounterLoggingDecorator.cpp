@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/CounterCounterLoggingDecorator.h"
 #include "Counter.trace.h"
-#include "CounterFactory.h"
+#include "Generated/CounterFactory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogCounterCounterLoggingDecorator);

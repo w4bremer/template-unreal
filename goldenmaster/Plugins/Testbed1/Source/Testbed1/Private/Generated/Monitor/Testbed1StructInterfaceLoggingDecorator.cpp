@@ -17,7 +17,7 @@ limitations under the License.
 */
 #include "Generated/Monitor/Testbed1StructInterfaceLoggingDecorator.h"
 #include "Testbed1.trace.h"
-#include "Testbed1Factory.h"
+#include "Generated/Testbed1Factory.h"
 #include "Runtime/Launch/Resources/Version.h"
 
 DEFINE_LOG_CATEGORY(LogTestbed1StructInterfaceLoggingDecorator);
