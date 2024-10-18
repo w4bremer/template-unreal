@@ -26,7 +26,7 @@ class FSubsystemCollectionBase;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFCustomTypesModuleFactory, Log, All);
 
-class FCustomTypesModuleFactory
+class CUSTOMTYPES_API FCustomTypesModuleFactory
 {
 public:
 	/** type of function for creating implementations*/

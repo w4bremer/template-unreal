@@ -16,13 +16,12 @@ limitations under the License.
 */
 
 #include "TbSimpleNoPropertiesInterfaceOLink.spec.h"
-#include "Implementation/TbSimpleNoPropertiesInterface.h"
 #include "TbSimpleNoPropertiesInterfaceOLinkFixture.h"
 #include "Generated/OLink/TbSimpleNoPropertiesInterfaceOLinkClient.h"
 #include "Generated/OLink/TbSimpleNoPropertiesInterfaceOLinkAdapter.h"
 #include "OLinkHost.h"
 #include "OLinkClientConnection.h" // for olink factory
-#include "TbSimpleTestsCommon.h"
+#include "TbSimple/Tests/TbSimpleTestsCommon.h"
 #include "Misc/AutomationTest.h"
 
 #if WITH_DEV_AUTOMATION_TESTS

@@ -30,7 +30,7 @@ class ITbSame2SameEnum2InterfaceInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbSame2ModuleFactory, Log, All);
 
-class FTbSame2ModuleFactory
+class TBSAME2_API FTbSame2ModuleFactory
 {
 public:
 	/** type of function for creating implementations*/

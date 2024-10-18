@@ -1,6 +1,5 @@
 {{/* Copyright Epic Games, Inc. All Rights Reserved */}}
 {{- $ModuleName := Camel .Module.Name}}
-{{- $API_MACRO := printf "%s_API" (Camel .Module.Name) }}
 {{- $ConnecitonEnabled := or .Features.stubs .Features.olink -}}
 {{- $Category := printf "ApiGear%s" $ModuleName -}}
 /**
@@ -71,6 +70,7 @@ void U{{$ModuleName}}Settings::ValidateSettingsPostEngineInit()
 }
 
 {{- range .Module.Interfaces }}
+{{- if $.Features.monitor }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
 {{- $iclass := printf "I%sInterface" $class }}
 {{- $DisplayName := printf "%s%s" $ModuleName (Camel .Name) }}
@@ -101,4 +101,5 @@ TScriptInterface<I{{$class}}Interface> U{{$ModuleName}}Settings::Get{{$iclass}}F
 
 	return nullptr;
 }
+{{- end }}
 {{- end }}

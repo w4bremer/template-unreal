@@ -16,13 +16,12 @@ limitations under the License.
 */
 
 #include "TbSame2SameStruct1InterfaceOLink.spec.h"
-#include "Implementation/TbSame2SameStruct1Interface.h"
 #include "TbSame2SameStruct1InterfaceOLinkFixture.h"
 #include "Generated/OLink/TbSame2SameStruct1InterfaceOLinkClient.h"
 #include "Generated/OLink/TbSame2SameStruct1InterfaceOLinkAdapter.h"
 #include "OLinkHost.h"
 #include "OLinkClientConnection.h" // for olink factory
-#include "TbSame2TestsCommon.h"
+#include "TbSame2/Tests/TbSame2TestsCommon.h"
 #include "Misc/AutomationTest.h"
 
 #if WITH_DEV_AUTOMATION_TESTS

@@ -30,7 +30,7 @@ class ITestbed2NestedStruct3InterfaceInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTestbed2ModuleFactory, Log, All);
 
-class FTestbed2ModuleFactory
+class TESTBED2_API FTestbed2ModuleFactory
 {
 public:
 	/** type of function for creating implementations*/

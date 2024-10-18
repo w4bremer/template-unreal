@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-#include "Testbed2TestsCommon.h"
+#include "Tests/Testbed2TestsCommon.h"
 #include "Testbed2/Generated/api/Testbed2_data.h"
 #include "Misc/AutomationTest.h"
 

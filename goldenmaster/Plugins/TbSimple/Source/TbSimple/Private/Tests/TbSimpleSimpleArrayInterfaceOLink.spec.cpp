@@ -16,13 +16,12 @@ limitations under the License.
 */
 
 #include "TbSimpleSimpleArrayInterfaceOLink.spec.h"
-#include "Implementation/TbSimpleSimpleArrayInterface.h"
 #include "TbSimpleSimpleArrayInterfaceOLinkFixture.h"
 #include "Generated/OLink/TbSimpleSimpleArrayInterfaceOLinkClient.h"
 #include "Generated/OLink/TbSimpleSimpleArrayInterfaceOLinkAdapter.h"
 #include "OLinkHost.h"
 #include "OLinkClientConnection.h" // for olink factory
-#include "TbSimpleTestsCommon.h"
+#include "TbSimple/Tests/TbSimpleTestsCommon.h"
 #include "Misc/AutomationTest.h"
 
 #if WITH_DEV_AUTOMATION_TESTS

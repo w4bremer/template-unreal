@@ -27,7 +27,7 @@ class ICounterCounterInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFCounterModuleFactory, Log, All);
 
-class FCounterModuleFactory
+class COUNTER_API FCounterModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
