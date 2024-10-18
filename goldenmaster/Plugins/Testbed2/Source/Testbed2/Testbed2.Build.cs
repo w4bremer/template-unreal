@@ -51,8 +51,6 @@ public class Testbed2 : ModuleRules
 				"Core",
 				"CoreUObject",
 				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
 			}
 			);
 		

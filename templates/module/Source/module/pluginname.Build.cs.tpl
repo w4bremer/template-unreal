@@ -67,10 +67,6 @@ public class {{$ModuleName}} : ModuleRules
 {{- range $idx, $elem := .Module.Imports }}
 				"{{Camel .Name}}API",
 {{- end }}
-{{- if .Features.olink }}
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
-{{- end }}
 			}
 			);
 		

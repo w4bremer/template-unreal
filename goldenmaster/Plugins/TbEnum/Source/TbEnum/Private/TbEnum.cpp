@@ -17,7 +17,6 @@ limitations under the License.
 
 #include "TbEnum.h"
 #include "Generated/TbEnumFactory.h"
-#include "Generated/OLink/TbEnumEnumInterfaceOLinkClient.h"
 #include "Engine/Engine.h"
 #include "TbEnumSettings.h"
 #include "Modules/ModuleManager.h"
@@ -26,10 +25,6 @@ limitations under the License.
 
 void FTbEnumModule::StartupModule()
 {
-	FTbEnumModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbEnumEnumInterfaceInterface>
-		{
-		return Cast<UTbEnumEnumInterfaceOLinkClient>(Collection.InitializeDependency(UTbEnumEnumInterfaceOLinkClient::StaticClass()));
-	});
 }
 
 void FTbEnumModule::ShutdownModule()

@@ -55,8 +55,6 @@ public class Counter : ModuleRules
 				"Engine",
 				"CustomTypesAPI",
 				"ExternTypesAPI",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
 			}
 			);
 		

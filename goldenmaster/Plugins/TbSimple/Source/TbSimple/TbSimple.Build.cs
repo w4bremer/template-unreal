@@ -51,8 +51,6 @@ public class TbSimple : ModuleRules
 				"Core",
 				"CoreUObject",
 				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
 			}
 			);
 		

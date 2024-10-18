@@ -51,8 +51,6 @@ public class ExternTypes : ModuleRules
 				"Core",
 				"CoreUObject",
 				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
 			}
 			);
 		
