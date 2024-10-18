@@ -17,6 +17,7 @@ public class Counter : ModuleRules
 		
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
         PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Private"));
+        PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Public/Counter"));
 
 		PublicIncludePaths.AddRange(
 			new string[] {

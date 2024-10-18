@@ -17,6 +17,7 @@ public class TbNames : ModuleRules
 		
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
         PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Private"));
+        PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Public/TbNames"));
 
 		PublicIncludePaths.AddRange(
 			new string[] {

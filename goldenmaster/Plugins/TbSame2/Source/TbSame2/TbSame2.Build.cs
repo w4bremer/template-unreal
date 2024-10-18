@@ -17,6 +17,7 @@ public class TbSame2 : ModuleRules
 		
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
         PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Private"));
+        PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Public/TbSame2"));
 
 		PublicIncludePaths.AddRange(
 			new string[] {

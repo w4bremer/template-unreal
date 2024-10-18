@@ -33,7 +33,7 @@ class ITbSimpleEmptyInterfaceInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbSimpleModuleFactory, Log, All);
 
-class FTbSimpleModuleFactory
+class TBSIMPLE_API FTbSimpleModuleFactory
 {
 public:
 	/** type of function for creating implementations*/

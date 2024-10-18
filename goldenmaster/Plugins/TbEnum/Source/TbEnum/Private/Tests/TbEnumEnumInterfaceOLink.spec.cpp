@@ -16,13 +16,12 @@ limitations under the License.
 */
 
 #include "TbEnumEnumInterfaceOLink.spec.h"
-#include "Implementation/TbEnumEnumInterface.h"
 #include "TbEnumEnumInterfaceOLinkFixture.h"
 #include "Generated/OLink/TbEnumEnumInterfaceOLinkClient.h"
 #include "Generated/OLink/TbEnumEnumInterfaceOLinkAdapter.h"
 #include "OLinkHost.h"
 #include "OLinkClientConnection.h" // for olink factory
-#include "TbEnumTestsCommon.h"
+#include "TbEnum/Tests/TbEnumTestsCommon.h"
 #include "Misc/AutomationTest.h"
 
 #if WITH_DEV_AUTOMATION_TESTS

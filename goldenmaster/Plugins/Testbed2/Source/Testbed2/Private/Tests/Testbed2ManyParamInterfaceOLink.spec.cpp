@@ -16,13 +16,12 @@ limitations under the License.
 */
 
 #include "Testbed2ManyParamInterfaceOLink.spec.h"
-#include "Implementation/Testbed2ManyParamInterface.h"
 #include "Testbed2ManyParamInterfaceOLinkFixture.h"
 #include "Generated/OLink/Testbed2ManyParamInterfaceOLinkClient.h"
 #include "Generated/OLink/Testbed2ManyParamInterfaceOLinkAdapter.h"
 #include "OLinkHost.h"
 #include "OLinkClientConnection.h" // for olink factory
-#include "Testbed2TestsCommon.h"
+#include "Testbed2/Tests/Testbed2TestsCommon.h"
 #include "Misc/AutomationTest.h"
 
 #if WITH_DEV_AUTOMATION_TESTS

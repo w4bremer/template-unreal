@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-#include "CustomTypesTestsCommon.h"
+#include "Tests/CustomTypesTestsCommon.h"
 #include "CustomTypes/Generated/api/CustomTypes_data.h"
 #include "Misc/AutomationTest.h"
 

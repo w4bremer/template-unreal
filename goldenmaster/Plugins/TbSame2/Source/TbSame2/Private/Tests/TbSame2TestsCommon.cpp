@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-#include "TbSame2TestsCommon.h"
+#include "Tests/TbSame2TestsCommon.h"
 #include "TbSame2/Generated/api/TbSame2_data.h"
 #include "Misc/AutomationTest.h"
 

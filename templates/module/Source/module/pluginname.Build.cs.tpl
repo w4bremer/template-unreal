@@ -21,6 +21,7 @@ public class {{$ModuleName}} : ModuleRules
 		
         PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
         PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Private"));
+        PrivateIncludePaths.Add(Path.Combine(ModuleDirectory, "Public/{{Camel .Module.Name}}"));
 
 		PublicIncludePaths.AddRange(
 			new string[] {

@@ -1,7 +1,7 @@
 {{- /* Copyright Epic Games, Inc. All Rights Reserved */ -}}
 /**{{ template "copyright" }}*/
 {{- $ModuleName := Camel .Module.Name}}
-#include "{{$ModuleName}}TestsCommon.h"
+#include "Tests/{{$ModuleName}}TestsCommon.h"
 #include "{{$ModuleName}}/Generated/api/{{$ModuleName}}_data.h"
 #include "Misc/AutomationTest.h"
 

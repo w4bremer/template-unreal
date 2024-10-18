@@ -27,7 +27,7 @@ class ITbEnumEnumInterfaceInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbEnumModuleFactory, Log, All);
 
-class FTbEnumModuleFactory
+class TBENUM_API FTbEnumModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
