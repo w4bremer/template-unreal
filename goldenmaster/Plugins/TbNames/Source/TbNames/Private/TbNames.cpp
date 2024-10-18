@@ -17,7 +17,6 @@ limitations under the License.
 
 #include "TbNames.h"
 #include "Generated/TbNamesFactory.h"
-#include "Generated/OLink/TbNamesNamEsOLinkClient.h"
 #include "Engine/Engine.h"
 #include "TbNamesSettings.h"
 #include "Modules/ModuleManager.h"
@@ -26,10 +25,6 @@ limitations under the License.
 
 void FTbNamesModule::StartupModule()
 {
-	FTbNamesModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbNamesNamEsInterface>
-		{
-		return Cast<UTbNamesNamEsOLinkClient>(Collection.InitializeDependency(UTbNamesNamEsOLinkClient::StaticClass()));
-	});
 }
 
 void FTbNamesModule::ShutdownModule()

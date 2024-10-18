@@ -17,13 +17,6 @@ limitations under the License.
 
 #include "TbSimple.h"
 #include "Generated/TbSimpleFactory.h"
-#include "Generated/OLink/TbSimpleVoidInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleSimpleInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleSimpleArrayInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleNoPropertiesInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleNoOperationsInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleNoSignalsInterfaceOLinkClient.h"
-#include "Generated/OLink/TbSimpleEmptyInterfaceOLinkClient.h"
 #include "Engine/Engine.h"
 #include "TbSimpleSettings.h"
 #include "Modules/ModuleManager.h"
@@ -32,34 +25,6 @@ limitations under the License.
 
 void FTbSimpleModule::StartupModule()
 {
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleVoidInterfaceInterface>
-		{
-		return Cast<UTbSimpleVoidInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleVoidInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleSimpleInterfaceInterface>
-		{
-		return Cast<UTbSimpleSimpleInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleSimpleInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface>
-		{
-		return Cast<UTbSimpleSimpleArrayInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleSimpleArrayInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface>
-		{
-		return Cast<UTbSimpleNoPropertiesInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleNoPropertiesInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleNoOperationsInterfaceInterface>
-		{
-		return Cast<UTbSimpleNoOperationsInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleNoOperationsInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleNoSignalsInterfaceInterface>
-		{
-		return Cast<UTbSimpleNoSignalsInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleNoSignalsInterfaceOLinkClient::StaticClass()));
-	});
-	FTbSimpleModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSimpleEmptyInterfaceInterface>
-		{
-		return Cast<UTbSimpleEmptyInterfaceOLinkClient>(Collection.InitializeDependency(UTbSimpleEmptyInterfaceOLinkClient::StaticClass()));
-	});
 }
 
 void FTbSimpleModule::ShutdownModule()
