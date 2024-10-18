@@ -28,7 +28,7 @@ class ITestbed1StructArrayInterfaceInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTestbed1ModuleFactory, Log, All);
 
-class FTestbed1ModuleFactory
+class TESTBED1_API FTestbed1ModuleFactory
 {
 public:
 	/** type of function for creating implementations*/

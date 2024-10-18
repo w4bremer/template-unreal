@@ -27,7 +27,7 @@ class ITbNamesNamEsInterface;
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbNamesModuleFactory, Log, All);
 
-class FTbNamesModuleFactory
+class TBNAMES_API FTbNamesModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
