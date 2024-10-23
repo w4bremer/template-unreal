@@ -37,13 +37,13 @@ public class CounterOLink : ModuleRules
 			new string[]
 			{
 				"CounterAPI",
-				"Counter",
+				"CounterCore",
 				"ApiGear",
 				"Projects",
 				"Engine",
 				"JsonUtilities",
-				"CustomTypes", 
-				"ExternTypes"
+				"CustomTypesCore", 
+				"ExternTypesCore"
 			}
 			);
 			

@@ -37,7 +37,7 @@ public class TbSimpleMonitor : ModuleRules
 			new string[]
 			{
 				"TbSimpleAPI",
-				"TbSimple",
+				"TbSimpleCore",
 				"ApiGear",
 				"Projects",
 				"Engine",

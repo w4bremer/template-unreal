@@ -43,7 +43,7 @@ public class {{$ModuleName}}Monitor : ModuleRules
 {{- if .Features.api }}
 				"{{Camel .Module.Name}}API",
 {{- end }}
-				"{{Camel .Module.Name}}",
+				"{{Camel .Module.Name}}Core",
 {{- if .Features.apigear }}
 				"ApiGear",
 {{- end }}
@@ -53,7 +53,7 @@ public class {{$ModuleName}}Monitor : ModuleRules
 {{- if .Module.Imports }}, {{- end}}
 {{- range $idx, $elem := .Module.Imports }}
 {{- if $idx}}, {{ end }}
-				"{{Camel .Name}}"
+				"{{Camel .Name}}Core"
 {{- end }}
 			}
 			);

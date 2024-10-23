@@ -50,7 +50,7 @@ public class TbSame1Implementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"TbSame1",
+				"TbSame1Core",
 			}
 			);
 		

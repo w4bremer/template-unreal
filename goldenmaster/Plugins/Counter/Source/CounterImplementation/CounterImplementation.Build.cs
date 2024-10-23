@@ -42,9 +42,9 @@ public class CounterImplementation : ModuleRules
 				"Engine",
 				"JsonUtilities",
 				"CustomTypesAPI",
-				"CustomTypes", 
+				"CustomTypesCore", 
 				"ExternTypesAPI",
-				"ExternTypes"
+				"ExternTypesCore"
 			}
 			);
 			
@@ -54,7 +54,7 @@ public class CounterImplementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"Counter",
+				"CounterCore",
 			}
 			);
 		

@@ -37,7 +37,7 @@ public class TbNamesOLink : ModuleRules
 			new string[]
 			{
 				"TbNamesAPI",
-				"TbNames",
+				"TbNamesCore",
 				"ApiGear",
 				"Projects",
 				"Engine",

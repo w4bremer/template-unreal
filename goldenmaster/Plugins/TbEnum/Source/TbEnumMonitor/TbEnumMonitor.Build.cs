@@ -37,7 +37,7 @@ public class TbEnumMonitor : ModuleRules
 			new string[]
 			{
 				"TbEnumAPI",
-				"TbEnum",
+				"TbEnumCore",
 				"ApiGear",
 				"Projects",
 				"Engine",

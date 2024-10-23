@@ -50,7 +50,7 @@ public class TbSimpleImplementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"TbSimple",
+				"TbSimpleCore",
 			}
 			);
 		

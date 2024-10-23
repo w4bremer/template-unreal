@@ -37,7 +37,7 @@ public class Testbed2OLink : ModuleRules
 			new string[]
 			{
 				"Testbed2API",
-				"Testbed2",
+				"Testbed2Core",
 				"ApiGear",
 				"Projects",
 				"Engine",

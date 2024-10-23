@@ -51,7 +51,7 @@ public class {{$ModuleName}}Implementation : ModuleRules
 {{- range $idx, $elem := .Module.Imports }}
 {{- if $idx}}, {{ end }}
 				"{{Camel .Name}}API",
-				"{{Camel .Name}}"
+				"{{Camel .Name}}Core"
 {{- end }}
 			}
 			);
@@ -62,7 +62,7 @@ public class {{$ModuleName}}Implementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"{{$ModuleName}}",
+				"{{$ModuleName}}Core",
 			}
 			);
 		

@@ -50,7 +50,7 @@ public class TbEnumImplementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"TbEnum",
+				"TbEnumCore",
 			}
 			);
 		

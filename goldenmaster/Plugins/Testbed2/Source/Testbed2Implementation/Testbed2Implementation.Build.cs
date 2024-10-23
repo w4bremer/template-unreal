@@ -50,7 +50,7 @@ public class Testbed2Implementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"Testbed2",
+				"Testbed2Core",
 			}
 			);
 		

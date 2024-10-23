@@ -50,7 +50,7 @@ public class TbNamesImplementation : ModuleRules
 			{
 				"CoreUObject",
 				"Engine",
-				"TbNames",
+				"TbNamesCore",
 			}
 			);
 		

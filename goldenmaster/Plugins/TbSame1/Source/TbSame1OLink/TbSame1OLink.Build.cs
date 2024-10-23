@@ -37,7 +37,7 @@ public class TbSame1OLink : ModuleRules
 			new string[]
 			{
 				"TbSame1API",
-				"TbSame1",
+				"TbSame1Core",
 				"ApiGear",
 				"Projects",
 				"Engine",
