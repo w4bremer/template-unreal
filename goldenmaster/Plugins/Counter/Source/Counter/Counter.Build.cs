@@ -41,6 +41,8 @@ public class Counter : ModuleRules
 				"Projects",
 				"Engine",
 				"JsonUtilities",
+				"ApiGearOLink",
+				"OLinkProtocolLibrary",
 				"CustomTypes", 
 				"ExternTypes"
 			}
@@ -51,9 +53,7 @@ public class Counter : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
+				"Engine"
 			}
 			);
 		

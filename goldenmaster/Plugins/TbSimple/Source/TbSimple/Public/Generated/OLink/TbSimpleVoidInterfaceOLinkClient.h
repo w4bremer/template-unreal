@@ -16,7 +16,7 @@ limitations under the License.
 */
 #pragma once
 
-#include "AbstractTbSimpleVoidInterface.h"
+#include "Generated/api/AbstractTbSimpleVoidInterface.h"
 THIRD_PARTY_INCLUDES_START
 #include "olink/clientnode.h"
 THIRD_PARTY_INCLUDES_END

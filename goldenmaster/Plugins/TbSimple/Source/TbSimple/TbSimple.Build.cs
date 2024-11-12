@@ -40,7 +40,9 @@ public class TbSimple : ModuleRules
 				"ApiGear",
 				"Projects",
 				"Engine",
-				"JsonUtilities"
+				"JsonUtilities",
+				"ApiGearOLink",
+				"OLinkProtocolLibrary"
 			}
 			);
 			
@@ -49,9 +51,7 @@ public class TbSimple : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
+				"Engine"
 			}
 			);
 		

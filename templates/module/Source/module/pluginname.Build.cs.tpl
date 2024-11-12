@@ -49,7 +49,11 @@ public class {{$ModuleName}} : ModuleRules
 {{- end }}
 				"Projects",
 				"Engine",
-				"JsonUtilities"
+				"JsonUtilities",
+{{- if .Features.olink }}
+				"ApiGearOLink",
+				"OLinkProtocolLibrary"
+{{- end }}
 {{- if .Module.Imports }}, {{- end}}
 {{- range $idx, $elem := .Module.Imports }}
 {{- if $idx}}, {{ end }}
@@ -63,11 +67,7 @@ public class {{$ModuleName}} : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-{{- if .Features.olink }}
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
-{{- end }}
+				"Engine"
 			}
 			);
 		

@@ -16,7 +16,7 @@ limitations under the License.
 */
 #pragma once
 
-#include "AbstractTbSame2SameEnum1Interface.h"
+#include "Generated/api/AbstractTbSame2SameEnum1Interface.h"
 THIRD_PARTY_INCLUDES_START
 #include "olink/clientnode.h"
 THIRD_PARTY_INCLUDES_END
