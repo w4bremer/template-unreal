@@ -77,7 +77,7 @@ void {{$Class}}::On{{Camel .Name}}({{ueParams "" .Params}})
 {{ end }}
 
 {{- range .Interface.Properties }}
-void {{$Class}}::On{{Camel .Name}}Changed({{ueParam "In" .}})
+void {{$Class}}::On{{Camel .Name}}ChangedBp({{ueParam "In" .}})
 {
 	static const auto& propertyId = ApiGear::ObjectLink::Name::createMemberId(olinkObjectName(), "{{.Name}}");
 	static const auto& objectId = ApiGear::ObjectLink::Name::getObjectId(propertyId);

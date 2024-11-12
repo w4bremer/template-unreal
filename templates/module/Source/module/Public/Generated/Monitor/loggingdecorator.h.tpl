@@ -78,6 +78,6 @@ private:
 {{- range $i, $e := .Interface.Properties }}
 {{- if $i }}{{nl}}{{ end }}
 	UFUNCTION(Category = "{{$Category}}", BlueprintInternalUseOnly)
-	void On{{Camel .Name}}Changed({{ueParam "In" .}});
+	void On{{Camel .Name}}ChangedBp({{ueParam "In" .}});
 {{- end }}
 };

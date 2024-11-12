@@ -170,11 +170,11 @@ void {{$abstractclass}}::Deinitialize()
 	if ({{$Iface}}Signals)
 	{
 {{- range $i, $e := .Signals }}
-		{{$Iface}}Signals->On{{Camel .Name}}Signal.RemoveAll({{$Iface}}Signals);
+		{{$Iface}}Signals->On{{Camel .Name}}SignalBp.RemoveAll({{$Iface}}Signals);
 {{- end }}
 {{- if and (len .Properties) (len .Signals) }}{{ nl }}{{ end }}
 {{- range $i, $e := .Properties }}
-		{{$Iface}}Signals->On{{Camel .Name}}Changed.RemoveAll({{$Iface}}Signals);
+		{{$Iface}}Signals->On{{Camel .Name}}ChangedBp.RemoveAll({{$Iface}}Signals);
 {{- end }}
 	}
 {{- end }}

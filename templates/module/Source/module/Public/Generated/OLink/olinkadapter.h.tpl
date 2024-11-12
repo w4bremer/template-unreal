@@ -47,7 +47,7 @@ private:
 {{- range $i, $e := .Interface.Properties }}
 {{- if $i }}{{nl}}{{ end }}
 	UFUNCTION(Category = "{{$Category}}", BlueprintInternalUseOnly)
-	void On{{Camel .Name}}Changed({{ueParam "" .}});
+	void On{{Camel .Name}}ChangedBp({{ueParam "" .}});
 {{- end }}
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */

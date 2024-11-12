@@ -50,7 +50,7 @@ public:
 {{- end }}
 {{- if len .Interface.Properties }}{{ nl }}{{ end }}
 {{- range $i, $e := .Interface.Properties }}
-	void On{{Camel .Name}}Changed({{ueParam "" .}});
+	void On{{Camel .Name}}ChangedBp({{ueParam "" .}});
 {{- end }}
 
 private:

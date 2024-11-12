@@ -57,7 +57,7 @@ void {{$Class}}ImplSpec::Define()
 
 		testDoneDelegate = TestDone;
 		{{$Class}}Signals* {{$Iface}}Signals = ImplFixture->GetImplementation()->Execute__GetSignals(ImplFixture->GetImplementation().GetObject());
-		{{$Iface}}Signals->On{{Camel .Name}}Changed.AddDynamic(ImplFixture->GetHelper().Get(), &{{$Class}}ImplHelper::{{ Camel .Name }}PropertyCb);
+		{{$Iface}}Signals->On{{Camel .Name}}ChangedBp.AddDynamic(ImplFixture->GetHelper().Get(), &{{$Class}}ImplHelper::{{ Camel .Name }}PropertyCb);
 		// use different test value
 		{{- if .IsArray }}
 		{{- if .IsPrimitive }}
@@ -102,7 +102,7 @@ void {{$Class}}ImplSpec::Define()
 		{
 		testDoneDelegate = TestDone;
 		{{$Class}}Signals* {{$Iface}}Signals = ImplFixture->GetImplementation()->Execute__GetSignals(ImplFixture->GetImplementation().GetObject());
-		{{$Iface}}Signals->On{{Camel .Name}}Signal.AddDynamic(ImplFixture->GetHelper().Get(), &{{$Class}}ImplHelper::{{ Camel .Name }}SignalCb);
+		{{$Iface}}Signals->On{{Camel .Name}}SignalBp.AddDynamic(ImplFixture->GetHelper().Get(), &{{$Class}}ImplHelper::{{ Camel .Name }}SignalCb);
 
 		// use different test value
 		{{- range $i, $e := .Params -}}

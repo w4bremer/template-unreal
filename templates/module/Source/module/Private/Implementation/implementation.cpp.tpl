@@ -22,7 +22,7 @@ void {{$Class}}::Set{{Camel .Name}}_Implementation({{ueParam "In" .}})
 	if ({{ueVar "" .}} != {{ueVar "In" .}})
 	{
 		{{ueVar "" .}} = {{ueVar "In" .}};
-		Execute__GetSignals(this)->On{{Camel .Name}}Changed.Broadcast({{ueVar "" .}});
+		Execute__GetSignals(this)->Broadcast{{Camel .Name}}Changed({{ueVar "" .}});
 	}
 }
 {{- end }}

@@ -58,10 +58,10 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 		checkf(BackendSignals, TEXT("Cannot unsubscribe from delegates from backend service {{$Iface}}"));
 {{- end }}
 {{- range .Interface.Properties }}
-		BackendSignals->On{{Camel .Name}}Changed.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}}Changed);
+		BackendSignals->On{{Camel .Name}}ChangedBp.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}}ChangedBp);
 {{- end }}
 {{- range .Interface.Signals }}
-		BackendSignals->On{{Camel .Name}}Signal.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}});
+		BackendSignals->On{{Camel .Name}}SignalBp.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}});
 {{- end }}
 	}
 
@@ -77,10 +77,10 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 {{- end }}
 	// connect property changed signals or simple events
 {{- range .Interface.Properties }}
-	BackendSignals->On{{Camel .Name}}Changed.AddDynamic(this, &{{$Class}}::On{{Camel .Name}}Changed);
+	BackendSignals->On{{Camel .Name}}ChangedBp.AddDynamic(this, &{{$Class}}::On{{Camel .Name}}ChangedBp);
 {{- end }}
 {{- range .Interface.Signals }}
-	BackendSignals->On{{Camel .Name}}Signal.AddDynamic(this, &{{$Class}}::On{{Camel .Name}});
+	BackendSignals->On{{Camel .Name}}SignalBp.AddDynamic(this, &{{$Class}}::On{{Camel .Name}});
 {{- end }}
 
 	// update olink source with new backend
@@ -95,9 +95,9 @@ void {{$Class}}::On{{Camel .Name}}({{ueParams "" .Params}})
 {{- end }}
 {{- range .Interface.Properties }}
 
-void {{$Class}}::On{{Camel .Name}}Changed({{ueParam "In" .}})
+void {{$Class}}::On{{Camel .Name}}ChangedBp({{ueParam "In" .}})
 {
-	Source->On{{Camel .Name}}Changed({{ueVar "In" .}});
+	Source->On{{Camel .Name}}ChangedBp({{ueVar "In" .}});
 }
 {{- end }}
 

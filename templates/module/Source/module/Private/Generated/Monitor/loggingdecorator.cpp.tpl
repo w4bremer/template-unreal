@@ -72,10 +72,10 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 		checkf(BackendSignals, TEXT("Cannot unsubscribe from delegates from backend service {{$Iface}}"));
 {{- end }}
 {{- range .Interface.Properties }}
-		BackendSignals->On{{Camel .Name}}Changed.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}}Changed);
+		BackendSignals->On{{Camel .Name}}ChangedBp.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}}ChangedBp);
 {{- end }}
 {{- range .Interface.Signals }}
-		BackendSignals->On{{Camel .Name}}Signal.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}});
+		BackendSignals->On{{Camel .Name}}SignalBp.RemoveDynamic(this, &{{$Class}}::On{{Camel .Name}});
 {{- end }}
 	}
 
@@ -91,10 +91,10 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 {{- end }}
 	// connect property changed signals or simple events
 {{- range .Interface.Properties }}
-	BackendSignals->On{{Camel .Name}}Changed.AddDynamic(this, &{{$Class}}::On{{Camel .Name}}Changed);
+	BackendSignals->On{{Camel .Name}}ChangedBp.AddDynamic(this, &{{$Class}}::On{{Camel .Name}}ChangedBp);
 {{- end }}
 {{- range .Interface.Signals }}
-	BackendSignals->On{{Camel .Name}}Signal.AddDynamic(this, &{{$Class}}::On{{Camel .Name}});
+	BackendSignals->On{{Camel .Name}}SignalBp.AddDynamic(this, &{{$Class}}::On{{Camel .Name}});
 {{- end }}
 	// populate service state to proxy
 {{- range .Interface.Properties }}
@@ -107,17 +107,17 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 void {{$Class}}::On{{Camel .Name}}({{ueParams "In" .Params}})
 {
 	{{$Iface}}Tracer::trace_signal{{Camel .Name}}({{ueVars "In" .Params}});
-	Execute__GetSignals(this)->On{{Camel .Name}}Signal.Broadcast({{ueVars "In" .Params }});
+	Execute__GetSignals(this)->Broadcast{{Camel .Name}}Signal({{ueVars "In" .Params }});
 }
 {{- end }}
 {{- if .Interface.Properties }}{{nl}}{{ end }}
 {{- range $i, $e := .Interface.Properties }}
 {{- if $i }}{{nl}}{{ end }}
-void {{$Class}}::On{{Camel .Name}}Changed({{ueParam "In" .}})
+void {{$Class}}::On{{Camel .Name}}ChangedBp({{ueParam "In" .}})
 {
 	{{$Iface}}Tracer::capture_state(BackendService.GetObject(), this);
 	{{ueVar "" .}} = {{ueVar "In" .}};
-	Execute__GetSignals(this)->On{{Camel .Name}}Changed.Broadcast({{ueVar "In" .}});
+	Execute__GetSignals(this)->Broadcast{{Camel .Name}}Changed({{ueVar "In" .}});
 }
 
 {{ueReturn "" .}} {{$Class}}::Get{{Camel .Name}}_Implementation() const
