@@ -19,7 +19,7 @@ limitations under the License.
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "AbstractTbNamesNamEs.h"
+#include "Generated/api/AbstractTbNamesNamEs.h"
 #include "TbNamesNamEsLoggingDecorator.generated.h"
 
 // General Log

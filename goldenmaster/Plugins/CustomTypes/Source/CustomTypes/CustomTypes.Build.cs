@@ -40,7 +40,9 @@ public class CustomTypes : ModuleRules
 				"ApiGear",
 				"Projects",
 				"Engine",
-				"JsonUtilities"
+				"JsonUtilities",
+				"ApiGearOLink",
+				"OLinkProtocolLibrary"
 			}
 			);
 			
@@ -49,9 +51,7 @@ public class CustomTypes : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
+				"Engine"
 			}
 			);
 		

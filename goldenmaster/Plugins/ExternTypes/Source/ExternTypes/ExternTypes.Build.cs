@@ -40,7 +40,9 @@ public class ExternTypes : ModuleRules
 				"ApiGear",
 				"Projects",
 				"Engine",
-				"JsonUtilities"
+				"JsonUtilities",
+				"ApiGearOLink",
+				"OLinkProtocolLibrary"
 			}
 			);
 			
@@ -49,9 +51,7 @@ public class ExternTypes : ModuleRules
 			new string[]
 			{
 				"CoreUObject",
-				"Engine",
-				"ApiGearOLink",
-				"OLinkProtocolLibrary"
+				"Engine"
 			}
 			);
 		
