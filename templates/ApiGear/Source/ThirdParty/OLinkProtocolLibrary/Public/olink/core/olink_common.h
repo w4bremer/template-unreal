@@ -24,7 +24,7 @@
 */
 #pragma once
 
-
+#ifndef OLINK_EXPORT
 #if defined _WIN32 || defined __CYGWIN__
 #ifdef __GNUC__
 #define OLINK_EXPORT __attribute__ ((dllexport))
@@ -38,3 +38,4 @@
     #define OLINK_EXPORT
   #endif
 #endif
+#endif // OLINK_EXPORT
