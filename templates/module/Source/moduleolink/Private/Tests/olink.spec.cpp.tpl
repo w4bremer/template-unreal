@@ -98,7 +98,7 @@ void {{$Class}}OLinkSpec::Define()
 	{{- end }}
 	});
 
-	{{- if and (not .IsReadOnly) (not (eq .KindType "extern")) }}
+	{{- if and (not .IsReadOnly) (not (eq .KindType "extern")) (not (eq .KindType "interface"))}}
 
 	LatentIt("Property.{{ Camel .Name }}.Change", EAsyncExecution::ThreadPool, [this](const FDoneDelegate TestDone)
 		{

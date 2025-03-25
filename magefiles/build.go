@@ -42,8 +42,8 @@ func goInstall(pkg string) {
 	helper.Must(sh.RunV("go", "install", pkg))
 }
 func genSol(sol string) {
-	bin := helper.Join("bin", apigear())
-	helper.Must(sh.RunV(bin, "generate", "solution", sol))
+	// bin := helper.Join("bin", apigear())
+	helper.Must(sh.RunV(apigear(), "generate", "solution", sol))
 }
 
 // Install installs the apigear cli and testbed-apis.

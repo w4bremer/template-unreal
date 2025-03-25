@@ -113,6 +113,22 @@ call :buildUEplugin "%script_path%\Plugins\Counter\Counter.uplugin" , "%script_p
 if !buildresult! GEQ 1 call :cleanup !buildresult!
 if !buildresult! GEQ 1 exit /b !buildresult!
 
+@REM Building and testing TbRefInterfaces module
+call :buildUEplugin "%script_path%\Plugins\TbRefInterfaces\TbRefInterfaces.uplugin" , "%script_path%build\Plugins\TbRefInterfaces"
+if !buildresult! GEQ 1 call :cleanup !buildresult!
+if !buildresult! GEQ 1 exit /b !buildresult!
+
+@REM Building and testing TbRefInterfacesImport module
+call :buildUEplugin "%script_path%\Plugins\TbRefInterfacesImport\TbRefInterfacesImport.uplugin" , "%script_path%build\Plugins\TbRefInterfacesImport"
+if !buildresult! GEQ 1 call :cleanup !buildresult!
+if !buildresult! GEQ 1 exit /b !buildresult!
+
+@REM copy TbRefInterfacesImport plugin to UE installation for use by other plugins
+set TbRefInterfacesImportPluginTarget_path=%ApiGearTarget_path%\TbRefInterfacesImport
+xcopy /E /Y "%script_path%build\Plugins\TbRefInterfacesImport" "%TbRefInterfacesImportPluginTarget_path%\"  >nul
+if %ERRORLEVEL% GEQ 1 call :cleanup %ERRORLEVEL%
+if %ERRORLEVEL% GEQ 1 exit /b %ERRORLEVEL%
+
 
 call :cleanup 0
 exit /b 0

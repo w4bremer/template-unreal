@@ -2,6 +2,11 @@
 
 #include "apigear.json.adapter.h"
 #include "Testbed2/Generated/api/Testbed2_data.h"
+#include "Testbed2/Generated/api/Testbed2ManyParamInterfaceInterface.h"
+#include "Testbed2/Generated/api/Testbed2NestedStruct1InterfaceInterface.h"
+#include "Testbed2/Generated/api/Testbed2NestedStruct2InterfaceInterface.h"
+#include "Testbed2/Generated/api/Testbed2NestedStruct3InterfaceInterface.h"
+//[]*model.Import(nil)
 
 static void from_json(const nlohmann::json& j, FTestbed2Struct1& p)
 {
@@ -80,4 +85,50 @@ static void from_json(const nlohmann::json& j, FTestbed2NestedStruct3& p)
 static void to_json(nlohmann::json& j, const FTestbed2NestedStruct3& p)
 {
 	j = nlohmann::json{{"field1", p.field1}, {"field2", p.field2}, {"field3", p.field3}};
+}
+
+static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2ManyParamInterface>& p)
+{
+	Cast<ITestbed2ManyParamInterface>(p.GetObject())->SetProp1(j.at("prop1").get<int32>());
+	Cast<ITestbed2ManyParamInterface>(p.GetObject())->SetProp2(j.at("prop2").get<int32>());
+	Cast<ITestbed2ManyParamInterface>(p.GetObject())->SetProp3(j.at("prop3").get<int32>());
+	Cast<ITestbed2ManyParamInterface>(p.GetObject())->SetProp4(j.at("prop4").get<int32>());
+}
+
+static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2ManyParamInterface>& p)
+{
+	j = nlohmann::json{{"prop1", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp2()}, {"prop3", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp3()}, {"prop4", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp4()}};
+}
+
+static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct1Interface>& p)
+{
+	Cast<ITestbed2NestedStruct1Interface>(p.GetObject())->SetProp1(j.at("prop1").get<FTestbed2NestedStruct1>());
+}
+
+static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct1Interface>& p)
+{
+	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct1Interface>(p.GetObject())->GetProp1()}};
+}
+
+static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct2Interface>& p)
+{
+	Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->SetProp1(j.at("prop1").get<FTestbed2NestedStruct1>());
+	Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->SetProp2(j.at("prop2").get<FTestbed2NestedStruct2>());
+}
+
+static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct2Interface>& p)
+{
+	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp2()}};
+}
+
+static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct3Interface>& p)
+{
+	Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->SetProp1(j.at("prop1").get<FTestbed2NestedStruct1>());
+	Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->SetProp2(j.at("prop2").get<FTestbed2NestedStruct2>());
+	Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->SetProp3(j.at("prop3").get<FTestbed2NestedStruct3>());
+}
+
+static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct3Interface>& p)
+{
+	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp2()}, {"prop3", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp3()}};
 }

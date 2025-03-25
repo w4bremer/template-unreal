@@ -133,5 +133,18 @@ if [ $? -ne 0 ]; then cleanup && exit 1; fi;
 buildUEplugin "$script_path/Plugins/Counter/Counter.uplugin" "$script_path/build/Plugins/Counter"
 if [ $buildresult -ne 0 ]; then cleanup && exit 1; fi;
 
+# Building and testing TbRefInterfaces module
+buildUEplugin "$script_path/Plugins/TbRefInterfaces/TbRefInterfaces.uplugin" "$script_path/build/Plugins/TbRefInterfaces"
+if [ $buildresult -ne 0 ]; then cleanup && exit 1; fi;
+
+# Building and testing TbRefInterfacesImport module
+buildUEplugin "$script_path/Plugins/TbRefInterfacesImport/TbRefInterfacesImport.uplugin" "$script_path/build/Plugins/TbRefInterfacesImport"
+if [ $buildresult -ne 0 ]; then cleanup && exit 1; fi;
+
+# copy TbRefInterfacesImport plugin to UE installation for use by other plugins
+TbRefInterfacesImportPluginTarget_path=$ApiGearTarget_path/TbRefInterfacesImport
+mkdir -p "$TbRefInterfacesImportPluginTarget_path" && cp -rf "$script_path/build/Plugins/TbRefInterfacesImport" "$TbRefInterfacesImportPluginTarget_path" 1>&-
+if [ $? -ne 0 ]; then cleanup && exit 1; fi;
+
 
 cleanup

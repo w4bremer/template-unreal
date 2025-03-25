@@ -1,0 +1,67 @@
+
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "TbRefInterfaces",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"EnabledByDefault" : true,
+	"Modules": [
+		{
+			"Name": "TbRefInterfacesAPI",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name": "TbRefInterfacesCore",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name": "TbRefInterfacesImplementation",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name": "TbRefInterfacesOLink",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name": "TbRefInterfacesMonitor",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name": "TbRefInterfacesMsgBus",
+			"Type": "Runtime",
+			"LoadingPhase": "default"
+		},
+		{
+			"Name" : "TbRefInterfacesEditor",
+			"Type" : "Editor",
+			"LoadingPhase" : "default",
+			"PlatformAllowList" : [ "Win64", "Mac", "Linux" ]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ApiGear",
+			"Enabled": true
+		},
+		{
+			"Name": "TbRefInterfacesImport",
+			"Enabled": true
+		}
+	]
+}

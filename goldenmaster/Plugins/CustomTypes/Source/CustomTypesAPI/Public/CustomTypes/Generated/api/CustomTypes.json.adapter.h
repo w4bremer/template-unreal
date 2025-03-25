@@ -2,6 +2,7 @@
 
 #include "apigear.json.adapter.h"
 #include "CustomTypes/Generated/api/CustomTypes_data.h"
+//[]*model.Import(nil)
 
 static void from_json(const nlohmann::json& j, FCustomTypesVector3D& p)
 {
