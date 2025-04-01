@@ -270,6 +270,12 @@ features:
           - source: "module/Source/module/Private/Implementation/implementation.cpp.tpl"
             target: "Source/{{Camel .Module.Name}}/Private/Implementation/{{Camel .Module.Name}}{{Camel .Interface.Name}}.cpp"
             preserve: true
+          - source: "module/Source/module/Public/Implementation/implementationbpbase.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Public/Implementation/{{Camel .Module.Name}}{{Camel .Interface.Name}}BPBase.h"
+            preserve: false
+          - source: "module/Source/module/Private/Implementation/implementationbpbase.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/Implementation/{{Camel .Module.Name}}{{Camel .Interface.Name}}BPBase.cpp"
+            preserve: false
           - source: "module/Source/module/Private/Tests/implementation.spec.h.tpl"
             target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}Impl.spec.h"
             preserve: true
@@ -281,6 +287,18 @@ features:
             preserve: true
           - source: "module/Source/module/Private/Tests/implementationfixture.cpp.tpl"
             target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}ImplFixture.cpp"
+            preserve: true
+          - source: "module/Source/module/Private/Tests/implementationbp.spec.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}ImplBP.spec.h"
+            preserve: true
+          - source: "module/Source/module/Private/Tests/implementationbp.spec.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}ImplBP.spec.cpp"
+            preserve: true
+          - source: "module/Source/module/Private/Tests/implementationbpfixture.h.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}ImplBPFixture.h"
+            preserve: true
+          - source: "module/Source/module/Private/Tests/implementationbpfixture.cpp.tpl"
+            target: "Source/{{Camel .Module.Name}}/Private/Tests/{{Camel .Module.Name}}{{Camel .Interface.Name}}ImplBPFixture.cpp"
             preserve: true
   - name: plugin
     scopes:

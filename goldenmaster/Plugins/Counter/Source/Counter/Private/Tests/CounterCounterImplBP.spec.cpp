@@ -1,0 +1,169 @@
+/**
+Copyright 2021 ApiGear UG
+Copyright 2021 Epic Games, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+#include "CounterCounterImplBP.spec.h"
+#include "Implementation/CounterCounter.h"
+#include "CounterCounterImplBPFixture.h"
+#include "CustomTypes/Private/Tests/CustomTypesTestsCommon.h"
+#include "ExternTypes/Private/Tests/ExternTypesTestsCommon.h"
+#include "Misc/AutomationTest.h"
+
+#if WITH_DEV_AUTOMATION_TESTS
+
+void UCounterCounterBPBaseImplSpec::Define()
+{
+	BeforeEach([this]()
+		{
+		ImplBPFixture = MakeUnique<FCounterCounterImplBPFixture>();
+		TestTrue("Check for valid ImplBPFixture", ImplBPFixture.IsValid());
+
+		TestTrue("Check for valid testImplementation", ImplBPFixture->GetImplementation().GetInterface() != nullptr);
+
+		TestTrue("Check for valid Helper", ImplBPFixture->GetHelper().IsValid());
+		ImplBPFixture->GetHelper()->SetSpec(this);
+	});
+
+	AfterEach([this]()
+		{
+		ImplBPFixture.Reset();
+	});
+
+	It("Property.Vector.Default", [this]()
+		{
+		// Do implement test here
+		FCustomTypesVector3D TestValue = FCustomTypesVector3D(); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetVector(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	});
+
+	LatentIt("Property.Vector.Change", EAsyncExecution::ThreadPool, [this](const FDoneDelegate TestDone)
+		{
+		// Do implement test here
+		FCustomTypesVector3D TestValue = FCustomTypesVector3D(); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetVector(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+
+		testDoneDelegate = TestDone;
+		UCounterCounterSignals* CounterCounterSignals = ImplBPFixture->GetImplementation()->Execute__GetSignals(ImplBPFixture->GetImplementation().GetObject());
+		CounterCounterSignals->OnVectorChanged.AddDynamic(ImplBPFixture->GetHelper().Get(), &UCounterCounterBPBaseImplHelper::VectorPropertyCb);
+		// use different test value
+		TestValue = createTestFCustomTypesVector3D();
+		ImplBPFixture->GetImplementation()->Execute_SetVector(ImplBPFixture->GetImplementation().GetObject(), TestValue);
+	});
+
+	It("Property.ExternVector.Default", [this]()
+		{
+		// Do implement test here
+		FVector TestValue = FVector(0.f, 0.f, 0.f); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetExternVector(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	});
+
+	It("Property.VectorArray.Default", [this]()
+		{
+		// Do implement test here
+		TArray<FCustomTypesVector3D> TestValue = TArray<FCustomTypesVector3D>(); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetVectorArray(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	});
+
+	LatentIt("Property.VectorArray.Change", EAsyncExecution::ThreadPool, [this](const FDoneDelegate TestDone)
+		{
+		// Do implement test here
+		TArray<FCustomTypesVector3D> TestValue = TArray<FCustomTypesVector3D>(); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetVectorArray(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+
+		testDoneDelegate = TestDone;
+		UCounterCounterSignals* CounterCounterSignals = ImplBPFixture->GetImplementation()->Execute__GetSignals(ImplBPFixture->GetImplementation().GetObject());
+		CounterCounterSignals->OnVectorArrayChanged.AddDynamic(ImplBPFixture->GetHelper().Get(), &UCounterCounterBPBaseImplHelper::VectorArrayPropertyCb);
+		// use different test value
+		TestValue = createTestFCustomTypesVector3DArray();
+		ImplBPFixture->GetImplementation()->Execute_SetVectorArray(ImplBPFixture->GetImplementation().GetObject(), TestValue);
+	});
+
+	It("Property.ExternVectorArray.Default", [this]()
+		{
+		// Do implement test here
+		TArray<FVector> TestValue = TArray<FVector>(); // default value
+		TestEqual(TEXT("Getter should return the default value"), ImplBPFixture->GetImplementation()->Execute_GetExternVectorArray(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	});
+
+	It("Operation.Increment", [this]()
+		{
+		// Do implement test here
+		ImplBPFixture->GetImplementation()->Execute_Increment(ImplBPFixture->GetImplementation().GetObject(), FVector(0.f, 0.f, 0.f));
+	});
+
+	It("Operation.IncrementArray", [this]()
+		{
+		// Do implement test here
+		ImplBPFixture->GetImplementation()->Execute_IncrementArray(ImplBPFixture->GetImplementation().GetObject(), TArray<FVector>());
+	});
+
+	It("Operation.Decrement", [this]()
+		{
+		// Do implement test here
+		ImplBPFixture->GetImplementation()->Execute_Decrement(ImplBPFixture->GetImplementation().GetObject(), FCustomTypesVector3D());
+	});
+
+	It("Operation.DecrementArray", [this]()
+		{
+		// Do implement test here
+		ImplBPFixture->GetImplementation()->Execute_DecrementArray(ImplBPFixture->GetImplementation().GetObject(), TArray<FCustomTypesVector3D>());
+	});
+
+	LatentIt("Signal.ValueChanged", EAsyncExecution::ThreadPool, [this](const FDoneDelegate TestDone)
+		{
+		testDoneDelegate = TestDone;
+		UCounterCounterSignals* CounterCounterSignals = ImplBPFixture->GetImplementation()->Execute__GetSignals(ImplBPFixture->GetImplementation().GetObject());
+		CounterCounterSignals->OnValueChangedSignal.AddDynamic(ImplBPFixture->GetHelper().Get(), &UCounterCounterBPBaseImplHelper::ValueChangedSignalCb);
+
+		// use different test value
+		FCustomTypesVector3D VectorTestValue = createTestFCustomTypesVector3D();
+		FVector ExternVectorTestValue = FVector(0.f, 0.f, 0.f);
+		TArray<FCustomTypesVector3D> VectorArrayTestValue = createTestFCustomTypesVector3DArray();
+		TArray<FVector> ExternVectorArrayTestValue = TArray<FVector>();
+		CounterCounterSignals->BroadcastValueChangedSignal(VectorTestValue, ExternVectorTestValue, VectorArrayTestValue, ExternVectorArrayTestValue);
+	});
+}
+
+void UCounterCounterBPBaseImplSpec::VectorPropertyCb(const FCustomTypesVector3D& InVector)
+{
+	FCustomTypesVector3D TestValue = FCustomTypesVector3D();
+	// use different test value
+	TestValue = createTestFCustomTypesVector3D();
+	TestEqual(TEXT("Delegate parameter should be the same value as set by the setter"), InVector, TestValue);
+	TestEqual(TEXT("Getter should return the same value as set by the setter"), ImplBPFixture->GetImplementation()->Execute_GetVector(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	testDoneDelegate.Execute();
+}
+
+void UCounterCounterBPBaseImplSpec::VectorArrayPropertyCb(const TArray<FCustomTypesVector3D>& InVectorArray)
+{
+	TArray<FCustomTypesVector3D> TestValue = TArray<FCustomTypesVector3D>();
+	// use different test value
+	TestValue = createTestFCustomTypesVector3DArray();
+	TestEqual(TEXT("Delegate parameter should be the same value as set by the setter"), InVectorArray, TestValue);
+	TestEqual(TEXT("Getter should return the same value as set by the setter"), ImplBPFixture->GetImplementation()->Execute_GetVectorArray(ImplBPFixture->GetImplementation().GetObject()), TestValue);
+	testDoneDelegate.Execute();
+}
+
+void UCounterCounterBPBaseImplSpec::ValueChangedSignalCb(const FCustomTypesVector3D& InVector, const FVector& InExternVector, const TArray<FCustomTypesVector3D>& InVectorArray, const TArray<FVector>& InExternVectorArray)
+{
+	// known test value
+	FCustomTypesVector3D VectorTestValue = createTestFCustomTypesVector3D();
+	TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InVector, VectorTestValue);
+	TArray<FCustomTypesVector3D> VectorArrayTestValue = createTestFCustomTypesVector3DArray();
+	TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InVectorArray, VectorArrayTestValue);
+	testDoneDelegate.Execute();
+}
+#endif // WITH_DEV_AUTOMATION_TESTS
