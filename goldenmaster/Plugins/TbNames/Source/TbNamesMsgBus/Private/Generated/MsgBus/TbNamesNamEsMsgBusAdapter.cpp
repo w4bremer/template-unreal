@@ -137,7 +137,7 @@ bool UTbNamesNamEsMsgBusAdapter::_IsListening() const
 	return TbNamesNamEsMsgBusEndpoint.IsValid();
 }
 
-void UTbNamesNamEsMsgBusAdapter::_setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService)
+void UTbNamesNamEsMsgBusAdapter::_setBackendService(TScriptInterface<ITbNamesNamEs> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

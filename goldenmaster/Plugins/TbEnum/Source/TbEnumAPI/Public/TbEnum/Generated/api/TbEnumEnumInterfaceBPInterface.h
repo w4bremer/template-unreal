@@ -22,18 +22,18 @@ limitations under the License.
 #include "TbEnumEnumInterfaceBPInterface.generated.h"
 
 /**
- * Interface UTbEnumEnumInterfaceBPInterface only for Unreal Engine's reflection system
+ * Interface UTbEnumEnumInterfaceBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTbEnumEnumInterfaceBPInterface : public UInterface
+class UTbEnumEnumInterfaceBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbEnumEnumInterfaceBPInterface
+ * Interface ITbEnumEnumInterfaceBP
  */
-class TBENUMAPI_API ITbEnumEnumInterfaceBPInterface
+class TBENUMAPI_API ITbEnumEnumInterfaceBP
 {
 	GENERATED_BODY()
 

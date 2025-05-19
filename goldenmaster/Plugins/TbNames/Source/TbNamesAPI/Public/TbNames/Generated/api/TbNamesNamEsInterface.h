@@ -41,7 +41,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTbNamesNamEsEnumPropertyChangedDelegate, ET
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbNamesNamEsEnumPropertyChangedDelegateBP, ETbNamesEnum_With_Under_scores, EnumProperty);
 
 /**
- * Class UTbNamesNamEsInterfaceSignals
+ * Class UTbNamesNamEsSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -119,19 +119,19 @@ public:
 };
 
 /**
- * Interface UTbNamesNamEsInterface only for Unreal Engine's reflection system
+ * Interface UTbNamesNamEs only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTbNamesNamEsInterface : public UInterface
+class UTbNamesNamEs : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbNamesNamEsInterface
+ * Interface ITbNamesNamEs
  */
-class TBNAMESAPI_API ITbNamesNamEsInterface
+class TBNAMESAPI_API ITbNamesNamEs
 {
 	GENERATED_BODY()
 

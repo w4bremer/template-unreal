@@ -139,7 +139,7 @@ bool UCounterCounterMsgBusAdapter::_IsListening() const
 	return CounterCounterMsgBusEndpoint.IsValid();
 }
 
-void UCounterCounterMsgBusAdapter::_setBackendService(TScriptInterface<ICounterCounterInterface> InService)
+void UCounterCounterMsgBusAdapter::_setBackendService(TScriptInterface<ICounterCounter> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

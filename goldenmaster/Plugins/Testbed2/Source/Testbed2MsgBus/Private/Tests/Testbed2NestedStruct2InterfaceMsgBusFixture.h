@@ -11,7 +11,7 @@
 #include "Testbed2/Generated/api/Testbed2_data.h"
 
 class UTestbed2NestedStruct2InterfaceMsgBusSpec;
-class ITestbed2NestedStruct2InterfaceInterface;
+class ITestbed2NestedStruct2Interface;
 class UTestbed2NestedStruct2InterfaceMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FTestbed2NestedStruct2InterfaceMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> GetImplementation();
+	TScriptInterface<ITestbed2NestedStruct2Interface> GetImplementation();
 	UTestbed2NestedStruct2InterfaceMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> testImplementation;
+	TScriptInterface<ITestbed2NestedStruct2Interface> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

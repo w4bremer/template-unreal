@@ -216,7 +216,7 @@ FTbSimpleSimpleInterfaceImplFixture::~FTbSimpleSimpleInterfaceImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleSimpleInterfaceInterface> FTbSimpleSimpleInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleSimpleInterface> FTbSimpleSimpleInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

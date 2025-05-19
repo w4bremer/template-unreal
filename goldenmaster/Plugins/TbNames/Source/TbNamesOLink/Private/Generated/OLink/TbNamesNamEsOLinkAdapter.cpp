@@ -52,7 +52,7 @@ void UTbNamesNamEsOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTbNamesNamEsOLinkAdapter::setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService)
+void UTbNamesNamEsOLinkAdapter::setBackendService(TScriptInterface<ITbNamesNamEs> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -170,7 +170,7 @@ void UTbNamesNamEsOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTbNamesNamEsOLinkAdapter::setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService)
+void UTbNamesNamEsOLinkAdapter::setBackendService(TScriptInterface<ITbNamesNamEs> InService)
 {
 }
 

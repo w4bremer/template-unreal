@@ -11,7 +11,7 @@
 #include "TbSame2SameEnum2InterfaceImplFixture.generated.h"
 
 class FTbSame2SameEnum2InterfaceImplFixture;
-class ITbSame2SameEnum2InterfaceInterface;
+class ITbSame2SameEnum2Interface;
 
 UCLASS()
 class UTbSame2SameEnum2InterfaceImplHelper : public UObject
@@ -49,14 +49,14 @@ public:
 	~FTbSame2SameEnum2InterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSame2SameEnum2InterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSame2SameEnum2Interface> GetImplementation();
 	TSoftObjectPtr<UTbSame2SameEnum2InterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSame2SameEnum2InterfaceInterface> testImplementation;
+	TScriptInterface<ITbSame2SameEnum2Interface> testImplementation;
 	TSoftObjectPtr<UTbSame2SameEnum2InterfaceImplHelper> Helper;
 };
 

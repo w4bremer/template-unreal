@@ -40,7 +40,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FCounterCounterExternVectorArrayChangedDeleg
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCounterCounterExternVectorArrayChangedDelegateBP, const TArray<FVector>&, ExternVectorArray);
 
 /**
- * Class UCounterCounterInterfaceSignals
+ * Class UCounterCounterSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -107,19 +107,19 @@ public:
 };
 
 /**
- * Interface UCounterCounterInterface only for Unreal Engine's reflection system
+ * Interface UCounterCounter only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UCounterCounterInterface : public UInterface
+class UCounterCounter : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ICounterCounterInterface
+ * Interface ICounterCounter
  */
-class COUNTERAPI_API ICounterCounterInterface
+class COUNTERAPI_API ICounterCounter
 {
 	GENERATED_BODY()
 

@@ -12,7 +12,7 @@
 #include "TbEnum/Generated/api/TbEnum_data.h"
 
 class FTbEnumEnumInterfaceOLinkFixture;
-class ITbEnumEnumInterfaceInterface;
+class ITbEnumEnumInterface;
 class UTbEnumEnumInterfaceOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FTbEnumEnumInterfaceOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbEnumEnumInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbEnumEnumInterface> GetImplementation();
 	UOLinkHost* GetHost();
 	UTbEnumEnumInterfaceOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbEnumEnumInterfaceInterface> testImplementation;
+	TScriptInterface<ITbEnumEnumInterface> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

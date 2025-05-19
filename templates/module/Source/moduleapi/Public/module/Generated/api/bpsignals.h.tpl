@@ -28,7 +28,7 @@ limitations under the License.
 {{- with .Interface }}
 {{- $Class := printf "%s%s" $ModuleName (Camel .Name) }}
 {{- $Category := printf "ApiGear Helper|%s|%s" $ModuleName (Camel .Name) }}
-{{- $class := printf "U%sInterface" $Class }}
+{{- $class := printf "U%s" $Class }}
 {{- $Iface := printf "%s%s" $ModuleName (Camel .Name) }}
 {{- range .Module.Imports }}
 #include "{{Camel .Name}}/Generated/api/{{Camel .Name}}_data.h"
@@ -43,12 +43,12 @@ limitations under the License.
  * Does contain signal events, property-changed events and void-function events only.
  */
 UINTERFACE(BlueprintType)
-class U{{$Class}}BPSignalsInterface : public UInterface
+class U{{$Class}}BPSignals : public UInterface
 {
 	GENERATED_BODY()
 };
 
-class {{$API_MACRO}} I{{$Class}}BPSignalsInterface
+class {{$API_MACRO}} I{{$Class}}BPSignals
 {
 	GENERATED_BODY()
 

@@ -26,7 +26,7 @@ limitations under the License.
 
 void FTbNamesOLinkModule::StartupModule()
 {
-	FTbNamesModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbNamesNamEsInterface>
+	FTbNamesModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbNamesNamEs>
 		{
 		return Cast<UTbNamesNamEsOLinkClient>(Collection.InitializeDependency(UTbNamesNamEsOLinkClient::StaticClass()));
 	});

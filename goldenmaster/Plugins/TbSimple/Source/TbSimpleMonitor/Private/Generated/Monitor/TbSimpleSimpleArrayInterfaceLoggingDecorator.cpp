@@ -33,7 +33,7 @@ UTbSimpleSimpleArrayInterfaceLoggingDecorator::~UTbSimpleSimpleArrayInterfaceLog
 void UTbSimpleSimpleArrayInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceInterfaceForLogging(Collection));
+	setBackendService(UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceForLogging(Collection));
 }
 
 void UTbSimpleSimpleArrayInterfaceLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTbSimpleSimpleArrayInterfaceLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTbSimpleSimpleArrayInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> InService)
+void UTbSimpleSimpleArrayInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbSimpleSimpleArrayInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

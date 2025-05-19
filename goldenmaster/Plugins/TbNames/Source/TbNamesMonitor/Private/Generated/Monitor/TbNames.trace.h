@@ -6,7 +6,7 @@ class TbNamesNamEsTracer
 {
 public:
 	TbNamesNamEsTracer();
-	static void capture_state(UObject* Object, ITbNamesNamEsInterface* obj);
+	static void capture_state(UObject* Object, ITbNamesNamEs* obj);
 	static void trace_callSetSwitch(bool bInSwitch);
 	static void trace_callSetSomeProperty(int32 InSomeProperty);
 	static void trace_callSetSomePoperty2(int32 InSomePoperty2);

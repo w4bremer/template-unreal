@@ -25,7 +25,7 @@ limitations under the License.
 const FString TbEnumLocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITbEnumEnumInterfaceInterface;
+class ITbEnumEnumInterface;
 
 /**
  * Implements the settings for the TbEnum plugin.
@@ -48,7 +48,7 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITbEnumEnumInterfaceInterface> GetITbEnumEnumInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbEnumEnumInterface> GetITbEnumEnumInterfaceForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

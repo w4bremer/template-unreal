@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTbSimpleVoidInterface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TBSIMPLEAPI_API UAbstractTbSimpleVoidInterface : public UGameInstanceSubsystem, public ITbSimpleVoidInterfaceInterface
+class TBSIMPLEAPI_API UAbstractTbSimpleVoidInterface : public UGameInstanceSubsystem, public ITbSimpleVoidInterface
 {
 	GENERATED_BODY()
 

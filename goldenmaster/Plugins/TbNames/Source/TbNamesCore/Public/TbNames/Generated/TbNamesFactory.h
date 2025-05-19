@@ -22,7 +22,7 @@ limitations under the License.
 
 class UGameInstance;
 class FSubsystemCollectionBase;
-class ITbNamesNamEsInterface;
+class ITbNamesNamEs;
 
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbNamesModuleFactory, Log, All);
@@ -31,11 +31,11 @@ class TBNAMESCORE_API FTbNamesModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
-	using FTbNamesNamEsFactoryFunction = TFunction<TScriptInterface<ITbNamesNamEsInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbNamesNamEsFactoryFunction = TFunction<TScriptInterface<ITbNamesNamEs>(FSubsystemCollectionBase& Collection)>;
 
 	/** register factories for different types of implementations and interfaces */
 	static bool RegisterFactory(FString TypeIdentifier, FTbNamesNamEsFactoryFunction FactoryFunction);
-	static TScriptInterface<ITbNamesNamEsInterface> GetTbNamesNamEsImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbNamesNamEs> GetTbNamesNamEsImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 
 private:
 	static TMap<FString, FTbNamesModuleFactory::FTbNamesNamEsFactoryFunction> TbNamesNamEsFactories;

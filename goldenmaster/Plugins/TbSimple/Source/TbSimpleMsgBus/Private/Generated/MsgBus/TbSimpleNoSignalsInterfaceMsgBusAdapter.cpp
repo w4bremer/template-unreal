@@ -135,7 +135,7 @@ bool UTbSimpleNoSignalsInterfaceMsgBusAdapter::_IsListening() const
 	return TbSimpleNoSignalsInterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTbSimpleNoSignalsInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> InService)
+void UTbSimpleNoSignalsInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSimpleNoSignalsInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

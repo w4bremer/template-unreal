@@ -11,7 +11,7 @@
 #include "TbEnum/Generated/api/TbEnum_data.h"
 
 class UTbEnumEnumInterfaceMsgBusSpec;
-class ITbEnumEnumInterfaceInterface;
+class ITbEnumEnumInterface;
 class UTbEnumEnumInterfaceMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FTbEnumEnumInterfaceMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbEnumEnumInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbEnumEnumInterface> GetImplementation();
 	UTbEnumEnumInterfaceMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbEnumEnumInterfaceInterface> testImplementation;
+	TScriptInterface<ITbEnumEnumInterface> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

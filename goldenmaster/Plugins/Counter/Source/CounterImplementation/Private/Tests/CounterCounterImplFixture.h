@@ -11,7 +11,7 @@
 #include "CounterCounterImplFixture.generated.h"
 
 class FCounterCounterImplFixture;
-class ICounterCounterInterface;
+class ICounterCounter;
 
 UCLASS()
 class UCounterCounterImplHelper : public UObject
@@ -46,14 +46,14 @@ public:
 	~FCounterCounterImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ICounterCounterInterface> GetImplementation();
+	TScriptInterface<ICounterCounter> GetImplementation();
 	TSoftObjectPtr<UCounterCounterImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ICounterCounterInterface> testImplementation;
+	TScriptInterface<ICounterCounter> testImplementation;
 	TSoftObjectPtr<UCounterCounterImplHelper> Helper;
 };
 

@@ -6,7 +6,7 @@ TbEnumEnumInterfaceTracer::TbEnumEnumInterfaceTracer()
 {
 }
 
-void TbEnumEnumInterfaceTracer::capture_state(UObject* Object, ITbEnumEnumInterfaceInterface* obj)
+void TbEnumEnumInterfaceTracer::capture_state(UObject* Object, ITbEnumEnumInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop0"] = obj->GetProp0();

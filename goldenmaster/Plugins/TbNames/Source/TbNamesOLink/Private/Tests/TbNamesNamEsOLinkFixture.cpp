@@ -42,7 +42,7 @@ FTbNamesNamEsOLinkFixture::~FTbNamesNamEsOLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbNamesNamEsInterface> FTbNamesNamEsOLinkFixture::GetImplementation()
+TScriptInterface<ITbNamesNamEs> FTbNamesNamEsOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

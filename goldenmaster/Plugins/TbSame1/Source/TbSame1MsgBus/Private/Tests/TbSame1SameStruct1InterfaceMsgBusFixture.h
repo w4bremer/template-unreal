@@ -11,7 +11,7 @@
 #include "TbSame1/Generated/api/TbSame1_data.h"
 
 class UTbSame1SameStruct1InterfaceMsgBusSpec;
-class ITbSame1SameStruct1InterfaceInterface;
+class ITbSame1SameStruct1Interface;
 class UTbSame1SameStruct1InterfaceMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FTbSame1SameStruct1InterfaceMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSame1SameStruct1InterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSame1SameStruct1Interface> GetImplementation();
 	UTbSame1SameStruct1InterfaceMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSame1SameStruct1InterfaceInterface> testImplementation;
+	TScriptInterface<ITbSame1SameStruct1Interface> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

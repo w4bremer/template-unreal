@@ -42,7 +42,7 @@ FTbEnumEnumInterfaceOLinkFixture::~FTbEnumEnumInterfaceOLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbEnumEnumInterfaceInterface> FTbEnumEnumInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITbEnumEnumInterface> FTbEnumEnumInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

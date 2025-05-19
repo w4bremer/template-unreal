@@ -28,12 +28,12 @@ limitations under the License.
  * Does contain signal events, property-changed events and void-function events only.
  */
 UINTERFACE(BlueprintType)
-class UCounterCounterBPSignalsInterface : public UInterface
+class UCounterCounterBPSignals : public UInterface
 {
 	GENERATED_BODY()
 };
 
-class COUNTERAPI_API ICounterCounterBPSignalsInterface
+class COUNTERAPI_API ICounterCounterBPSignals
 {
 	GENERATED_BODY()
 

@@ -48,7 +48,7 @@ TbSame2SameEnum2InterfaceOLinkSource::TbSame2SameEnum2InterfaceOLinkSource()
 {
 }
 
-void TbSame2SameEnum2InterfaceOLinkSource::setBackendService(TScriptInterface<ITbSame2SameEnum2InterfaceInterface> InService)
+void TbSame2SameEnum2InterfaceOLinkSource::setBackendService(TScriptInterface<ITbSame2SameEnum2Interface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

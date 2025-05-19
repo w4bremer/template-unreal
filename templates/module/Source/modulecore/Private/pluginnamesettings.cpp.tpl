@@ -72,10 +72,10 @@ void U{{$ModuleName}}Settings::ValidateSettingsPostEngineInit()
 {{- range .Module.Interfaces }}
 {{- if $.Features.monitor }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-{{- $iclass := printf "I%sInterface" $class }}
+{{- $iclass := printf "I%s" $class }}
 {{- $DisplayName := printf "%s%s" $ModuleName (Camel .Name) }}
 
-TScriptInterface<I{{$class}}Interface> U{{$ModuleName}}Settings::Get{{$iclass}}ForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<I{{$class}}> U{{$ModuleName}}Settings::Get{{$iclass}}ForLogging(FSubsystemCollectionBase& Collection)
 {
 {{- if or $.Features.stubs $.Features.olink }}
 	U{{$ModuleName}}Settings* {{$ModuleName}}Settings = GetMutableDefault<U{{$ModuleName}}Settings>();

@@ -28,15 +28,15 @@ limitations under the License.
 
 void FTestbed1ImplementationModule::StartupModule()
 {
-	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructInterfaceInterface>
+	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructInterface>
 		{
 		return Cast<UTestbed1StructInterfaceImplementation>(Collection.InitializeDependency(UTestbed1StructInterfaceImplementation::StaticClass()));
 	});
-	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructArrayInterfaceInterface>
+	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructArrayInterface>
 		{
 		return Cast<UTestbed1StructArrayInterfaceImplementation>(Collection.InitializeDependency(UTestbed1StructArrayInterfaceImplementation::StaticClass()));
 	});
-	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructArray2InterfaceInterface>
+	FTestbed1ModuleFactory::RegisterFactory(Testbed1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITestbed1StructArray2Interface>
 		{
 		return Cast<UTestbed1StructArray2InterfaceImplementation>(Collection.InitializeDependency(UTestbed1StructArray2InterfaceImplementation::StaticClass()));
 	});

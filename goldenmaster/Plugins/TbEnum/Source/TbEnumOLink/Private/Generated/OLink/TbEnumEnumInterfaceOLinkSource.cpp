@@ -48,7 +48,7 @@ TbEnumEnumInterfaceOLinkSource::TbEnumEnumInterfaceOLinkSource()
 {
 }
 
-void TbEnumEnumInterfaceOLinkSource::setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService)
+void TbEnumEnumInterfaceOLinkSource::setBackendService(TScriptInterface<ITbEnumEnumInterface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

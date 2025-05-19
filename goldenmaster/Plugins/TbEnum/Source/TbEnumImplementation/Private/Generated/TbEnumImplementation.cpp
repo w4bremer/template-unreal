@@ -26,7 +26,7 @@ limitations under the License.
 
 void FTbEnumImplementationModule::StartupModule()
 {
-	FTbEnumModuleFactory::RegisterFactory(TbEnumLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbEnumEnumInterfaceInterface>
+	FTbEnumModuleFactory::RegisterFactory(TbEnumLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbEnumEnumInterface>
 		{
 		return Cast<UTbEnumEnumInterfaceImplementation>(Collection.InitializeDependency(UTbEnumEnumInterfaceImplementation::StaticClass()));
 	});

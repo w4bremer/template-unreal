@@ -42,7 +42,7 @@ FTestbed2ManyParamInterfaceMsgBusFixture::~FTestbed2ManyParamInterfaceMsgBusFixt
 	CleanUp();
 }
 
-TScriptInterface<ITestbed2ManyParamInterfaceInterface> FTestbed2ManyParamInterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITestbed2ManyParamInterface> FTestbed2ManyParamInterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

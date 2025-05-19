@@ -42,7 +42,7 @@ FCounterCounterOLinkFixture::~FCounterCounterOLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<ICounterCounterInterface> FCounterCounterOLinkFixture::GetImplementation()
+TScriptInterface<ICounterCounter> FCounterCounterOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

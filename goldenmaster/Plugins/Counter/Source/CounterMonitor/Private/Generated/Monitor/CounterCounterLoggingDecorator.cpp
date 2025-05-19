@@ -33,7 +33,7 @@ UCounterCounterLoggingDecorator::~UCounterCounterLoggingDecorator() = default;
 void UCounterCounterLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UCounterSettings::GetICounterCounterInterfaceForLogging(Collection));
+	setBackendService(UCounterSettings::GetICounterCounterForLogging(Collection));
 }
 
 void UCounterCounterLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UCounterCounterLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UCounterCounterLoggingDecorator::setBackendService(TScriptInterface<ICounterCounterInterface> InService)
+void UCounterCounterLoggingDecorator::setBackendService(TScriptInterface<ICounterCounter> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

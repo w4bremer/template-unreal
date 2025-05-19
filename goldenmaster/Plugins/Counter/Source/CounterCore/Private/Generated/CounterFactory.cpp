@@ -38,7 +38,7 @@ bool FCounterModuleFactory::RegisterFactory(FString TypeIdentifier, FCounterCoun
 	return true;
 }
 
-TScriptInterface<ICounterCounterInterface> FCounterModuleFactory::GetCounterCounterImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ICounterCounter> FCounterModuleFactory::GetCounterCounterImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (CounterCounterFactories.Contains(UniqueImplementationIdentifier))
 	{

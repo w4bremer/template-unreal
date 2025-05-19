@@ -33,7 +33,7 @@ UTestbed2ManyParamInterfaceLoggingDecorator::~UTestbed2ManyParamInterfaceLogging
 void UTestbed2ManyParamInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTestbed2Settings::GetITestbed2ManyParamInterfaceInterfaceForLogging(Collection));
+	setBackendService(UTestbed2Settings::GetITestbed2ManyParamInterfaceForLogging(Collection));
 }
 
 void UTestbed2ManyParamInterfaceLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTestbed2ManyParamInterfaceLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTestbed2ManyParamInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService)
+void UTestbed2ManyParamInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

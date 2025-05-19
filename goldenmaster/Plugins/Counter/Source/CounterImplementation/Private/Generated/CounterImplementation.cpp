@@ -26,7 +26,7 @@ limitations under the License.
 
 void FCounterImplementationModule::StartupModule()
 {
-	FCounterModuleFactory::RegisterFactory(CounterLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ICounterCounterInterface>
+	FCounterModuleFactory::RegisterFactory(CounterLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ICounterCounter>
 		{
 		return Cast<UCounterCounterImplementation>(Collection.InitializeDependency(UCounterCounterImplementation::StaticClass()));
 	});

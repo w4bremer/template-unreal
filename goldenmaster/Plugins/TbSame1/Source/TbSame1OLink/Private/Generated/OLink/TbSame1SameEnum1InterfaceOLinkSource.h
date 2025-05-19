@@ -28,7 +28,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTbSame1SameEnum1InterfaceOLinkSource, Log, All);
-/** @brief handles OLink network interactions specific to ITbSame1SameEnum1InterfaceInterface */
+/** @brief handles OLink network interactions specific to ITbSame1SameEnum1Interface */
 class TbSame1SameEnum1InterfaceOLinkSource : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -36,7 +36,7 @@ public:
 	virtual ~TbSame1SameEnum1InterfaceOLinkSource() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<ITbSame1SameEnum1InterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbSame1SameEnum1Interface> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -61,7 +61,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<ITbSame1SameEnum1InterfaceInterface> BackendService;
+	TScriptInterface<ITbSame1SameEnum1Interface> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

@@ -22,7 +22,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(Log{{$Class}}, Log, All);
-/** @brief handles OLink network interactions specific to I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface */
+/** @brief handles OLink network interactions specific to I{{Camel .Module.Name}}{{Camel .Interface.Name}} */
 class {{$Class}} : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -30,7 +30,7 @@ public:
 	virtual ~{{$Class}}() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService);
+	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -59,7 +59,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> BackendService;
+	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

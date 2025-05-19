@@ -11,7 +11,7 @@
 #include "Testbed2ManyParamInterfaceImplFixture.generated.h"
 
 class FTestbed2ManyParamInterfaceImplFixture;
-class ITestbed2ManyParamInterfaceInterface;
+class ITestbed2ManyParamInterface;
 
 UCLASS()
 class UTestbed2ManyParamInterfaceImplHelper : public UObject
@@ -61,14 +61,14 @@ public:
 	~FTestbed2ManyParamInterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITestbed2ManyParamInterfaceInterface> GetImplementation();
+	TScriptInterface<ITestbed2ManyParamInterface> GetImplementation();
 	TSoftObjectPtr<UTestbed2ManyParamInterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITestbed2ManyParamInterfaceInterface> testImplementation;
+	TScriptInterface<ITestbed2ManyParamInterface> testImplementation;
 	TSoftObjectPtr<UTestbed2ManyParamInterfaceImplHelper> Helper;
 };
 

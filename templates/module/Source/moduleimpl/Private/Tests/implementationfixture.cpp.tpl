@@ -108,7 +108,7 @@ F{{ $DisplayName }}ImplFixture::~F{{ $DisplayName }}ImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<I{{$DisplayName}}Interface> F{{ $DisplayName }}ImplFixture::GetImplementation()
+TScriptInterface<I{{$DisplayName}}> F{{ $DisplayName }}ImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

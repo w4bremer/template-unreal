@@ -132,7 +132,7 @@ FTbEnumEnumInterfaceImplFixture::~FTbEnumEnumInterfaceImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbEnumEnumInterfaceInterface> FTbEnumEnumInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbEnumEnumInterface> FTbEnumEnumInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

@@ -154,7 +154,7 @@ FTestbed1StructArrayInterfaceImplFixture::~FTestbed1StructArrayInterfaceImplFixt
 	CleanUp();
 }
 
-TScriptInterface<ITestbed1StructArrayInterfaceInterface> FTestbed1StructArrayInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITestbed1StructArrayInterface> FTestbed1StructArrayInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

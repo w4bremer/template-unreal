@@ -88,7 +88,7 @@ FTbSimpleNoOperationsInterfaceImplFixture::~FTbSimpleNoOperationsInterfaceImplFi
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> FTbSimpleNoOperationsInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoOperationsInterface> FTbSimpleNoOperationsInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

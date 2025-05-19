@@ -26,7 +26,7 @@ limitations under the License.
 
 void FCounterOLinkModule::StartupModule()
 {
-	FCounterModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ICounterCounterInterface>
+	FCounterModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ICounterCounter>
 		{
 		return Cast<UCounterCounterOLinkClient>(Collection.InitializeDependency(UCounterCounterOLinkClient::StaticClass()));
 	});

@@ -40,7 +40,7 @@ void {{$class}}::StartupModule()
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
 {{- if $.Features.stubs }}
-	{{$classFactory}}::RegisterFactory({{$ModuleName}}LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<I{{$class}}Interface>
+	{{$classFactory}}::RegisterFactory({{$ModuleName}}LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<I{{$class}}>
 		{
 		return Cast<U{{$class}}Implementation>(Collection.InitializeDependency(U{{$class}}Implementation::StaticClass()));
 	});

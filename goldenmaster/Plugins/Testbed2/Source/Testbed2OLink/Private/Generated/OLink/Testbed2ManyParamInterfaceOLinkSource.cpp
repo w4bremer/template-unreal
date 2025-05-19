@@ -48,7 +48,7 @@ Testbed2ManyParamInterfaceOLinkSource::Testbed2ManyParamInterfaceOLinkSource()
 {
 }
 
-void Testbed2ManyParamInterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService)
+void Testbed2ManyParamInterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

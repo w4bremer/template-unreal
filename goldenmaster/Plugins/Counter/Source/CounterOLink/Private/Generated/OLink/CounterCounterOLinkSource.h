@@ -28,7 +28,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogCounterCounterOLinkSource, Log, All);
-/** @brief handles OLink network interactions specific to ICounterCounterInterface */
+/** @brief handles OLink network interactions specific to ICounterCounter */
 class CounterCounterOLinkSource : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -36,7 +36,7 @@ public:
 	virtual ~CounterCounterOLinkSource() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<ICounterCounterInterface> InService);
+	void setBackendService(TScriptInterface<ICounterCounter> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -64,7 +64,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<ICounterCounterInterface> BackendService;
+	TScriptInterface<ICounterCounter> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

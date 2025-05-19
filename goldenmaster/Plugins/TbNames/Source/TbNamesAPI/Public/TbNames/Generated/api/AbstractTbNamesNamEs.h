@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTbNamesNamEs
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TBNAMESAPI_API UAbstractTbNamesNamEs : public UGameInstanceSubsystem, public ITbNamesNamEsInterface
+class TBNAMESAPI_API UAbstractTbNamesNamEs : public UGameInstanceSubsystem, public ITbNamesNamEs
 {
 	GENERATED_BODY()
 

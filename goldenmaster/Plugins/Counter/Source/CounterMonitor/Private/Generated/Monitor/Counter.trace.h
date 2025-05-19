@@ -6,7 +6,7 @@ class CounterCounterTracer
 {
 public:
 	CounterCounterTracer();
-	static void capture_state(UObject* Object, ICounterCounterInterface* obj);
+	static void capture_state(UObject* Object, ICounterCounter* obj);
 	static void trace_callSetVector(const FCustomTypesVector3D& InVector);
 	static void trace_callSetExternVector(const FVector& InExternVector);
 	static void trace_callSetVectorArray(const TArray<FCustomTypesVector3D>& InVectorArray);

@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTestbed2NestedStruct2Interface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TESTBED2API_API UAbstractTestbed2NestedStruct2Interface : public UGameInstanceSubsystem, public ITestbed2NestedStruct2InterfaceInterface
+class TESTBED2API_API UAbstractTestbed2NestedStruct2Interface : public UGameInstanceSubsystem, public ITestbed2NestedStruct2Interface
 {
 	GENERATED_BODY()
 

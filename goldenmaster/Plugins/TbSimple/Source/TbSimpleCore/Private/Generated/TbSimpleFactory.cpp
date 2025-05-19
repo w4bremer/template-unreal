@@ -44,7 +44,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleVo
 	return true;
 }
 
-TScriptInterface<ITbSimpleVoidInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleVoidInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleVoidInterface> FTbSimpleModuleFactory::GetTbSimpleVoidInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleVoidInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -67,7 +67,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleSi
 	return true;
 }
 
-TScriptInterface<ITbSimpleSimpleInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleSimpleInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleSimpleInterface> FTbSimpleModuleFactory::GetTbSimpleSimpleInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleSimpleInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -90,7 +90,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleSi
 	return true;
 }
 
-TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleSimpleArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleSimpleArrayInterface> FTbSimpleModuleFactory::GetTbSimpleSimpleArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleSimpleArrayInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -113,7 +113,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleNo
 	return true;
 }
 
-TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleNoPropertiesInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoPropertiesInterface> FTbSimpleModuleFactory::GetTbSimpleNoPropertiesInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleNoPropertiesInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -136,7 +136,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleNo
 	return true;
 }
 
-TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleNoOperationsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoOperationsInterface> FTbSimpleModuleFactory::GetTbSimpleNoOperationsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleNoOperationsInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -159,7 +159,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleNo
 	return true;
 }
 
-TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleNoSignalsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoSignalsInterface> FTbSimpleModuleFactory::GetTbSimpleNoSignalsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleNoSignalsInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -182,7 +182,7 @@ bool FTbSimpleModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSimpleEm
 	return true;
 }
 
-TScriptInterface<ITbSimpleEmptyInterfaceInterface> FTbSimpleModuleFactory::GetTbSimpleEmptyInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleEmptyInterface> FTbSimpleModuleFactory::GetTbSimpleEmptyInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSimpleEmptyInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{

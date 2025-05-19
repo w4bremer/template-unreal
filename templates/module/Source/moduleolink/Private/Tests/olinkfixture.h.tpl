@@ -16,7 +16,7 @@
 #include "{{$ModuleName}}/Generated/api/{{$ModuleName}}_data.h"
 
 class F{{ $DisplayName }}OLinkFixture;
-class I{{$DisplayName}}Interface;
+class I{{$DisplayName}};
 class U{{$DisplayName}}OLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -37,7 +37,7 @@ public:
 	~F{{ $DisplayName }}OLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<I{{$DisplayName}}Interface> GetImplementation();
+	TScriptInterface<I{{$DisplayName}}> GetImplementation();
 	UOLinkHost* GetHost();
 	{{$Class}}OLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -46,7 +46,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<I{{$DisplayName}}Interface> testImplementation;
+	TScriptInterface<I{{$DisplayName}}> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

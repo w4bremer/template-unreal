@@ -22,18 +22,18 @@ limitations under the License.
 #include "TbSame1SameStruct2InterfaceBPInterface.generated.h"
 
 /**
- * Interface UTbSame1SameStruct2InterfaceBPInterface only for Unreal Engine's reflection system
+ * Interface UTbSame1SameStruct2InterfaceBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTbSame1SameStruct2InterfaceBPInterface : public UInterface
+class UTbSame1SameStruct2InterfaceBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbSame1SameStruct2InterfaceBPInterface
+ * Interface ITbSame1SameStruct2InterfaceBP
  */
-class TBSAME1API_API ITbSame1SameStruct2InterfaceBPInterface
+class TBSAME1API_API ITbSame1SameStruct2InterfaceBP
 {
 	GENERATED_BODY()
 

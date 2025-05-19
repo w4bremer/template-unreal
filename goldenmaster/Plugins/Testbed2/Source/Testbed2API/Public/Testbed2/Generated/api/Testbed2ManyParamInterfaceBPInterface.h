@@ -22,18 +22,18 @@ limitations under the License.
 #include "Testbed2ManyParamInterfaceBPInterface.generated.h"
 
 /**
- * Interface UTestbed2ManyParamInterfaceBPInterface only for Unreal Engine's reflection system
+ * Interface UTestbed2ManyParamInterfaceBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTestbed2ManyParamInterfaceBPInterface : public UInterface
+class UTestbed2ManyParamInterfaceBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITestbed2ManyParamInterfaceBPInterface
+ * Interface ITestbed2ManyParamInterfaceBP
  */
-class TESTBED2API_API ITestbed2ManyParamInterfaceBPInterface
+class TESTBED2API_API ITestbed2ManyParamInterfaceBP
 {
 	GENERATED_BODY()
 

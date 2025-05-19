@@ -141,7 +141,7 @@ bool UTestbed1StructArrayInterfaceMsgBusAdapter::_IsListening() const
 	return Testbed1StructArrayInterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTestbed1StructArrayInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITestbed1StructArrayInterfaceInterface> InService)
+void UTestbed1StructArrayInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITestbed1StructArrayInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

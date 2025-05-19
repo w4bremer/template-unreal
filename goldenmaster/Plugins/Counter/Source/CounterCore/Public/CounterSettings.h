@@ -25,7 +25,7 @@ limitations under the License.
 const FString CounterLocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ICounterCounterInterface;
+class ICounterCounter;
 
 /**
  * Implements the settings for the Counter plugin.
@@ -48,7 +48,7 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ICounterCounterInterface> GetICounterCounterInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ICounterCounter> GetICounterCounterForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

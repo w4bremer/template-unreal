@@ -22,7 +22,7 @@ limitations under the License.
 
 class UGameInstance;
 class FSubsystemCollectionBase;
-class ITbEnumEnumInterfaceInterface;
+class ITbEnumEnumInterface;
 
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbEnumModuleFactory, Log, All);
@@ -31,11 +31,11 @@ class TBENUMCORE_API FTbEnumModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
-	using FTbEnumEnumInterfaceFactoryFunction = TFunction<TScriptInterface<ITbEnumEnumInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbEnumEnumInterfaceFactoryFunction = TFunction<TScriptInterface<ITbEnumEnumInterface>(FSubsystemCollectionBase& Collection)>;
 
 	/** register factories for different types of implementations and interfaces */
 	static bool RegisterFactory(FString TypeIdentifier, FTbEnumEnumInterfaceFactoryFunction FactoryFunction);
-	static TScriptInterface<ITbEnumEnumInterfaceInterface> GetTbEnumEnumInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbEnumEnumInterface> GetTbEnumEnumInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 
 private:
 	static TMap<FString, FTbEnumModuleFactory::FTbEnumEnumInterfaceFactoryFunction> TbEnumEnumInterfaceFactories;

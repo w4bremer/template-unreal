@@ -31,7 +31,7 @@ class RemoteRegistry;
 } // namespace ApiGear
 
 /** @brief handles the adaption between the service implementation and the OLink protocol
- * takes an object of the type ITestbed2NestedStruct3InterfaceInterface
+ * takes an object of the type ITestbed2NestedStruct3Interface
  * and holds the corresponding Testbed2NestedStruct3InterfaceOLinkSource OLink source object
  */
 UCLASS(BlueprintType)
@@ -47,7 +47,7 @@ public:
 	void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Testbed2|NestedStruct3Interface")
-	void setBackendService(TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITestbed2NestedStruct3Interface> InService);
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Testbed2|NestedStruct3Interface")
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -82,7 +82,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Testbed2|NestedStruct3Interface")
-	TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> BackendService;
+	TScriptInterface<ITestbed2NestedStruct3Interface> BackendService;
 
 	/** Holds the registry */
 	TSharedPtr<ApiGear::ObjectLink::RemoteRegistry> Registry;

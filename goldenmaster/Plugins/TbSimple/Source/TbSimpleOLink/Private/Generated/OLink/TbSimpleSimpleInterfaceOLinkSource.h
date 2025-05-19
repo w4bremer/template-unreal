@@ -28,7 +28,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTbSimpleSimpleInterfaceOLinkSource, Log, All);
-/** @brief handles OLink network interactions specific to ITbSimpleSimpleInterfaceInterface */
+/** @brief handles OLink network interactions specific to ITbSimpleSimpleInterface */
 class TbSimpleSimpleInterfaceOLinkSource : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -36,7 +36,7 @@ public:
 	virtual ~TbSimpleSimpleInterfaceOLinkSource() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<ITbSimpleSimpleInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbSimpleSimpleInterface> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -75,7 +75,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> BackendService;
+	TScriptInterface<ITbSimpleSimpleInterface> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

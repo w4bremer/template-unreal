@@ -32,7 +32,7 @@ F{{ $DisplayName }}MsgBusFixture::~F{{ $DisplayName }}MsgBusFixture()
 	CleanUp();
 }
 
-TScriptInterface<I{{$DisplayName}}Interface> F{{ $DisplayName }}MsgBusFixture::GetImplementation()
+TScriptInterface<I{{$DisplayName}}> F{{ $DisplayName }}MsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

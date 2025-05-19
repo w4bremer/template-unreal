@@ -12,7 +12,7 @@
 #include "TbSame2/Generated/api/TbSame2_data.h"
 
 class FTbSame2SameEnum1InterfaceOLinkFixture;
-class ITbSame2SameEnum1InterfaceInterface;
+class ITbSame2SameEnum1Interface;
 class UTbSame2SameEnum1InterfaceOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FTbSame2SameEnum1InterfaceOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSame2SameEnum1InterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSame2SameEnum1Interface> GetImplementation();
 	UOLinkHost* GetHost();
 	UTbSame2SameEnum1InterfaceOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSame2SameEnum1InterfaceInterface> testImplementation;
+	TScriptInterface<ITbSame2SameEnum1Interface> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

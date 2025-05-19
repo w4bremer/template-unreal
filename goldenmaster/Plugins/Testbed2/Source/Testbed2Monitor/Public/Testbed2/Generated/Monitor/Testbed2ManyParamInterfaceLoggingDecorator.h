@@ -35,7 +35,7 @@ public:
 	virtual ~UTestbed2ManyParamInterfaceLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Testbed2|ManyParamInterface")
-	void setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -70,7 +70,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Testbed2|ManyParamInterface")
-	TScriptInterface<ITestbed2ManyParamInterfaceInterface> BackendService;
+	TScriptInterface<ITestbed2ManyParamInterface> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|Testbed2|ManyParamInterface", BlueprintInternalUseOnly)

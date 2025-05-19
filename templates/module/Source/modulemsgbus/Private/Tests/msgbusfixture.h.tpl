@@ -15,7 +15,7 @@
 #include "{{$ModuleName}}/Generated/api/{{$ModuleName}}_data.h"
 
 class {{$Class}}MsgBusSpec;
-class I{{$DisplayName}}Interface;
+class I{{$DisplayName}};
 class U{{$DisplayName}}MsgBusAdapter;
 class IApiGearConnection;
 
@@ -35,14 +35,14 @@ public:
 	~F{{ $DisplayName }}MsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<I{{$DisplayName}}Interface> GetImplementation();
+	TScriptInterface<I{{$DisplayName}}> GetImplementation();
 	{{$Class}}MsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<I{{$DisplayName}}Interface> testImplementation;
+	TScriptInterface<I{{$DisplayName}}> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

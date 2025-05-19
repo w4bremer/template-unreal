@@ -6,7 +6,7 @@ class Testbed1StructInterfaceTracer
 {
 public:
 	Testbed1StructInterfaceTracer();
-	static void capture_state(UObject* Object, ITestbed1StructInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITestbed1StructInterface* obj);
 	static void trace_callSetPropBool(const FTestbed1StructBool& InPropBool);
 	static void trace_callSetPropInt(const FTestbed1StructInt& InPropInt);
 	static void trace_callSetPropFloat(const FTestbed1StructFloat& InPropFloat);
@@ -25,7 +25,7 @@ class Testbed1StructArrayInterfaceTracer
 {
 public:
 	Testbed1StructArrayInterfaceTracer();
-	static void capture_state(UObject* Object, ITestbed1StructArrayInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITestbed1StructArrayInterface* obj);
 	static void trace_callSetPropBool(const TArray<FTestbed1StructBool>& InPropBool);
 	static void trace_callSetPropInt(const TArray<FTestbed1StructInt>& InPropInt);
 	static void trace_callSetPropFloat(const TArray<FTestbed1StructFloat>& InPropFloat);
@@ -47,7 +47,7 @@ class Testbed1StructArray2InterfaceTracer
 {
 public:
 	Testbed1StructArray2InterfaceTracer();
-	static void capture_state(UObject* Object, ITestbed1StructArray2InterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITestbed1StructArray2Interface* obj);
 	static void trace_callSetPropBool(const FTestbed1StructBoolWithArray& InPropBool);
 	static void trace_callSetPropInt(const FTestbed1StructIntWithArray& InPropInt);
 	static void trace_callSetPropFloat(const FTestbed1StructFloatWithArray& InPropFloat);

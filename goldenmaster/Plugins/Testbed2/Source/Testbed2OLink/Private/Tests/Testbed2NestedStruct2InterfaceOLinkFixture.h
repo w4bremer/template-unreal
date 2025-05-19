@@ -12,7 +12,7 @@
 #include "Testbed2/Generated/api/Testbed2_data.h"
 
 class FTestbed2NestedStruct2InterfaceOLinkFixture;
-class ITestbed2NestedStruct2InterfaceInterface;
+class ITestbed2NestedStruct2Interface;
 class UTestbed2NestedStruct2InterfaceOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FTestbed2NestedStruct2InterfaceOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> GetImplementation();
+	TScriptInterface<ITestbed2NestedStruct2Interface> GetImplementation();
 	UOLinkHost* GetHost();
 	UTestbed2NestedStruct2InterfaceOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> testImplementation;
+	TScriptInterface<ITestbed2NestedStruct2Interface> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

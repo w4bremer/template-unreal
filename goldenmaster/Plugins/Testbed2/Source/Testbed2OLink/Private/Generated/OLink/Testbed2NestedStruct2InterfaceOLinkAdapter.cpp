@@ -52,7 +52,7 @@ void UTestbed2NestedStruct2InterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTestbed2NestedStruct2InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> InService)
+void UTestbed2NestedStruct2InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2NestedStruct2Interface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -148,7 +148,7 @@ void UTestbed2NestedStruct2InterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTestbed2NestedStruct2InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> InService)
+void UTestbed2NestedStruct2InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2NestedStruct2Interface> InService)
 {
 }
 

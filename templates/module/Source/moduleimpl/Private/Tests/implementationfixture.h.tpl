@@ -15,7 +15,7 @@
 #include "{{$DisplayName}}ImplFixture.generated.h"
 
 class F{{$DisplayName}}ImplFixture;
-class I{{$DisplayName}}Interface;
+class I{{$DisplayName}};
 
 UCLASS()
 class {{$Class}}ImplHelper : public UObject
@@ -53,14 +53,14 @@ public:
 	~F{{ $DisplayName }}ImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<I{{$DisplayName}}Interface> GetImplementation();
+	TScriptInterface<I{{$DisplayName}}> GetImplementation();
 	TSoftObjectPtr<{{$Class}}ImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<I{{$DisplayName}}Interface> testImplementation;
+	TScriptInterface<I{{$DisplayName}}> testImplementation;
 	TSoftObjectPtr<{{$Class}}ImplHelper> Helper;
 };
 

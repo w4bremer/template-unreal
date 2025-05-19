@@ -13,7 +13,7 @@ class {{$class}}
 {
 public:
 	{{$class}}();
-	static void capture_state(UObject* Object, I{{$ModuleName}}{{$Name}}Interface* obj);
+	static void capture_state(UObject* Object, I{{$ModuleName}}{{$Name}}* obj);
 {{- range .Properties }}
 {{- if not .IsReadOnly }}
 	static void trace_callSet{{Camel .Name}}({{ueParam "In" .}});

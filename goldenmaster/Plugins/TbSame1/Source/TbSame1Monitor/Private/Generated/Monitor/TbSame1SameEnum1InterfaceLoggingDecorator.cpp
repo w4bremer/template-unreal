@@ -33,7 +33,7 @@ UTbSame1SameEnum1InterfaceLoggingDecorator::~UTbSame1SameEnum1InterfaceLoggingDe
 void UTbSame1SameEnum1InterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSame1Settings::GetITbSame1SameEnum1InterfaceInterfaceForLogging(Collection));
+	setBackendService(UTbSame1Settings::GetITbSame1SameEnum1InterfaceForLogging(Collection));
 }
 
 void UTbSame1SameEnum1InterfaceLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTbSame1SameEnum1InterfaceLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTbSame1SameEnum1InterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbSame1SameEnum1InterfaceInterface> InService)
+void UTbSame1SameEnum1InterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbSame1SameEnum1Interface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

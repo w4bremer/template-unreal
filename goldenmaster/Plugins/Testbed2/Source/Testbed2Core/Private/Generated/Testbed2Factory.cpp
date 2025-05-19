@@ -41,7 +41,7 @@ bool FTestbed2ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed2Ma
 	return true;
 }
 
-TScriptInterface<ITestbed2ManyParamInterfaceInterface> FTestbed2ModuleFactory::GetTestbed2ManyParamInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2ManyParamInterface> FTestbed2ModuleFactory::GetTestbed2ManyParamInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed2ManyParamInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -64,7 +64,7 @@ bool FTestbed2ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed2Ne
 	return true;
 }
 
-TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> FTestbed2ModuleFactory::GetTestbed2NestedStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct1Interface> FTestbed2ModuleFactory::GetTestbed2NestedStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed2NestedStruct1InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -87,7 +87,7 @@ bool FTestbed2ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed2Ne
 	return true;
 }
 
-TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> FTestbed2ModuleFactory::GetTestbed2NestedStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct2Interface> FTestbed2ModuleFactory::GetTestbed2NestedStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed2NestedStruct2InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -110,7 +110,7 @@ bool FTestbed2ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed2Ne
 	return true;
 }
 
-TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> FTestbed2ModuleFactory::GetTestbed2NestedStruct3InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct3Interface> FTestbed2ModuleFactory::GetTestbed2NestedStruct3InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed2NestedStruct3InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{

@@ -31,7 +31,7 @@ class RemoteRegistry;
 } // namespace ApiGear
 
 /** @brief handles the adaption between the service implementation and the OLink protocol
- * takes an object of the type ICounterCounterInterface
+ * takes an object of the type ICounterCounter
  * and holds the corresponding CounterCounterOLinkSource OLink source object
  */
 UCLASS(BlueprintType)
@@ -47,7 +47,7 @@ public:
 	void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Counter|Counter")
-	void setBackendService(TScriptInterface<ICounterCounterInterface> InService);
+	void setBackendService(TScriptInterface<ICounterCounter> InService);
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Counter|Counter")
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -78,7 +78,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Counter|Counter")
-	TScriptInterface<ICounterCounterInterface> BackendService;
+	TScriptInterface<ICounterCounter> BackendService;
 
 	/** Holds the registry */
 	TSharedPtr<ApiGear::ObjectLink::RemoteRegistry> Registry;

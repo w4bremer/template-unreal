@@ -26,7 +26,7 @@ limitations under the License.
 {{- $Class := printf "%s%s" $ModuleName (Camel .Name) }}
 #include "{{$ModuleName}}/Generated/api/{{$Class}}Interface.h"
 {{- $Category := printf "ApiGear|%s|%s" $ModuleName (Camel .Name) }}
-{{- $class := printf "I%sInterface" $Class }}
+{{- $class := printf "I%s" $Class }}
 {{- $Iface := printf "%s%s" $ModuleName (Camel .Name) }}
 #include "Abstract{{$Class}}.generated.h"
 {{ $abstractclass := printf "UAbstract%s" $Class }}

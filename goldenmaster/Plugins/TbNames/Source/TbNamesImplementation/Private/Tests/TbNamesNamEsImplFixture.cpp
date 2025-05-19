@@ -116,7 +116,7 @@ FTbNamesNamEsImplFixture::~FTbNamesNamEsImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbNamesNamEsInterface> FTbNamesNamEsImplFixture::GetImplementation()
+TScriptInterface<ITbNamesNamEs> FTbNamesNamEsImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

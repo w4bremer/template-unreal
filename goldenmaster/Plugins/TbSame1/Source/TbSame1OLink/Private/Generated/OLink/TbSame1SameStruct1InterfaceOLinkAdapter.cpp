@@ -52,7 +52,7 @@ void UTbSame1SameStruct1InterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTbSame1SameStruct1InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITbSame1SameStruct1InterfaceInterface> InService)
+void UTbSame1SameStruct1InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITbSame1SameStruct1Interface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -126,7 +126,7 @@ void UTbSame1SameStruct1InterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTbSame1SameStruct1InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITbSame1SameStruct1InterfaceInterface> InService)
+void UTbSame1SameStruct1InterfaceOLinkAdapter::setBackendService(TScriptInterface<ITbSame1SameStruct1Interface> InService)
 {
 }
 

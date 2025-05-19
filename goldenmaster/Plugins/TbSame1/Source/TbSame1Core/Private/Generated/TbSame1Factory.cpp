@@ -41,7 +41,7 @@ bool FTbSame1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSame1Same
 	return true;
 }
 
-TScriptInterface<ITbSame1SameStruct1InterfaceInterface> FTbSame1ModuleFactory::GetTbSame1SameStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame1SameStruct1Interface> FTbSame1ModuleFactory::GetTbSame1SameStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSame1SameStruct1InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -64,7 +64,7 @@ bool FTbSame1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSame1Same
 	return true;
 }
 
-TScriptInterface<ITbSame1SameStruct2InterfaceInterface> FTbSame1ModuleFactory::GetTbSame1SameStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame1SameStruct2Interface> FTbSame1ModuleFactory::GetTbSame1SameStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSame1SameStruct2InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -87,7 +87,7 @@ bool FTbSame1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSame1Same
 	return true;
 }
 
-TScriptInterface<ITbSame1SameEnum1InterfaceInterface> FTbSame1ModuleFactory::GetTbSame1SameEnum1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame1SameEnum1Interface> FTbSame1ModuleFactory::GetTbSame1SameEnum1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSame1SameEnum1InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -110,7 +110,7 @@ bool FTbSame1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTbSame1Same
 	return true;
 }
 
-TScriptInterface<ITbSame1SameEnum2InterfaceInterface> FTbSame1ModuleFactory::GetTbSame1SameEnum2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame1SameEnum2Interface> FTbSame1ModuleFactory::GetTbSame1SameEnum2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbSame1SameEnum2InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{

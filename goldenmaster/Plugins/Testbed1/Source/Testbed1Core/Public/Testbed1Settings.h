@@ -25,9 +25,9 @@ limitations under the License.
 const FString Testbed1LocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITestbed1StructInterfaceInterface;
-class ITestbed1StructArrayInterfaceInterface;
-class ITestbed1StructArray2InterfaceInterface;
+class ITestbed1StructInterface;
+class ITestbed1StructArrayInterface;
+class ITestbed1StructArray2Interface;
 
 /**
  * Implements the settings for the Testbed1 plugin.
@@ -50,9 +50,9 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITestbed1StructInterfaceInterface> GetITestbed1StructInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed1StructArrayInterfaceInterface> GetITestbed1StructArrayInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed1StructArray2InterfaceInterface> GetITestbed1StructArray2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed1StructInterface> GetITestbed1StructInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed1StructArrayInterface> GetITestbed1StructArrayInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed1StructArray2Interface> GetITestbed1StructArray2InterfaceForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

@@ -6,7 +6,7 @@ class TbSimpleVoidInterfaceTracer
 {
 public:
 	TbSimpleVoidInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleVoidInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleVoidInterface* obj);
 	static void trace_signalSigVoid();
 	static void trace_callFuncVoid();
 };
@@ -15,7 +15,7 @@ class TbSimpleSimpleInterfaceTracer
 {
 public:
 	TbSimpleSimpleInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleSimpleInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleSimpleInterface* obj);
 	static void trace_callSetPropBool(bool bInPropBool);
 	static void trace_callSetPropInt(int32 InPropInt);
 	static void trace_callSetPropInt32(int32 InPropInt32);
@@ -47,7 +47,7 @@ class TbSimpleSimpleArrayInterfaceTracer
 {
 public:
 	TbSimpleSimpleArrayInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleSimpleArrayInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleSimpleArrayInterface* obj);
 	static void trace_callSetPropBool(const TArray<bool>& InPropBool);
 	static void trace_callSetPropInt(const TArray<int32>& InPropInt);
 	static void trace_callSetPropInt32(const TArray<int32>& InPropInt32);
@@ -78,7 +78,7 @@ class TbSimpleNoPropertiesInterfaceTracer
 {
 public:
 	TbSimpleNoPropertiesInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleNoPropertiesInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleNoPropertiesInterface* obj);
 	static void trace_signalSigVoid();
 	static void trace_signalSigBool(bool bParamBool);
 	static void trace_callFuncVoid();
@@ -89,7 +89,7 @@ class TbSimpleNoOperationsInterfaceTracer
 {
 public:
 	TbSimpleNoOperationsInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleNoOperationsInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleNoOperationsInterface* obj);
 	static void trace_callSetPropBool(bool bInPropBool);
 	static void trace_callSetPropInt(int32 InPropInt);
 	static void trace_signalSigVoid();
@@ -100,7 +100,7 @@ class TbSimpleNoSignalsInterfaceTracer
 {
 public:
 	TbSimpleNoSignalsInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleNoSignalsInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleNoSignalsInterface* obj);
 	static void trace_callSetPropBool(bool bInPropBool);
 	static void trace_callSetPropInt(int32 InPropInt);
 	static void trace_callFuncVoid();
@@ -111,5 +111,5 @@ class TbSimpleEmptyInterfaceTracer
 {
 public:
 	TbSimpleEmptyInterfaceTracer();
-	static void capture_state(UObject* Object, ITbSimpleEmptyInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbSimpleEmptyInterface* obj);
 };

@@ -48,7 +48,7 @@ Testbed1StructArrayInterfaceOLinkSource::Testbed1StructArrayInterfaceOLinkSource
 {
 }
 
-void Testbed1StructArrayInterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed1StructArrayInterfaceInterface> InService)
+void Testbed1StructArrayInterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed1StructArrayInterface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

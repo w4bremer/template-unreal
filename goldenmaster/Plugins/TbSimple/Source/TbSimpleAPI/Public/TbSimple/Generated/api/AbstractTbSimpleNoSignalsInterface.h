@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTbSimpleNoSignalsInterface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TBSIMPLEAPI_API UAbstractTbSimpleNoSignalsInterface : public UGameInstanceSubsystem, public ITbSimpleNoSignalsInterfaceInterface
+class TBSIMPLEAPI_API UAbstractTbSimpleNoSignalsInterface : public UGameInstanceSubsystem, public ITbSimpleNoSignalsInterface
 {
 	GENERATED_BODY()
 

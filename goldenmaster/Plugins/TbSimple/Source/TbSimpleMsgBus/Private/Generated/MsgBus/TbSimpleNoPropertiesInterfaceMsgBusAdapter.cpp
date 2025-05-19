@@ -133,7 +133,7 @@ bool UTbSimpleNoPropertiesInterfaceMsgBusAdapter::_IsListening() const
 	return TbSimpleNoPropertiesInterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTbSimpleNoPropertiesInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> InService)
+void UTbSimpleNoPropertiesInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSimpleNoPropertiesInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

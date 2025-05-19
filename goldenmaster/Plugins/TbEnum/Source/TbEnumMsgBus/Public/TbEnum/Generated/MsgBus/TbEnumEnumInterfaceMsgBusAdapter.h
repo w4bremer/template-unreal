@@ -55,7 +55,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbEnumEnumInterfaceClientCountDeleg
 DECLARE_LOG_CATEGORY_EXTERN(LogTbEnumEnumInterfaceMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ITbEnumEnumInterfaceInterface
+/// takes an object of the type ITbEnumEnumInterface
 /// and holds the corresponding TbEnumEnumInterfaceOLinkSource OLink source object
 UCLASS(BlueprintType)
 class TBENUMMSGBUS_API UTbEnumEnumInterfaceMsgBusAdapter : public UGameInstanceSubsystem
@@ -98,7 +98,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbEnum|EnumInterface")
-	void _setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService);
+	void _setBackendService(TScriptInterface<ITbEnumEnumInterface> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> TbEnumEnumInterfaceMsgBusEndpoint;
@@ -156,7 +156,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbEnum|EnumInterface")
-	TScriptInterface<ITbEnumEnumInterfaceInterface> BackendService;
+	TScriptInterface<ITbEnumEnumInterface> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

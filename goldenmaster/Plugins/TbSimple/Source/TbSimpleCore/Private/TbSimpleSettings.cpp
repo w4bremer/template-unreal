@@ -51,7 +51,7 @@ void UTbSimpleSettings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITbSimpleVoidInterfaceInterface> UTbSimpleSettings::GetITbSimpleVoidInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleVoidInterface> UTbSimpleSettings::GetITbSimpleVoidInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -70,7 +70,7 @@ TScriptInterface<ITbSimpleVoidInterfaceInterface> UTbSimpleSettings::GetITbSimpl
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleSimpleInterfaceInterface> UTbSimpleSettings::GetITbSimpleSimpleInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleSimpleInterface> UTbSimpleSettings::GetITbSimpleSimpleInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -89,7 +89,7 @@ TScriptInterface<ITbSimpleSimpleInterfaceInterface> UTbSimpleSettings::GetITbSim
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleSimpleArrayInterface> UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -108,7 +108,7 @@ TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> UTbSimpleSettings::GetI
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> UTbSimpleSettings::GetITbSimpleNoPropertiesInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoPropertiesInterface> UTbSimpleSettings::GetITbSimpleNoPropertiesInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -127,7 +127,7 @@ TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> UTbSimpleSettings::Get
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> UTbSimpleSettings::GetITbSimpleNoOperationsInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoOperationsInterface> UTbSimpleSettings::GetITbSimpleNoOperationsInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -146,7 +146,7 @@ TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> UTbSimpleSettings::Get
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> UTbSimpleSettings::GetITbSimpleNoSignalsInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleNoSignalsInterface> UTbSimpleSettings::GetITbSimpleNoSignalsInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 
@@ -165,7 +165,7 @@ TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> UTbSimpleSettings::GetITb
 	return nullptr;
 }
 
-TScriptInterface<ITbSimpleEmptyInterfaceInterface> UTbSimpleSettings::GetITbSimpleEmptyInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSimpleEmptyInterface> UTbSimpleSettings::GetITbSimpleEmptyInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSimpleSettings* TbSimpleSettings = GetMutableDefault<UTbSimpleSettings>();
 

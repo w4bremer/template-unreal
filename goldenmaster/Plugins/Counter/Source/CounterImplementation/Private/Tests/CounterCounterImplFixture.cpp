@@ -86,7 +86,7 @@ FCounterCounterImplFixture::~FCounterCounterImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ICounterCounterInterface> FCounterCounterImplFixture::GetImplementation()
+TScriptInterface<ICounterCounter> FCounterCounterImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

@@ -47,7 +47,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbSame1SameStruct2InterfaceClientCo
 DECLARE_LOG_CATEGORY_EXTERN(LogTbSame1SameStruct2InterfaceMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ITbSame1SameStruct2InterfaceInterface
+/// takes an object of the type ITbSame1SameStruct2Interface
 /// and holds the corresponding TbSame1SameStruct2InterfaceOLinkSource OLink source object
 UCLASS(BlueprintType)
 class TBSAME1MSGBUS_API UTbSame1SameStruct2InterfaceMsgBusAdapter : public UGameInstanceSubsystem
@@ -90,7 +90,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbSame1|SameStruct2Interface")
-	void _setBackendService(TScriptInterface<ITbSame1SameStruct2InterfaceInterface> InService);
+	void _setBackendService(TScriptInterface<ITbSame1SameStruct2Interface> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> TbSame1SameStruct2InterfaceMsgBusEndpoint;
@@ -128,7 +128,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbSame1|SameStruct2Interface")
-	TScriptInterface<ITbSame1SameStruct2InterfaceInterface> BackendService;
+	TScriptInterface<ITbSame1SameStruct2Interface> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

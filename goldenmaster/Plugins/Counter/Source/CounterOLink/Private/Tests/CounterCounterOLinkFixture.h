@@ -12,7 +12,7 @@
 #include "Counter/Generated/api/Counter_data.h"
 
 class FCounterCounterOLinkFixture;
-class ICounterCounterInterface;
+class ICounterCounter;
 class UCounterCounterOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FCounterCounterOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ICounterCounterInterface> GetImplementation();
+	TScriptInterface<ICounterCounter> GetImplementation();
 	UOLinkHost* GetHost();
 	UCounterCounterOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ICounterCounterInterface> testImplementation;
+	TScriptInterface<ICounterCounter> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

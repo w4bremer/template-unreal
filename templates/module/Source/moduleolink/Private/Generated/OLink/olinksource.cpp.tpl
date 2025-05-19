@@ -50,7 +50,7 @@ DEFINE_LOG_CATEGORY(Log{{$Class}});
 {
 }
 
-void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService)
+void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

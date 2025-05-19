@@ -47,7 +47,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTbEnumEnumInterfaceProp3ChangedDelegate, ET
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbEnumEnumInterfaceProp3ChangedDelegateBP, ETbEnumEnum3, Prop3);
 
 /**
- * Class UTbEnumEnumInterfaceInterfaceSignals
+ * Class UTbEnumEnumInterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -147,19 +147,19 @@ public:
 };
 
 /**
- * Interface UTbEnumEnumInterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTbEnumEnumInterface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTbEnumEnumInterfaceInterface : public UInterface
+class UTbEnumEnumInterface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbEnumEnumInterfaceInterface
+ * Interface ITbEnumEnumInterface
  */
-class TBENUMAPI_API ITbEnumEnumInterfaceInterface
+class TBENUMAPI_API ITbEnumEnumInterface
 {
 	GENERATED_BODY()
 

@@ -51,7 +51,7 @@ void UTbSame2Settings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITbSame2SameStruct1InterfaceInterface> UTbSame2Settings::GetITbSame2SameStruct1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame2SameStruct1Interface> UTbSame2Settings::GetITbSame2SameStruct1InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSame2Settings* TbSame2Settings = GetMutableDefault<UTbSame2Settings>();
 
@@ -70,7 +70,7 @@ TScriptInterface<ITbSame2SameStruct1InterfaceInterface> UTbSame2Settings::GetITb
 	return nullptr;
 }
 
-TScriptInterface<ITbSame2SameStruct2InterfaceInterface> UTbSame2Settings::GetITbSame2SameStruct2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame2SameStruct2Interface> UTbSame2Settings::GetITbSame2SameStruct2InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSame2Settings* TbSame2Settings = GetMutableDefault<UTbSame2Settings>();
 
@@ -89,7 +89,7 @@ TScriptInterface<ITbSame2SameStruct2InterfaceInterface> UTbSame2Settings::GetITb
 	return nullptr;
 }
 
-TScriptInterface<ITbSame2SameEnum1InterfaceInterface> UTbSame2Settings::GetITbSame2SameEnum1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame2SameEnum1Interface> UTbSame2Settings::GetITbSame2SameEnum1InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSame2Settings* TbSame2Settings = GetMutableDefault<UTbSame2Settings>();
 
@@ -108,7 +108,7 @@ TScriptInterface<ITbSame2SameEnum1InterfaceInterface> UTbSame2Settings::GetITbSa
 	return nullptr;
 }
 
-TScriptInterface<ITbSame2SameEnum2InterfaceInterface> UTbSame2Settings::GetITbSame2SameEnum2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbSame2SameEnum2Interface> UTbSame2Settings::GetITbSame2SameEnum2InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbSame2Settings* TbSame2Settings = GetMutableDefault<UTbSame2Settings>();
 

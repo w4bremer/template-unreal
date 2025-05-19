@@ -52,7 +52,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCounterCounterClientCountDelegate, 
 DECLARE_LOG_CATEGORY_EXTERN(LogCounterCounterMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ICounterCounterInterface
+/// takes an object of the type ICounterCounter
 /// and holds the corresponding CounterCounterOLinkSource OLink source object
 UCLASS(BlueprintType)
 class COUNTERMSGBUS_API UCounterCounterMsgBusAdapter : public UGameInstanceSubsystem
@@ -95,7 +95,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Counter|Counter")
-	void _setBackendService(TScriptInterface<ICounterCounterInterface> InService);
+	void _setBackendService(TScriptInterface<ICounterCounter> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> CounterCounterMsgBusEndpoint;
@@ -141,7 +141,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Counter|Counter")
-	TScriptInterface<ICounterCounterInterface> BackendService;
+	TScriptInterface<ICounterCounter> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

@@ -42,7 +42,7 @@ FTbSame1SameEnum2InterfaceOLinkFixture::~FTbSame1SameEnum2InterfaceOLinkFixture(
 	CleanUp();
 }
 
-TScriptInterface<ITbSame1SameEnum2InterfaceInterface> FTbSame1SameEnum2InterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITbSame1SameEnum2Interface> FTbSame1SameEnum2InterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

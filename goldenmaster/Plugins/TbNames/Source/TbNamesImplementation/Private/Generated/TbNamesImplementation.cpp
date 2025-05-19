@@ -26,7 +26,7 @@ limitations under the License.
 
 void FTbNamesImplementationModule::StartupModule()
 {
-	FTbNamesModuleFactory::RegisterFactory(TbNamesLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbNamesNamEsInterface>
+	FTbNamesModuleFactory::RegisterFactory(TbNamesLocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbNamesNamEs>
 		{
 		return Cast<UTbNamesNamEsImplementation>(Collection.InitializeDependency(UTbNamesNamEsImplementation::StaticClass()));
 	});

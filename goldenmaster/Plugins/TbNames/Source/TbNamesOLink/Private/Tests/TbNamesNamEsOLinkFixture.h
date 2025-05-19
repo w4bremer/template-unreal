@@ -12,7 +12,7 @@
 #include "TbNames/Generated/api/TbNames_data.h"
 
 class FTbNamesNamEsOLinkFixture;
-class ITbNamesNamEsInterface;
+class ITbNamesNamEs;
 class UTbNamesNamEsOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FTbNamesNamEsOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbNamesNamEsInterface> GetImplementation();
+	TScriptInterface<ITbNamesNamEs> GetImplementation();
 	UOLinkHost* GetHost();
 	UTbNamesNamEsOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbNamesNamEsInterface> testImplementation;
+	TScriptInterface<ITbNamesNamEs> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

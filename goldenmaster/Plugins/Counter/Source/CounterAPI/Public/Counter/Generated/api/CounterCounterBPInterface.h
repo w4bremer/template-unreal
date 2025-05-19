@@ -24,18 +24,18 @@ limitations under the License.
 #include "CounterCounterBPInterface.generated.h"
 
 /**
- * Interface UCounterCounterBPInterface only for Unreal Engine's reflection system
+ * Interface UCounterCounterBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UCounterCounterBPInterface : public UInterface
+class UCounterCounterBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ICounterCounterBPInterface
+ * Interface ICounterCounterBP
  */
-class COUNTERAPI_API ICounterCounterBPInterface
+class COUNTERAPI_API ICounterCounterBP
 {
 	GENERATED_BODY()
 

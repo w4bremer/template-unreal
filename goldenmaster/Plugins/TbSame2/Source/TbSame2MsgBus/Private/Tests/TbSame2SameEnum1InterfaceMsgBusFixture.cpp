@@ -42,7 +42,7 @@ FTbSame2SameEnum1InterfaceMsgBusFixture::~FTbSame2SameEnum1InterfaceMsgBusFixtur
 	CleanUp();
 }
 
-TScriptInterface<ITbSame2SameEnum1InterfaceInterface> FTbSame2SameEnum1InterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITbSame2SameEnum1Interface> FTbSame2SameEnum1InterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

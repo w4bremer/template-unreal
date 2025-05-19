@@ -43,7 +43,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(F{{$Iface}}ClientCountDelegate, int3
 DECLARE_LOG_CATEGORY_EXTERN(Log{{$Iface}}MsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface
+/// takes an object of the type I{{Camel .Module.Name}}{{Camel .Interface.Name}}
 /// and holds the corresponding {{$Iface}}OLinkSource OLink source object
 UCLASS(BlueprintType)
 class {{ $API_MACRO }} {{$Class}} : public UGameInstanceSubsystem
@@ -86,7 +86,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "{{$Category}}")
-	void _setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService);
+	void _setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> {{Camel .Module.Name}}{{Camel .Interface.Name}}MsgBusEndpoint;
@@ -130,7 +130,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "{{$Category}}")
-	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> BackendService;
+	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

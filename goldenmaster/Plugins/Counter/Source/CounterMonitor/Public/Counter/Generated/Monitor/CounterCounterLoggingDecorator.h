@@ -35,7 +35,7 @@ public:
 	virtual ~UCounterCounterLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Counter|Counter")
-	void setBackendService(TScriptInterface<ICounterCounterInterface> InService);
+	void setBackendService(TScriptInterface<ICounterCounter> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -70,7 +70,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Counter|Counter")
-	TScriptInterface<ICounterCounterInterface> BackendService;
+	TScriptInterface<ICounterCounter> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|Counter|Counter", BlueprintInternalUseOnly)

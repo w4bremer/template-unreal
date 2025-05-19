@@ -38,7 +38,7 @@ bool FTbNamesModuleFactory::RegisterFactory(FString TypeIdentifier, FTbNamesNamE
 	return true;
 }
 
-TScriptInterface<ITbNamesNamEsInterface> FTbNamesModuleFactory::GetTbNamesNamEsImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbNamesNamEs> FTbNamesModuleFactory::GetTbNamesNamEsImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbNamesNamEsFactories.Contains(UniqueImplementationIdentifier))
 	{

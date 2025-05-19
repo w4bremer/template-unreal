@@ -33,7 +33,7 @@ UTestbed1StructInterfaceLoggingDecorator::~UTestbed1StructInterfaceLoggingDecora
 void UTestbed1StructInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTestbed1Settings::GetITestbed1StructInterfaceInterfaceForLogging(Collection));
+	setBackendService(UTestbed1Settings::GetITestbed1StructInterfaceForLogging(Collection));
 }
 
 void UTestbed1StructInterfaceLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTestbed1StructInterfaceLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTestbed1StructInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITestbed1StructInterfaceInterface> InService)
+void UTestbed1StructInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITestbed1StructInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

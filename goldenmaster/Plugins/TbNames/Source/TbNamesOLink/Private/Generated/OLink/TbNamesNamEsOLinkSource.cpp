@@ -48,7 +48,7 @@ TbNamesNamEsOLinkSource::TbNamesNamEsOLinkSource()
 {
 }
 
-void TbNamesNamEsOLinkSource::setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService)
+void TbNamesNamEsOLinkSource::setBackendService(TScriptInterface<ITbNamesNamEs> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

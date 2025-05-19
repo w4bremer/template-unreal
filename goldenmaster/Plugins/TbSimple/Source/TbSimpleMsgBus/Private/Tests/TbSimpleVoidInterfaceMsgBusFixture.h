@@ -11,7 +11,7 @@
 #include "TbSimple/Generated/api/TbSimple_data.h"
 
 class UTbSimpleVoidInterfaceMsgBusSpec;
-class ITbSimpleVoidInterfaceInterface;
+class ITbSimpleVoidInterface;
 class UTbSimpleVoidInterfaceMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FTbSimpleVoidInterfaceMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSimpleVoidInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSimpleVoidInterface> GetImplementation();
 	UTbSimpleVoidInterfaceMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSimpleVoidInterfaceInterface> testImplementation;
+	TScriptInterface<ITbSimpleVoidInterface> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

@@ -42,7 +42,7 @@ FTestbed1StructArray2InterfaceOLinkFixture::~FTestbed1StructArray2InterfaceOLink
 	CleanUp();
 }
 
-TScriptInterface<ITestbed1StructArray2InterfaceInterface> FTestbed1StructArray2InterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITestbed1StructArray2Interface> FTestbed1StructArray2InterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

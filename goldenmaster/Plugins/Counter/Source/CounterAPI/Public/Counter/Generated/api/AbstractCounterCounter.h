@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractCounterCounter
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class COUNTERAPI_API UAbstractCounterCounter : public UGameInstanceSubsystem, public ICounterCounterInterface
+class COUNTERAPI_API UAbstractCounterCounter : public UGameInstanceSubsystem, public ICounterCounter
 {
 	GENERATED_BODY()
 

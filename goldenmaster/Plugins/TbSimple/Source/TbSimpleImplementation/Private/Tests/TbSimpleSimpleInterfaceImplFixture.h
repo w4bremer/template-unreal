@@ -11,7 +11,7 @@
 #include "TbSimpleSimpleInterfaceImplFixture.generated.h"
 
 class FTbSimpleSimpleInterfaceImplFixture;
-class ITbSimpleSimpleInterfaceInterface;
+class ITbSimpleSimpleInterface;
 
 UCLASS()
 class UTbSimpleSimpleInterfaceImplHelper : public UObject
@@ -85,14 +85,14 @@ public:
 	~FTbSimpleSimpleInterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSimpleSimpleInterface> GetImplementation();
 	TSoftObjectPtr<UTbSimpleSimpleInterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> testImplementation;
+	TScriptInterface<ITbSimpleSimpleInterface> testImplementation;
 	TSoftObjectPtr<UTbSimpleSimpleInterfaceImplHelper> Helper;
 };
 

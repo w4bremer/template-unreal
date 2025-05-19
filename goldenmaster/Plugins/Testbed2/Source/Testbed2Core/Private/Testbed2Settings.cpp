@@ -51,7 +51,7 @@ void UTestbed2Settings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITestbed2ManyParamInterfaceInterface> UTestbed2Settings::GetITestbed2ManyParamInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2ManyParamInterface> UTestbed2Settings::GetITestbed2ManyParamInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed2Settings* Testbed2Settings = GetMutableDefault<UTestbed2Settings>();
 
@@ -70,7 +70,7 @@ TScriptInterface<ITestbed2ManyParamInterfaceInterface> UTestbed2Settings::GetITe
 	return nullptr;
 }
 
-TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> UTestbed2Settings::GetITestbed2NestedStruct1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct1Interface> UTestbed2Settings::GetITestbed2NestedStruct1InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed2Settings* Testbed2Settings = GetMutableDefault<UTestbed2Settings>();
 
@@ -89,7 +89,7 @@ TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> UTestbed2Settings::Ge
 	return nullptr;
 }
 
-TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> UTestbed2Settings::GetITestbed2NestedStruct2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct2Interface> UTestbed2Settings::GetITestbed2NestedStruct2InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed2Settings* Testbed2Settings = GetMutableDefault<UTestbed2Settings>();
 
@@ -108,7 +108,7 @@ TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> UTestbed2Settings::Ge
 	return nullptr;
 }
 
-TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> UTestbed2Settings::GetITestbed2NestedStruct3InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed2NestedStruct3Interface> UTestbed2Settings::GetITestbed2NestedStruct3InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed2Settings* Testbed2Settings = GetMutableDefault<UTestbed2Settings>();
 

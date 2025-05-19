@@ -11,7 +11,7 @@
 #include "TbSame1SameStruct1InterfaceImplFixture.generated.h"
 
 class FTbSame1SameStruct1InterfaceImplFixture;
-class ITbSame1SameStruct1InterfaceInterface;
+class ITbSame1SameStruct1Interface;
 
 UCLASS()
 class UTbSame1SameStruct1InterfaceImplHelper : public UObject
@@ -43,14 +43,14 @@ public:
 	~FTbSame1SameStruct1InterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSame1SameStruct1InterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSame1SameStruct1Interface> GetImplementation();
 	TSoftObjectPtr<UTbSame1SameStruct1InterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSame1SameStruct1InterfaceInterface> testImplementation;
+	TScriptInterface<ITbSame1SameStruct1Interface> testImplementation;
 	TSoftObjectPtr<UTbSame1SameStruct1InterfaceImplHelper> Helper;
 };
 

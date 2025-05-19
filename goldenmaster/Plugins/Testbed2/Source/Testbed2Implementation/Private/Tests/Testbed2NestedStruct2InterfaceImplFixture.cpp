@@ -92,7 +92,7 @@ FTestbed2NestedStruct2InterfaceImplFixture::~FTestbed2NestedStruct2InterfaceImpl
 	CleanUp();
 }
 
-TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> FTestbed2NestedStruct2InterfaceImplFixture::GetImplementation()
+TScriptInterface<ITestbed2NestedStruct2Interface> FTestbed2NestedStruct2InterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

@@ -133,7 +133,7 @@ bool UTbSame2SameEnum1InterfaceMsgBusAdapter::_IsListening() const
 	return TbSame2SameEnum1InterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTbSame2SameEnum1InterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSame2SameEnum1InterfaceInterface> InService)
+void UTbSame2SameEnum1InterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbSame2SameEnum1Interface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

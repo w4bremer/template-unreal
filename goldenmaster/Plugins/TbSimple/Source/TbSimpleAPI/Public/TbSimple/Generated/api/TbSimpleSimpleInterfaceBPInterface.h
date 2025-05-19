@@ -22,18 +22,18 @@ limitations under the License.
 #include "TbSimpleSimpleInterfaceBPInterface.generated.h"
 
 /**
- * Interface UTbSimpleSimpleInterfaceBPInterface only for Unreal Engine's reflection system
+ * Interface UTbSimpleSimpleInterfaceBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTbSimpleSimpleInterfaceBPInterface : public UInterface
+class UTbSimpleSimpleInterfaceBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbSimpleSimpleInterfaceBPInterface
+ * Interface ITbSimpleSimpleInterfaceBP
  */
-class TBSIMPLEAPI_API ITbSimpleSimpleInterfaceBPInterface
+class TBSIMPLEAPI_API ITbSimpleSimpleInterfaceBP
 {
 	GENERATED_BODY()
 

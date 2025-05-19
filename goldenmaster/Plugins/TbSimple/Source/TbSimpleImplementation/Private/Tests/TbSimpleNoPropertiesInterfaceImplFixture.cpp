@@ -62,7 +62,7 @@ FTbSimpleNoPropertiesInterfaceImplFixture::~FTbSimpleNoPropertiesInterfaceImplFi
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> FTbSimpleNoPropertiesInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoPropertiesInterface> FTbSimpleNoPropertiesInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

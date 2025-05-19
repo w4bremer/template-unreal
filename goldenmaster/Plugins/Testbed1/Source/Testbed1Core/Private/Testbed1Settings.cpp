@@ -51,7 +51,7 @@ void UTestbed1Settings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITestbed1StructInterfaceInterface> UTestbed1Settings::GetITestbed1StructInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructInterface> UTestbed1Settings::GetITestbed1StructInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed1Settings* Testbed1Settings = GetMutableDefault<UTestbed1Settings>();
 
@@ -70,7 +70,7 @@ TScriptInterface<ITestbed1StructInterfaceInterface> UTestbed1Settings::GetITestb
 	return nullptr;
 }
 
-TScriptInterface<ITestbed1StructArrayInterfaceInterface> UTestbed1Settings::GetITestbed1StructArrayInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructArrayInterface> UTestbed1Settings::GetITestbed1StructArrayInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed1Settings* Testbed1Settings = GetMutableDefault<UTestbed1Settings>();
 
@@ -89,7 +89,7 @@ TScriptInterface<ITestbed1StructArrayInterfaceInterface> UTestbed1Settings::GetI
 	return nullptr;
 }
 
-TScriptInterface<ITestbed1StructArray2InterfaceInterface> UTestbed1Settings::GetITestbed1StructArray2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructArray2Interface> UTestbed1Settings::GetITestbed1StructArray2InterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTestbed1Settings* Testbed1Settings = GetMutableDefault<UTestbed1Settings>();
 

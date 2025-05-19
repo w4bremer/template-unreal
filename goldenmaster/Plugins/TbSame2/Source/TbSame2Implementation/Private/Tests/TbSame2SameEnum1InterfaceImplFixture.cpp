@@ -69,7 +69,7 @@ FTbSame2SameEnum1InterfaceImplFixture::~FTbSame2SameEnum1InterfaceImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbSame2SameEnum1InterfaceInterface> FTbSame2SameEnum1InterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSame2SameEnum1Interface> FTbSame2SameEnum1InterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

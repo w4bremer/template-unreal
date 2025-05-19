@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTbEnumEnumInterface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TBENUMAPI_API UAbstractTbEnumEnumInterface : public UGameInstanceSubsystem, public ITbEnumEnumInterfaceInterface
+class TBENUMAPI_API UAbstractTbEnumEnumInterface : public UGameInstanceSubsystem, public ITbEnumEnumInterface
 {
 	GENERATED_BODY()
 

@@ -8,7 +8,7 @@ CounterCounterTracer::CounterCounterTracer()
 {
 }
 
-void CounterCounterTracer::capture_state(UObject* Object, ICounterCounterInterface* obj)
+void CounterCounterTracer::capture_state(UObject* Object, ICounterCounter* obj)
 {
 	nlohmann::json fields_;
 	fields_["vector"] = obj->GetVector();

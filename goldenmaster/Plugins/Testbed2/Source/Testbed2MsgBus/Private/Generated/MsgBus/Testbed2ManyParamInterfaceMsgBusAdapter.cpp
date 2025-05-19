@@ -139,7 +139,7 @@ bool UTestbed2ManyParamInterfaceMsgBusAdapter::_IsListening() const
 	return Testbed2ManyParamInterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTestbed2ManyParamInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService)
+void UTestbed2ManyParamInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

@@ -6,7 +6,7 @@ Testbed2ManyParamInterfaceTracer::Testbed2ManyParamInterfaceTracer()
 {
 }
 
-void Testbed2ManyParamInterfaceTracer::capture_state(UObject* Object, ITestbed2ManyParamInterfaceInterface* obj)
+void Testbed2ManyParamInterfaceTracer::capture_state(UObject* Object, ITestbed2ManyParamInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -112,7 +112,7 @@ Testbed2NestedStruct1InterfaceTracer::Testbed2NestedStruct1InterfaceTracer()
 {
 }
 
-void Testbed2NestedStruct1InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct1InterfaceInterface* obj)
+void Testbed2NestedStruct1InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct1Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -143,7 +143,7 @@ Testbed2NestedStruct2InterfaceTracer::Testbed2NestedStruct2InterfaceTracer()
 {
 }
 
-void Testbed2NestedStruct2InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct2InterfaceInterface* obj)
+void Testbed2NestedStruct2InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct2Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -197,7 +197,7 @@ Testbed2NestedStruct3InterfaceTracer::Testbed2NestedStruct3InterfaceTracer()
 {
 }
 
-void Testbed2NestedStruct3InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct3InterfaceInterface* obj)
+void Testbed2NestedStruct3InterfaceTracer::capture_state(UObject* Object, ITestbed2NestedStruct3Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();

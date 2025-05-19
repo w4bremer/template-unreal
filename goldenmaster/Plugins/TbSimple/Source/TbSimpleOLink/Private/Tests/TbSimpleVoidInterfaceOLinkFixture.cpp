@@ -42,7 +42,7 @@ FTbSimpleVoidInterfaceOLinkFixture::~FTbSimpleVoidInterfaceOLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleVoidInterfaceInterface> FTbSimpleVoidInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITbSimpleVoidInterface> FTbSimpleVoidInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

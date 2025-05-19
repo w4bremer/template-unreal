@@ -51,7 +51,7 @@ void {{$Class}}::Deinitialize()
 	Super::Deinitialize();
 }
 
-void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService)
+void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -80,7 +80,7 @@ void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Cam
 	checkf(InService.GetInterface() != nullptr, TEXT("Cannot set backend service - interface {{$Iface}} is not fully implemented"));
 
 	// subscribe to new backend
-{{- $Service := printf "I%sInterface" $Iface }}
+{{- $Service := printf "I%s" $Iface }}
 	BackendService = InService;
 {{- if or (len .Interface.Properties) (.Interface.Signals) }}
 	U{{$Iface}}Signals* BackendSignals = BackendService->_GetSignals();
@@ -142,7 +142,7 @@ void {{$Class}}::Deinitialize()
 	Super::Deinitialize();
 }
 
-void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService)
+void {{$Class}}::setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService)
 {
 }
 {{- range .Interface.Signals }}

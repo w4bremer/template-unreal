@@ -22,7 +22,7 @@ limitations under the License.
 
 class UGameInstance;
 class FSubsystemCollectionBase;
-class ICounterCounterInterface;
+class ICounterCounter;
 
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFCounterModuleFactory, Log, All);
@@ -31,11 +31,11 @@ class COUNTERCORE_API FCounterModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
-	using FCounterCounterFactoryFunction = TFunction<TScriptInterface<ICounterCounterInterface>(FSubsystemCollectionBase& Collection)>;
+	using FCounterCounterFactoryFunction = TFunction<TScriptInterface<ICounterCounter>(FSubsystemCollectionBase& Collection)>;
 
 	/** register factories for different types of implementations and interfaces */
 	static bool RegisterFactory(FString TypeIdentifier, FCounterCounterFactoryFunction FactoryFunction);
-	static TScriptInterface<ICounterCounterInterface> GetCounterCounterImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ICounterCounter> GetCounterCounterImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 
 private:
 	static TMap<FString, FCounterModuleFactory::FCounterCounterFactoryFunction> CounterCounterFactories;

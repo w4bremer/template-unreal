@@ -28,7 +28,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTestbed1StructInterfaceOLinkSource, Log, All);
-/** @brief handles OLink network interactions specific to ITestbed1StructInterfaceInterface */
+/** @brief handles OLink network interactions specific to ITestbed1StructInterface */
 class Testbed1StructInterfaceOLinkSource : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -36,7 +36,7 @@ public:
 	virtual ~Testbed1StructInterfaceOLinkSource() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<ITestbed1StructInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITestbed1StructInterface> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -67,7 +67,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<ITestbed1StructInterfaceInterface> BackendService;
+	TScriptInterface<ITestbed1StructInterface> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

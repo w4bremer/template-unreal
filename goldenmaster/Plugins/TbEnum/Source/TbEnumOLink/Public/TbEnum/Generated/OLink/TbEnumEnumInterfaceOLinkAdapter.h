@@ -31,7 +31,7 @@ class RemoteRegistry;
 } // namespace ApiGear
 
 /** @brief handles the adaption between the service implementation and the OLink protocol
- * takes an object of the type ITbEnumEnumInterfaceInterface
+ * takes an object of the type ITbEnumEnumInterface
  * and holds the corresponding TbEnumEnumInterfaceOLinkSource OLink source object
  */
 UCLASS(BlueprintType)
@@ -47,7 +47,7 @@ public:
 	void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbEnum|EnumInterface")
-	void setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbEnumEnumInterface> InService);
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbEnum|EnumInterface")
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -90,7 +90,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbEnum|EnumInterface")
-	TScriptInterface<ITbEnumEnumInterfaceInterface> BackendService;
+	TScriptInterface<ITbEnumEnumInterface> BackendService;
 
 	/** Holds the registry */
 	TSharedPtr<ApiGear::ObjectLink::RemoteRegistry> Registry;

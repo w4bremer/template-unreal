@@ -48,7 +48,7 @@ TbSimpleEmptyInterfaceOLinkSource::TbSimpleEmptyInterfaceOLinkSource()
 {
 }
 
-void TbSimpleEmptyInterfaceOLinkSource::setBackendService(TScriptInterface<ITbSimpleEmptyInterfaceInterface> InService)
+void TbSimpleEmptyInterfaceOLinkSource::setBackendService(TScriptInterface<ITbSimpleEmptyInterface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

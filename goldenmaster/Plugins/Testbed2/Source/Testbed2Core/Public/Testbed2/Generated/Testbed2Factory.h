@@ -22,10 +22,10 @@ limitations under the License.
 
 class UGameInstance;
 class FSubsystemCollectionBase;
-class ITestbed2ManyParamInterfaceInterface;
-class ITestbed2NestedStruct1InterfaceInterface;
-class ITestbed2NestedStruct2InterfaceInterface;
-class ITestbed2NestedStruct3InterfaceInterface;
+class ITestbed2ManyParamInterface;
+class ITestbed2NestedStruct1Interface;
+class ITestbed2NestedStruct2Interface;
+class ITestbed2NestedStruct3Interface;
 
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTestbed2ModuleFactory, Log, All);
@@ -34,20 +34,20 @@ class TESTBED2CORE_API FTestbed2ModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
-	using FTestbed2ManyParamInterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2ManyParamInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTestbed2NestedStruct1InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct1InterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTestbed2NestedStruct2InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct2InterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTestbed2NestedStruct3InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct3InterfaceInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTestbed2ManyParamInterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2ManyParamInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTestbed2NestedStruct1InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct1Interface>(FSubsystemCollectionBase& Collection)>;
+	using FTestbed2NestedStruct2InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct2Interface>(FSubsystemCollectionBase& Collection)>;
+	using FTestbed2NestedStruct3InterfaceFactoryFunction = TFunction<TScriptInterface<ITestbed2NestedStruct3Interface>(FSubsystemCollectionBase& Collection)>;
 
 	/** register factories for different types of implementations and interfaces */
 	static bool RegisterFactory(FString TypeIdentifier, FTestbed2ManyParamInterfaceFactoryFunction FactoryFunction);
 	static bool RegisterFactory(FString TypeIdentifier, FTestbed2NestedStruct1InterfaceFactoryFunction FactoryFunction);
 	static bool RegisterFactory(FString TypeIdentifier, FTestbed2NestedStruct2InterfaceFactoryFunction FactoryFunction);
 	static bool RegisterFactory(FString TypeIdentifier, FTestbed2NestedStruct3InterfaceFactoryFunction FactoryFunction);
-	static TScriptInterface<ITestbed2ManyParamInterfaceInterface> GetTestbed2ManyParamInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> GetTestbed2NestedStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> GetTestbed2NestedStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> GetTestbed2NestedStruct3InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2ManyParamInterface> GetTestbed2ManyParamInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct1Interface> GetTestbed2NestedStruct1InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct2Interface> GetTestbed2NestedStruct2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct3Interface> GetTestbed2NestedStruct3InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 
 private:
 	static TMap<FString, FTestbed2ModuleFactory::FTestbed2ManyParamInterfaceFactoryFunction> Testbed2ManyParamInterfaceFactories;

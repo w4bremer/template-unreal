@@ -47,7 +47,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTestbed2ManyParamInterfaceProp4ChangedDeleg
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTestbed2ManyParamInterfaceProp4ChangedDelegateBP, int32, Prop4);
 
 /**
- * Class UTestbed2ManyParamInterfaceInterfaceSignals
+ * Class UTestbed2ManyParamInterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -147,19 +147,19 @@ public:
 };
 
 /**
- * Interface UTestbed2ManyParamInterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTestbed2ManyParamInterface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTestbed2ManyParamInterfaceInterface : public UInterface
+class UTestbed2ManyParamInterface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITestbed2ManyParamInterfaceInterface
+ * Interface ITestbed2ManyParamInterface
  */
-class TESTBED2API_API ITestbed2ManyParamInterfaceInterface
+class TESTBED2API_API ITestbed2ManyParamInterface
 {
 	GENERATED_BODY()
 

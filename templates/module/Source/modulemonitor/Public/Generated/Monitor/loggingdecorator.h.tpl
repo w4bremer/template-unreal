@@ -43,7 +43,7 @@ public:
 	virtual ~{{$Class}}();
 
 	UFUNCTION(BlueprintCallable, Category = "{{$Category}}")
-	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService);
+	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -66,7 +66,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "{{$Category}}")
-	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> BackendService;
+	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> BackendService;
 
 	// signals
 {{- range $i, $e := .Interface.Signals }}

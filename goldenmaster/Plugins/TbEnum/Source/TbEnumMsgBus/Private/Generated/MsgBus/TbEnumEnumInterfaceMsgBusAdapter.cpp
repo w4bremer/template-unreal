@@ -139,7 +139,7 @@ bool UTbEnumEnumInterfaceMsgBusAdapter::_IsListening() const
 	return TbEnumEnumInterfaceMsgBusEndpoint.IsValid();
 }
 
-void UTbEnumEnumInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService)
+void UTbEnumEnumInterfaceMsgBusAdapter::_setBackendService(TScriptInterface<ITbEnumEnumInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

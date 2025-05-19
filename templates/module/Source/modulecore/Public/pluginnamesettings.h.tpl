@@ -31,7 +31,7 @@ const FString {{$ModuleName}}LocalBackendIdentifier = "Local";
 class FSubsystemCollectionBase;
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-class I{{$class}}Interface;
+class I{{$class}};
 {{- end }}
 
 /**
@@ -65,7 +65,7 @@ public:
 {{- range .Module.Interfaces }}
 {{- if $.Features.monitor }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-	static TScriptInterface<I{{$class}}Interface> GetI{{$class}}InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<I{{$class}}> GetI{{$class}}ForLogging(FSubsystemCollectionBase& Collection);
 {{- end }}
 {{- end }}
 

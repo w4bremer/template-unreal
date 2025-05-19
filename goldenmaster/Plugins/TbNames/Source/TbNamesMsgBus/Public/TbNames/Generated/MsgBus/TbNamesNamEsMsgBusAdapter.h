@@ -51,7 +51,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbNamesNamEsClientCountDelegate, in
 DECLARE_LOG_CATEGORY_EXTERN(LogTbNamesNamEsMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ITbNamesNamEsInterface
+/// takes an object of the type ITbNamesNamEs
 /// and holds the corresponding TbNamesNamEsOLinkSource OLink source object
 UCLASS(BlueprintType)
 class TBNAMESMSGBUS_API UTbNamesNamEsMsgBusAdapter : public UGameInstanceSubsystem
@@ -94,7 +94,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbNames|NamEs")
-	void _setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService);
+	void _setBackendService(TScriptInterface<ITbNamesNamEs> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> TbNamesNamEsMsgBusEndpoint;
@@ -142,7 +142,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbNames|NamEs")
-	TScriptInterface<ITbNamesNamEsInterface> BackendService;
+	TScriptInterface<ITbNamesNamEs> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

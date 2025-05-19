@@ -28,7 +28,7 @@ THIRD_PARTY_INCLUDES_END
 #include "OLinkHost.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTbEnumEnumInterfaceOLinkSource, Log, All);
-/** @brief handles OLink network interactions specific to ITbEnumEnumInterfaceInterface */
+/** @brief handles OLink network interactions specific to ITbEnumEnumInterface */
 class TbEnumEnumInterfaceOLinkSource : public ApiGear::ObjectLink::IObjectSource
 {
 public:
@@ -36,7 +36,7 @@ public:
 	virtual ~TbEnumEnumInterfaceOLinkSource() = default;
 
 	/** set the backend service which logic is to be used */
-	void setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbEnumEnumInterface> InService);
 
 	/** set the OLink host to be used */
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -67,7 +67,7 @@ public:
 
 private:
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
-	TScriptInterface<ITbEnumEnumInterfaceInterface> BackendService;
+	TScriptInterface<ITbEnumEnumInterface> BackendService;
 
 	/** The host holding the connections and the registry */
 	TSoftObjectPtr<UOLinkHost> Host;

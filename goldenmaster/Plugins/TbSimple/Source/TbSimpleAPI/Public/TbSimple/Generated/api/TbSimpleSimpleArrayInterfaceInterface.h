@@ -69,7 +69,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTbSimpleSimpleArrayInterfacePropReadOnlyStr
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbSimpleSimpleArrayInterfacePropReadOnlyStringChangedDelegateBP, const FString&, PropReadOnlyString);
 
 /**
- * Class UTbSimpleSimpleArrayInterfaceInterfaceSignals
+ * Class UTbSimpleSimpleArrayInterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -268,19 +268,19 @@ public:
 };
 
 /**
- * Interface UTbSimpleSimpleArrayInterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTbSimpleSimpleArrayInterface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTbSimpleSimpleArrayInterfaceInterface : public UInterface
+class UTbSimpleSimpleArrayInterface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbSimpleSimpleArrayInterfaceInterface
+ * Interface ITbSimpleSimpleArrayInterface
  */
-class TBSIMPLEAPI_API ITbSimpleSimpleArrayInterfaceInterface
+class TBSIMPLEAPI_API ITbSimpleSimpleArrayInterface
 {
 	GENERATED_BODY()
 

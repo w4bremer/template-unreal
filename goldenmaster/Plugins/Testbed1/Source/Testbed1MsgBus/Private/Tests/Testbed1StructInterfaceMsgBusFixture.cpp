@@ -42,7 +42,7 @@ FTestbed1StructInterfaceMsgBusFixture::~FTestbed1StructInterfaceMsgBusFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITestbed1StructInterfaceInterface> FTestbed1StructInterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITestbed1StructInterface> FTestbed1StructInterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

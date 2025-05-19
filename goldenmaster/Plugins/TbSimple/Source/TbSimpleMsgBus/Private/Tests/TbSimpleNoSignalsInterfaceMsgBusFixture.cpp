@@ -42,7 +42,7 @@ FTbSimpleNoSignalsInterfaceMsgBusFixture::~FTbSimpleNoSignalsInterfaceMsgBusFixt
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> FTbSimpleNoSignalsInterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoSignalsInterface> FTbSimpleNoSignalsInterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

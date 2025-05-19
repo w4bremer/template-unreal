@@ -22,18 +22,18 @@ limitations under the License.
 #include "TbNamesNamEsBPInterface.generated.h"
 
 /**
- * Interface UTbNamesNamEsBPInterface only for Unreal Engine's reflection system
+ * Interface UTbNamesNamEsBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTbNamesNamEsBPInterface : public UInterface
+class UTbNamesNamEsBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbNamesNamEsBPInterface
+ * Interface ITbNamesNamEsBP
  */
-class TBNAMESAPI_API ITbNamesNamEsBPInterface
+class TBNAMESAPI_API ITbNamesNamEsBP
 {
 	GENERATED_BODY()
 

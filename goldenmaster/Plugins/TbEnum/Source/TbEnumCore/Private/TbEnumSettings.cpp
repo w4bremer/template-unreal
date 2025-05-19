@@ -51,7 +51,7 @@ void UTbEnumSettings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITbEnumEnumInterfaceInterface> UTbEnumSettings::GetITbEnumEnumInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbEnumEnumInterface> UTbEnumSettings::GetITbEnumEnumInterfaceForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbEnumSettings* TbEnumSettings = GetMutableDefault<UTbEnumSettings>();
 

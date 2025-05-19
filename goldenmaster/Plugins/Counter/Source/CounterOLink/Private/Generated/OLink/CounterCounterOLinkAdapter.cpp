@@ -52,7 +52,7 @@ void UCounterCounterOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UCounterCounterOLinkAdapter::setBackendService(TScriptInterface<ICounterCounterInterface> InService)
+void UCounterCounterOLinkAdapter::setBackendService(TScriptInterface<ICounterCounter> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -159,7 +159,7 @@ void UCounterCounterOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UCounterCounterOLinkAdapter::setBackendService(TScriptInterface<ICounterCounterInterface> InService)
+void UCounterCounterOLinkAdapter::setBackendService(TScriptInterface<ICounterCounter> InService)
 {
 }
 

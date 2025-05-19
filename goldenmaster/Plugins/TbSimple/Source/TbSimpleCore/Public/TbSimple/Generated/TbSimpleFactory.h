@@ -22,13 +22,13 @@ limitations under the License.
 
 class UGameInstance;
 class FSubsystemCollectionBase;
-class ITbSimpleVoidInterfaceInterface;
-class ITbSimpleSimpleInterfaceInterface;
-class ITbSimpleSimpleArrayInterfaceInterface;
-class ITbSimpleNoPropertiesInterfaceInterface;
-class ITbSimpleNoOperationsInterfaceInterface;
-class ITbSimpleNoSignalsInterfaceInterface;
-class ITbSimpleEmptyInterfaceInterface;
+class ITbSimpleVoidInterface;
+class ITbSimpleSimpleInterface;
+class ITbSimpleSimpleArrayInterface;
+class ITbSimpleNoPropertiesInterface;
+class ITbSimpleNoOperationsInterface;
+class ITbSimpleNoSignalsInterface;
+class ITbSimpleEmptyInterface;
 
 // General Log
 DECLARE_LOG_CATEGORY_EXTERN(LogFTbSimpleModuleFactory, Log, All);
@@ -37,13 +37,13 @@ class TBSIMPLECORE_API FTbSimpleModuleFactory
 {
 public:
 	/** type of function for creating implementations*/
-	using FTbSimpleVoidInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleVoidInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleSimpleInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleSimpleInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleSimpleArrayInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleNoPropertiesInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleNoOperationsInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoOperationsInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleNoSignalsInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoSignalsInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
-	using FTbSimpleEmptyInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleEmptyInterfaceInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleVoidInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleVoidInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleSimpleInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleSimpleInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleSimpleArrayInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleSimpleArrayInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleNoPropertiesInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoPropertiesInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleNoOperationsInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoOperationsInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleNoSignalsInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleNoSignalsInterface>(FSubsystemCollectionBase& Collection)>;
+	using FTbSimpleEmptyInterfaceFactoryFunction = TFunction<TScriptInterface<ITbSimpleEmptyInterface>(FSubsystemCollectionBase& Collection)>;
 
 	/** register factories for different types of implementations and interfaces */
 	static bool RegisterFactory(FString TypeIdentifier, FTbSimpleVoidInterfaceFactoryFunction FactoryFunction);
@@ -53,13 +53,13 @@ public:
 	static bool RegisterFactory(FString TypeIdentifier, FTbSimpleNoOperationsInterfaceFactoryFunction FactoryFunction);
 	static bool RegisterFactory(FString TypeIdentifier, FTbSimpleNoSignalsInterfaceFactoryFunction FactoryFunction);
 	static bool RegisterFactory(FString TypeIdentifier, FTbSimpleEmptyInterfaceFactoryFunction FactoryFunction);
-	static TScriptInterface<ITbSimpleVoidInterfaceInterface> GetTbSimpleVoidInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleSimpleInterfaceInterface> GetTbSimpleSimpleInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> GetTbSimpleSimpleArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> GetTbSimpleNoPropertiesInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> GetTbSimpleNoOperationsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> GetTbSimpleNoSignalsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleEmptyInterfaceInterface> GetTbSimpleEmptyInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleVoidInterface> GetTbSimpleVoidInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleSimpleInterface> GetTbSimpleSimpleInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleSimpleArrayInterface> GetTbSimpleSimpleArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoPropertiesInterface> GetTbSimpleNoPropertiesInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoOperationsInterface> GetTbSimpleNoOperationsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoSignalsInterface> GetTbSimpleNoSignalsInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleEmptyInterface> GetTbSimpleEmptyInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 
 private:
 	static TMap<FString, FTbSimpleModuleFactory::FTbSimpleVoidInterfaceFactoryFunction> TbSimpleVoidInterfaceFactories;

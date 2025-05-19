@@ -32,7 +32,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTbSame1SameEnum1InterfaceProp1ChangedDelega
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbSame1SameEnum1InterfaceProp1ChangedDelegateBP, ETbSame1Enum1, Prop1);
 
 /**
- * Class UTbSame1SameEnum1InterfaceInterfaceSignals
+ * Class UTbSame1SameEnum1InterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -66,19 +66,19 @@ public:
 };
 
 /**
- * Interface UTbSame1SameEnum1InterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTbSame1SameEnum1Interface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTbSame1SameEnum1InterfaceInterface : public UInterface
+class UTbSame1SameEnum1Interface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbSame1SameEnum1InterfaceInterface
+ * Interface ITbSame1SameEnum1Interface
  */
-class TBSAME1API_API ITbSame1SameEnum1InterfaceInterface
+class TBSAME1API_API ITbSame1SameEnum1Interface
 {
 	GENERATED_BODY()
 

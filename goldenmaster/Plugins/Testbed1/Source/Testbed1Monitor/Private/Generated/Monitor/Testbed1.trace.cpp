@@ -6,7 +6,7 @@ Testbed1StructInterfaceTracer::Testbed1StructInterfaceTracer()
 {
 }
 
-void Testbed1StructInterfaceTracer::capture_state(UObject* Object, ITestbed1StructInterfaceInterface* obj)
+void Testbed1StructInterfaceTracer::capture_state(UObject* Object, ITestbed1StructInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -100,7 +100,7 @@ Testbed1StructArrayInterfaceTracer::Testbed1StructArrayInterfaceTracer()
 {
 }
 
-void Testbed1StructArrayInterfaceTracer::capture_state(UObject* Object, ITestbed1StructArrayInterfaceInterface* obj)
+void Testbed1StructArrayInterfaceTracer::capture_state(UObject* Object, ITestbed1StructArrayInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -215,7 +215,7 @@ Testbed1StructArray2InterfaceTracer::Testbed1StructArray2InterfaceTracer()
 {
 }
 
-void Testbed1StructArray2InterfaceTracer::capture_state(UObject* Object, ITestbed1StructArray2InterfaceInterface* obj)
+void Testbed1StructArray2InterfaceTracer::capture_state(UObject* Object, ITestbed1StructArray2Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();

@@ -32,7 +32,7 @@ F{{ $DisplayName }}OLinkFixture::~F{{ $DisplayName }}OLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<I{{$DisplayName}}Interface> F{{ $DisplayName }}OLinkFixture::GetImplementation()
+TScriptInterface<I{{$DisplayName}}> F{{ $DisplayName }}OLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

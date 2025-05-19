@@ -33,7 +33,7 @@ UTbEnumEnumInterfaceLoggingDecorator::~UTbEnumEnumInterfaceLoggingDecorator() = 
 void UTbEnumEnumInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbEnumSettings::GetITbEnumEnumInterfaceInterfaceForLogging(Collection));
+	setBackendService(UTbEnumSettings::GetITbEnumEnumInterfaceForLogging(Collection));
 }
 
 void UTbEnumEnumInterfaceLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTbEnumEnumInterfaceLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTbEnumEnumInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService)
+void UTbEnumEnumInterfaceLoggingDecorator::setBackendService(TScriptInterface<ITbEnumEnumInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

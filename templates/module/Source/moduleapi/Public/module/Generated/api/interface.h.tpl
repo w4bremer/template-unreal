@@ -22,7 +22,7 @@ limitations under the License.
 {{- with .Interface }}
 {{- $Class := printf "%s%s" $ModuleName (Camel .Name) }}
 {{- $Category := printf "ApiGear|%s|%s" $ModuleName (Camel .Name) }}
-{{- $class := printf "U%sInterface" $Class }}
+{{- $class := printf "U%s" $Class }}
 {{- $Iface := printf "%s%s" $ModuleName (Camel .Name) }}
 #include "Engine/LatentActionManager.h"
 #include "UObject/Interface.h"
@@ -98,7 +98,7 @@ class {{$class}} : public UInterface
 {
 	GENERATED_BODY()
 };
-{{ $class := printf "I%sInterface" $Class }}
+{{ $class := printf "I%s" $Class }}
 /**
  * Interface {{$class}}
  */

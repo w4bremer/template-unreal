@@ -11,7 +11,7 @@
 #include "TbEnumEnumInterfaceImplFixture.generated.h"
 
 class FTbEnumEnumInterfaceImplFixture;
-class ITbEnumEnumInterfaceInterface;
+class ITbEnumEnumInterface;
 
 UCLASS()
 class UTbEnumEnumInterfaceImplHelper : public UObject
@@ -61,14 +61,14 @@ public:
 	~FTbEnumEnumInterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbEnumEnumInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbEnumEnumInterface> GetImplementation();
 	TSoftObjectPtr<UTbEnumEnumInterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbEnumEnumInterfaceInterface> testImplementation;
+	TScriptInterface<ITbEnumEnumInterface> testImplementation;
 	TSoftObjectPtr<UTbEnumEnumInterfaceImplHelper> Helper;
 };
 

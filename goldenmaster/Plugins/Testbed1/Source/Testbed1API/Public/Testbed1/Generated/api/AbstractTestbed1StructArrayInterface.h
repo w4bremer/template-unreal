@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTestbed1StructArrayInterface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TESTBED1API_API UAbstractTestbed1StructArrayInterface : public UGameInstanceSubsystem, public ITestbed1StructArrayInterfaceInterface
+class TESTBED1API_API UAbstractTestbed1StructArrayInterface : public UGameInstanceSubsystem, public ITestbed1StructArrayInterface
 {
 	GENERATED_BODY()
 

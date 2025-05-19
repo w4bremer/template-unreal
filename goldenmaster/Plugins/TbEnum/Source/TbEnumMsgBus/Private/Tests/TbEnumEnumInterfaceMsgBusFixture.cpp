@@ -42,7 +42,7 @@ FTbEnumEnumInterfaceMsgBusFixture::~FTbEnumEnumInterfaceMsgBusFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbEnumEnumInterfaceInterface> FTbEnumEnumInterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITbEnumEnumInterface> FTbEnumEnumInterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

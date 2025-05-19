@@ -42,7 +42,7 @@ FTbSame2SameStruct2InterfaceMsgBusFixture::~FTbSame2SameStruct2InterfaceMsgBusFi
 	CleanUp();
 }
 
-TScriptInterface<ITbSame2SameStruct2InterfaceInterface> FTbSame2SameStruct2InterfaceMsgBusFixture::GetImplementation()
+TScriptInterface<ITbSame2SameStruct2Interface> FTbSame2SameStruct2InterfaceMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

@@ -25,10 +25,10 @@ limitations under the License.
 const FString TbSame1LocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITbSame1SameStruct1InterfaceInterface;
-class ITbSame1SameStruct2InterfaceInterface;
-class ITbSame1SameEnum1InterfaceInterface;
-class ITbSame1SameEnum2InterfaceInterface;
+class ITbSame1SameStruct1Interface;
+class ITbSame1SameStruct2Interface;
+class ITbSame1SameEnum1Interface;
+class ITbSame1SameEnum2Interface;
 
 /**
  * Implements the settings for the TbSame1 plugin.
@@ -51,10 +51,10 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITbSame1SameStruct1InterfaceInterface> GetITbSame1SameStruct1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSame1SameStruct2InterfaceInterface> GetITbSame1SameStruct2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSame1SameEnum1InterfaceInterface> GetITbSame1SameEnum1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSame1SameEnum2InterfaceInterface> GetITbSame1SameEnum2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSame1SameStruct1Interface> GetITbSame1SameStruct1InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSame1SameStruct2Interface> GetITbSame1SameStruct2InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSame1SameEnum1Interface> GetITbSame1SameEnum1InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSame1SameEnum2Interface> GetITbSame1SameEnum2InterfaceForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

@@ -42,7 +42,7 @@ FTbSimpleNoSignalsInterfaceOLinkFixture::~FTbSimpleNoSignalsInterfaceOLinkFixtur
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> FTbSimpleNoSignalsInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoSignalsInterface> FTbSimpleNoSignalsInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

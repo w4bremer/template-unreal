@@ -26,12 +26,12 @@ limitations under the License.
  * Does contain signal events, property-changed events and void-function events only.
  */
 UINTERFACE(BlueprintType)
-class UTbSimpleNoSignalsInterfaceBPSignalsInterface : public UInterface
+class UTbSimpleNoSignalsInterfaceBPSignals : public UInterface
 {
 	GENERATED_BODY()
 };
 
-class TBSIMPLEAPI_API ITbSimpleNoSignalsInterfaceBPSignalsInterface
+class TBSIMPLEAPI_API ITbSimpleNoSignalsInterfaceBPSignals
 {
 	GENERATED_BODY()
 

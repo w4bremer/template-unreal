@@ -6,7 +6,7 @@ TbSimpleVoidInterfaceTracer::TbSimpleVoidInterfaceTracer()
 {
 }
 
-void TbSimpleVoidInterfaceTracer::capture_state(UObject* Object, ITbSimpleVoidInterfaceInterface* obj)
+void TbSimpleVoidInterfaceTracer::capture_state(UObject* Object, ITbSimpleVoidInterface* obj)
 {
 	nlohmann::json fields_;
 	Tracer::instance()->state("tb.simple/VoidInterface", fields_);
@@ -28,7 +28,7 @@ TbSimpleSimpleInterfaceTracer::TbSimpleSimpleInterfaceTracer()
 {
 }
 
-void TbSimpleSimpleInterfaceTracer::capture_state(UObject* Object, ITbSimpleSimpleInterfaceInterface* obj)
+void TbSimpleSimpleInterfaceTracer::capture_state(UObject* Object, ITbSimpleSimpleInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -213,7 +213,7 @@ TbSimpleSimpleArrayInterfaceTracer::TbSimpleSimpleArrayInterfaceTracer()
 {
 }
 
-void TbSimpleSimpleArrayInterfaceTracer::capture_state(UObject* Object, ITbSimpleSimpleArrayInterfaceInterface* obj)
+void TbSimpleSimpleArrayInterfaceTracer::capture_state(UObject* Object, ITbSimpleSimpleArrayInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -392,7 +392,7 @@ TbSimpleNoPropertiesInterfaceTracer::TbSimpleNoPropertiesInterfaceTracer()
 {
 }
 
-void TbSimpleNoPropertiesInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoPropertiesInterfaceInterface* obj)
+void TbSimpleNoPropertiesInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoPropertiesInterface* obj)
 {
 	nlohmann::json fields_;
 	Tracer::instance()->state("tb.simple/NoPropertiesInterface", fields_);
@@ -428,7 +428,7 @@ TbSimpleNoOperationsInterfaceTracer::TbSimpleNoOperationsInterfaceTracer()
 {
 }
 
-void TbSimpleNoOperationsInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoOperationsInterfaceInterface* obj)
+void TbSimpleNoOperationsInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoOperationsInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -465,7 +465,7 @@ TbSimpleNoSignalsInterfaceTracer::TbSimpleNoSignalsInterfaceTracer()
 {
 }
 
-void TbSimpleNoSignalsInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoSignalsInterfaceInterface* obj)
+void TbSimpleNoSignalsInterfaceTracer::capture_state(UObject* Object, ITbSimpleNoSignalsInterface* obj)
 {
 	nlohmann::json fields_;
 	fields_["propBool"] = obj->GetPropBool();
@@ -502,7 +502,7 @@ TbSimpleEmptyInterfaceTracer::TbSimpleEmptyInterfaceTracer()
 {
 }
 
-void TbSimpleEmptyInterfaceTracer::capture_state(UObject* Object, ITbSimpleEmptyInterfaceInterface* obj)
+void TbSimpleEmptyInterfaceTracer::capture_state(UObject* Object, ITbSimpleEmptyInterface* obj)
 {
 	nlohmann::json fields_;
 	Tracer::instance()->state("tb.simple/EmptyInterface", fields_);

@@ -39,7 +39,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbSimpleEmptyInterfaceClientCountDe
 DECLARE_LOG_CATEGORY_EXTERN(LogTbSimpleEmptyInterfaceMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ITbSimpleEmptyInterfaceInterface
+/// takes an object of the type ITbSimpleEmptyInterface
 /// and holds the corresponding TbSimpleEmptyInterfaceOLinkSource OLink source object
 UCLASS(BlueprintType)
 class TBSIMPLEMSGBUS_API UTbSimpleEmptyInterfaceMsgBusAdapter : public UGameInstanceSubsystem
@@ -82,7 +82,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbSimple|EmptyInterface")
-	void _setBackendService(TScriptInterface<ITbSimpleEmptyInterfaceInterface> InService);
+	void _setBackendService(TScriptInterface<ITbSimpleEmptyInterface> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> TbSimpleEmptyInterfaceMsgBusEndpoint;
@@ -101,7 +101,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbSimple|EmptyInterface")
-	TScriptInterface<ITbSimpleEmptyInterfaceInterface> BackendService;
+	TScriptInterface<ITbSimpleEmptyInterface> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

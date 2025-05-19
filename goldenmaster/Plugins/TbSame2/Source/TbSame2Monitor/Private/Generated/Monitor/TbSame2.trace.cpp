@@ -6,7 +6,7 @@ TbSame2SameStruct1InterfaceTracer::TbSame2SameStruct1InterfaceTracer()
 {
 }
 
-void TbSame2SameStruct1InterfaceTracer::capture_state(UObject* Object, ITbSame2SameStruct1InterfaceInterface* obj)
+void TbSame2SameStruct1InterfaceTracer::capture_state(UObject* Object, ITbSame2SameStruct1Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -37,7 +37,7 @@ TbSame2SameStruct2InterfaceTracer::TbSame2SameStruct2InterfaceTracer()
 {
 }
 
-void TbSame2SameStruct2InterfaceTracer::capture_state(UObject* Object, ITbSame2SameStruct2InterfaceInterface* obj)
+void TbSame2SameStruct2InterfaceTracer::capture_state(UObject* Object, ITbSame2SameStruct2Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -91,7 +91,7 @@ TbSame2SameEnum1InterfaceTracer::TbSame2SameEnum1InterfaceTracer()
 {
 }
 
-void TbSame2SameEnum1InterfaceTracer::capture_state(UObject* Object, ITbSame2SameEnum1InterfaceInterface* obj)
+void TbSame2SameEnum1InterfaceTracer::capture_state(UObject* Object, ITbSame2SameEnum1Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();
@@ -122,7 +122,7 @@ TbSame2SameEnum2InterfaceTracer::TbSame2SameEnum2InterfaceTracer()
 {
 }
 
-void TbSame2SameEnum2InterfaceTracer::capture_state(UObject* Object, ITbSame2SameEnum2InterfaceInterface* obj)
+void TbSame2SameEnum2InterfaceTracer::capture_state(UObject* Object, ITbSame2SameEnum2Interface* obj)
 {
 	nlohmann::json fields_;
 	fields_["prop1"] = obj->GetProp1();

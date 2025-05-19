@@ -40,7 +40,7 @@ bool FTestbed1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed1St
 	return true;
 }
 
-TScriptInterface<ITestbed1StructInterfaceInterface> FTestbed1ModuleFactory::GetTestbed1StructInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructInterface> FTestbed1ModuleFactory::GetTestbed1StructInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed1StructInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -63,7 +63,7 @@ bool FTestbed1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed1St
 	return true;
 }
 
-TScriptInterface<ITestbed1StructArrayInterfaceInterface> FTestbed1ModuleFactory::GetTestbed1StructArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructArrayInterface> FTestbed1ModuleFactory::GetTestbed1StructArrayInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed1StructArrayInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{
@@ -86,7 +86,7 @@ bool FTestbed1ModuleFactory::RegisterFactory(FString TypeIdentifier, FTestbed1St
 	return true;
 }
 
-TScriptInterface<ITestbed1StructArray2InterfaceInterface> FTestbed1ModuleFactory::GetTestbed1StructArray2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITestbed1StructArray2Interface> FTestbed1ModuleFactory::GetTestbed1StructArray2InterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (Testbed1StructArray2InterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{

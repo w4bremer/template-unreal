@@ -48,7 +48,7 @@ FTbSimpleEmptyInterfaceImplFixture::~FTbSimpleEmptyInterfaceImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleEmptyInterfaceInterface> FTbSimpleEmptyInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleEmptyInterface> FTbSimpleEmptyInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

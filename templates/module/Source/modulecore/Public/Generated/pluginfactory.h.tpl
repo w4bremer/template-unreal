@@ -29,7 +29,7 @@ class UGameInstance;
 class FSubsystemCollectionBase;
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-class I{{$class}}Interface;
+class I{{$class}};
 {{- end }}
 
 // General Log
@@ -41,7 +41,7 @@ public:
 	/** type of function for creating implementations*/
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-	using F{{$class}}FactoryFunction = TFunction<TScriptInterface<I{{$class}}Interface>(FSubsystemCollectionBase& Collection)>;
+	using F{{$class}}FactoryFunction = TFunction<TScriptInterface<I{{$class}}>(FSubsystemCollectionBase& Collection)>;
 {{- end }}
 
 	/** register factories for different types of implementations and interfaces */
@@ -52,7 +52,7 @@ public:
 
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-	static TScriptInterface<I{{$class}}Interface> Get{{$class}}Implementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
+	static TScriptInterface<I{{$class}}> Get{{$class}}Implementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection);
 {{- end }}
 
 private:

@@ -40,7 +40,7 @@ void {{$class}}::StartupModule()
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
 {{- if $.Features.olink }}
-	{{$classFactory}}::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<I{{$class}}Interface>
+	{{$classFactory}}::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<I{{$class}}>
 		{
 		return Cast<{{ printf "U%sOLinkClient" $class}}>(Collection.InitializeDependency({{ printf "U%sOLinkClient" $class}}::StaticClass()));
 	});

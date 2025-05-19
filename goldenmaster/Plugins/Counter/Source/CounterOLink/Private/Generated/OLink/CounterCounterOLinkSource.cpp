@@ -50,7 +50,7 @@ CounterCounterOLinkSource::CounterCounterOLinkSource()
 {
 }
 
-void CounterCounterOLinkSource::setBackendService(TScriptInterface<ICounterCounterInterface> InService)
+void CounterCounterOLinkSource::setBackendService(TScriptInterface<ICounterCounter> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

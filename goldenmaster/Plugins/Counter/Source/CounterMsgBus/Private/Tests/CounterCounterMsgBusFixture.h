@@ -11,7 +11,7 @@
 #include "Counter/Generated/api/Counter_data.h"
 
 class UCounterCounterMsgBusSpec;
-class ICounterCounterInterface;
+class ICounterCounter;
 class UCounterCounterMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FCounterCounterMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ICounterCounterInterface> GetImplementation();
+	TScriptInterface<ICounterCounter> GetImplementation();
 	UCounterCounterMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ICounterCounterInterface> testImplementation;
+	TScriptInterface<ICounterCounter> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

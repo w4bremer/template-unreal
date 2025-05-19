@@ -12,7 +12,7 @@
 #include "TbSimple/Generated/api/TbSimple_data.h"
 
 class FTbSimpleSimpleInterfaceOLinkFixture;
-class ITbSimpleSimpleInterfaceInterface;
+class ITbSimpleSimpleInterface;
 class UTbSimpleSimpleInterfaceOLinkAdapter;
 class IApiGearConnection;
 class UOLinkHost;
@@ -33,7 +33,7 @@ public:
 	~FTbSimpleSimpleInterfaceOLinkFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> GetImplementation();
+	TScriptInterface<ITbSimpleSimpleInterface> GetImplementation();
 	UOLinkHost* GetHost();
 	UTbSimpleSimpleInterfaceOLinkAdapter* GetAdapter();
 	TScriptInterface<IApiGearConnection> Connection;
@@ -42,7 +42,7 @@ private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> testImplementation;
+	TScriptInterface<ITbSimpleSimpleInterface> testImplementation;
 };
 } // namespace Tests
 } // namespace OLink

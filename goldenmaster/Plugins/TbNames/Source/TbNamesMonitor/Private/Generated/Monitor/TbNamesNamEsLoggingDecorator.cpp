@@ -33,7 +33,7 @@ UTbNamesNamEsLoggingDecorator::~UTbNamesNamEsLoggingDecorator() = default;
 void UTbNamesNamEsLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbNamesSettings::GetITbNamesNamEsInterfaceForLogging(Collection));
+	setBackendService(UTbNamesSettings::GetITbNamesNamEsForLogging(Collection));
 }
 
 void UTbNamesNamEsLoggingDecorator::Deinitialize()
@@ -42,7 +42,7 @@ void UTbNamesNamEsLoggingDecorator::Deinitialize()
 	BackendService = nullptr;
 }
 
-void UTbNamesNamEsLoggingDecorator::setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService)
+void UTbNamesNamEsLoggingDecorator::setBackendService(TScriptInterface<ITbNamesNamEs> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)

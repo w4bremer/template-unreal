@@ -18,7 +18,7 @@
 {
 }
 
-void {{$class}}::capture_state(UObject* Object, I{{$ModuleName}}{{$Name}}Interface* obj)
+void {{$class}}::capture_state(UObject* Object, I{{$ModuleName}}{{$Name}}* obj)
 {
 	nlohmann::json fields_;
 {{- range .Properties }}

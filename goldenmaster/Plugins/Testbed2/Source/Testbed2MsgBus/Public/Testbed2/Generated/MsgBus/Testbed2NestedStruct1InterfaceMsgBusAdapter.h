@@ -43,7 +43,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTestbed2NestedStruct1InterfaceClien
 DECLARE_LOG_CATEGORY_EXTERN(LogTestbed2NestedStruct1InterfaceMsgBusAdapter, Log, All);
 
 /// @brief handles the adaption between the service implementation and the OLink protocol
-/// takes an object of the type ITestbed2NestedStruct1InterfaceInterface
+/// takes an object of the type ITestbed2NestedStruct1Interface
 /// and holds the corresponding Testbed2NestedStruct1InterfaceOLinkSource OLink source object
 UCLASS(BlueprintType)
 class TESTBED2MSGBUS_API UTestbed2NestedStruct1InterfaceMsgBusAdapter : public UGameInstanceSubsystem
@@ -86,7 +86,7 @@ public:
 	};
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Testbed2|NestedStruct1Interface")
-	void _setBackendService(TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> InService);
+	void _setBackendService(TScriptInterface<ITestbed2NestedStruct1Interface> InService);
 
 private:
 	TSharedPtr<FMessageEndpoint, ESPMode::ThreadSafe> Testbed2NestedStruct1InterfaceMsgBusEndpoint;
@@ -114,7 +114,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Testbed2|NestedStruct1Interface")
-	TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> BackendService;
+	TScriptInterface<ITestbed2NestedStruct1Interface> BackendService;
 
 	// Heartbeat handling
 	void _CheckClientTimeouts();

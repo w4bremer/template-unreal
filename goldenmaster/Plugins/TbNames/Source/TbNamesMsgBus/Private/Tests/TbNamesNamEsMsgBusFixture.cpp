@@ -42,7 +42,7 @@ FTbNamesNamEsMsgBusFixture::~FTbNamesNamEsMsgBusFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITbNamesNamEsInterface> FTbNamesNamEsMsgBusFixture::GetImplementation()
+TScriptInterface<ITbNamesNamEs> FTbNamesNamEsMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

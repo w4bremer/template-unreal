@@ -144,7 +144,7 @@ FTestbed2ManyParamInterfaceImplFixture::~FTestbed2ManyParamInterfaceImplFixture(
 	CleanUp();
 }
 
-TScriptInterface<ITestbed2ManyParamInterfaceInterface> FTestbed2ManyParamInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITestbed2ManyParamInterface> FTestbed2ManyParamInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

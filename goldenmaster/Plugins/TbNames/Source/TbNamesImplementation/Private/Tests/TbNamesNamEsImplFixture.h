@@ -11,7 +11,7 @@
 #include "TbNamesNamEsImplFixture.generated.h"
 
 class FTbNamesNamEsImplFixture;
-class ITbNamesNamEsInterface;
+class ITbNamesNamEs;
 
 UCLASS()
 class UTbNamesNamEsImplHelper : public UObject
@@ -55,14 +55,14 @@ public:
 	~FTbNamesNamEsImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbNamesNamEsInterface> GetImplementation();
+	TScriptInterface<ITbNamesNamEs> GetImplementation();
 	TSoftObjectPtr<UTbNamesNamEsImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbNamesNamEsInterface> testImplementation;
+	TScriptInterface<ITbNamesNamEs> testImplementation;
 	TSoftObjectPtr<UTbNamesNamEsImplHelper> Helper;
 };
 

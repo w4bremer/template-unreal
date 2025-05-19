@@ -26,12 +26,12 @@ limitations under the License.
  * Does contain signal events, property-changed events and void-function events only.
  */
 UINTERFACE(BlueprintType)
-class UTestbed2ManyParamInterfaceBPSignalsInterface : public UInterface
+class UTestbed2ManyParamInterfaceBPSignals : public UInterface
 {
 	GENERATED_BODY()
 };
 
-class TESTBED2API_API ITestbed2ManyParamInterfaceBPSignalsInterface
+class TESTBED2API_API ITestbed2ManyParamInterfaceBPSignals
 {
 	GENERATED_BODY()
 

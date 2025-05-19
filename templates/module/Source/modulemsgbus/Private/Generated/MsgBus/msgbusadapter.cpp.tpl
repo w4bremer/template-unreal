@@ -138,7 +138,7 @@ bool {{$Class}}::_IsListening() const
 	return {{$Iface}}MsgBusEndpoint.IsValid();
 }
 
-void {{$Class}}::_setBackendService(TScriptInterface<I{{$Iface}}Interface> InService)
+void {{$Class}}::_setBackendService(TScriptInterface<I{{$Iface}}> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -167,7 +167,7 @@ void {{$Class}}::_setBackendService(TScriptInterface<I{{$Iface}}Interface> InSer
 	checkf(InService.GetInterface() != nullptr, TEXT("Cannot set backend service - interface {{$Iface}} is not fully implemented"));
 
 	// subscribe to new backend
-{{- $Service := printf "I%sInterface" $Iface }}
+{{- $Service := printf "I%s" $Iface }}
 	BackendService = InService;
 {{- if or (len .Interface.Properties) (.Interface.Signals) }}
 	U{{$Iface}}Signals* BackendSignals = BackendService->_GetSignals();

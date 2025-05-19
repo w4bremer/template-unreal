@@ -35,7 +35,7 @@ public:
 	virtual ~UTbEnumEnumInterfaceLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbEnum|EnumInterface")
-	void setBackendService(TScriptInterface<ITbEnumEnumInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbEnumEnumInterface> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -70,7 +70,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbEnum|EnumInterface")
-	TScriptInterface<ITbEnumEnumInterfaceInterface> BackendService;
+	TScriptInterface<ITbEnumEnumInterface> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|TbEnum|EnumInterface", BlueprintInternalUseOnly)

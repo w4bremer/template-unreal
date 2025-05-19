@@ -26,7 +26,7 @@ limitations under the License.
 
 void FTbEnumOLinkModule::StartupModule()
 {
-	FTbEnumModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbEnumEnumInterfaceInterface>
+	FTbEnumModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbEnumEnumInterface>
 		{
 		return Cast<UTbEnumEnumInterfaceOLinkClient>(Collection.InitializeDependency(UTbEnumEnumInterfaceOLinkClient::StaticClass()));
 	});

@@ -42,7 +42,7 @@ FTestbed1StructInterfaceOLinkFixture::~FTestbed1StructInterfaceOLinkFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITestbed1StructInterfaceInterface> FTestbed1StructInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITestbed1StructInterface> FTestbed1StructInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

@@ -25,7 +25,7 @@ limitations under the License.
 const FString TbNamesLocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITbNamesNamEsInterface;
+class ITbNamesNamEs;
 
 /**
  * Implements the settings for the TbNames plugin.
@@ -48,7 +48,7 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITbNamesNamEsInterface> GetITbNamesNamEsInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbNamesNamEs> GetITbNamesNamEsForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

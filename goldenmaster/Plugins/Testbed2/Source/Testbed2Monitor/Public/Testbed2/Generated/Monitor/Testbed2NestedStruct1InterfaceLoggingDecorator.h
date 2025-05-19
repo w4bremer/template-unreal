@@ -35,7 +35,7 @@ public:
 	virtual ~UTestbed2NestedStruct1InterfaceLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|Testbed2|NestedStruct1Interface")
-	void setBackendService(TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITestbed2NestedStruct1Interface> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -52,7 +52,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|Testbed2|NestedStruct1Interface")
-	TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> BackendService;
+	TScriptInterface<ITestbed2NestedStruct1Interface> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|Testbed2|NestedStruct1Interface", BlueprintInternalUseOnly)

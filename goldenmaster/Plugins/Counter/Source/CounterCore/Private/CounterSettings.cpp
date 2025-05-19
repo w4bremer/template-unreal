@@ -51,7 +51,7 @@ void UCounterSettings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ICounterCounterInterface> UCounterSettings::GetICounterCounterInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ICounterCounter> UCounterSettings::GetICounterCounterForLogging(FSubsystemCollectionBase& Collection)
 {
 	UCounterSettings* CounterSettings = GetMutableDefault<UCounterSettings>();
 

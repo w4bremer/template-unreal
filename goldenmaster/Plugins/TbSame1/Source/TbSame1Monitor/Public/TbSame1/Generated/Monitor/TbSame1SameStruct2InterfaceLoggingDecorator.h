@@ -35,7 +35,7 @@ public:
 	virtual ~UTbSame1SameStruct2InterfaceLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbSame1|SameStruct2Interface")
-	void setBackendService(TScriptInterface<ITbSame1SameStruct2InterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbSame1SameStruct2Interface> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -58,7 +58,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbSame1|SameStruct2Interface")
-	TScriptInterface<ITbSame1SameStruct2InterfaceInterface> BackendService;
+	TScriptInterface<ITbSame1SameStruct2Interface> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|TbSame1|SameStruct2Interface", BlueprintInternalUseOnly)

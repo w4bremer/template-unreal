@@ -11,7 +11,7 @@
 #include "TbNames/Generated/api/TbNames_data.h"
 
 class UTbNamesNamEsMsgBusSpec;
-class ITbNamesNamEsInterface;
+class ITbNamesNamEs;
 class UTbNamesNamEsMsgBusAdapter;
 class IApiGearConnection;
 
@@ -31,14 +31,14 @@ public:
 	~FTbNamesNamEsMsgBusFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITbNamesNamEsInterface> GetImplementation();
+	TScriptInterface<ITbNamesNamEs> GetImplementation();
 	UTbNamesNamEsMsgBusAdapter* GetAdapter();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITbNamesNamEsInterface> testImplementation;
+	TScriptInterface<ITbNamesNamEs> testImplementation;
 };
 } // namespace Tests
 } // namespace MsgBus

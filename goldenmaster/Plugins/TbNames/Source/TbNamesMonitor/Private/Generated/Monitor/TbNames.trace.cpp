@@ -6,7 +6,7 @@ TbNamesNamEsTracer::TbNamesNamEsTracer()
 {
 }
 
-void TbNamesNamEsTracer::capture_state(UObject* Object, ITbNamesNamEsInterface* obj)
+void TbNamesNamEsTracer::capture_state(UObject* Object, ITbNamesNamEs* obj)
 {
 	nlohmann::json fields_;
 	fields_["Switch"] = obj->GetSwitch();

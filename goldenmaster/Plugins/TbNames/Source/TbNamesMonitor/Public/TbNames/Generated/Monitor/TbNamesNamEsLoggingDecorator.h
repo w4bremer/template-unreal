@@ -35,7 +35,7 @@ public:
 	virtual ~UTbNamesNamEsLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbNames|NamEs")
-	void setBackendService(TScriptInterface<ITbNamesNamEsInterface> InService);
+	void setBackendService(TScriptInterface<ITbNamesNamEs> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -66,7 +66,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbNames|NamEs")
-	TScriptInterface<ITbNamesNamEsInterface> BackendService;
+	TScriptInterface<ITbNamesNamEs> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|TbNames|NamEs", BlueprintInternalUseOnly)

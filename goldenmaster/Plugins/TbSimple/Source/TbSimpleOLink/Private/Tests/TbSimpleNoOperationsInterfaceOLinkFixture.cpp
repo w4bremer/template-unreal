@@ -42,7 +42,7 @@ FTbSimpleNoOperationsInterfaceOLinkFixture::~FTbSimpleNoOperationsInterfaceOLink
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> FTbSimpleNoOperationsInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoOperationsInterface> FTbSimpleNoOperationsInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

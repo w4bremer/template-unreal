@@ -92,7 +92,7 @@ FTbSame2SameStruct2InterfaceImplFixture::~FTbSame2SameStruct2InterfaceImplFixtur
 	CleanUp();
 }
 
-TScriptInterface<ITbSame2SameStruct2InterfaceInterface> FTbSame2SameStruct2InterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSame2SameStruct2Interface> FTbSame2SameStruct2InterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

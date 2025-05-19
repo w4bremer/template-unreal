@@ -25,10 +25,10 @@ limitations under the License.
 const FString Testbed2LocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITestbed2ManyParamInterfaceInterface;
-class ITestbed2NestedStruct1InterfaceInterface;
-class ITestbed2NestedStruct2InterfaceInterface;
-class ITestbed2NestedStruct3InterfaceInterface;
+class ITestbed2ManyParamInterface;
+class ITestbed2NestedStruct1Interface;
+class ITestbed2NestedStruct2Interface;
+class ITestbed2NestedStruct3Interface;
 
 /**
  * Implements the settings for the Testbed2 plugin.
@@ -51,10 +51,10 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITestbed2ManyParamInterfaceInterface> GetITestbed2ManyParamInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct1InterfaceInterface> GetITestbed2NestedStruct1InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct2InterfaceInterface> GetITestbed2NestedStruct2InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> GetITestbed2NestedStruct3InterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2ManyParamInterface> GetITestbed2ManyParamInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct1Interface> GetITestbed2NestedStruct1InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct2Interface> GetITestbed2NestedStruct2InterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITestbed2NestedStruct3Interface> GetITestbed2NestedStruct3InterfaceForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

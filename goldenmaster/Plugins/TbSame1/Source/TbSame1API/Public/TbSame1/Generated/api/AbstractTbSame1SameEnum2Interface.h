@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTbSame1SameEnum2Interface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TBSAME1API_API UAbstractTbSame1SameEnum2Interface : public UGameInstanceSubsystem, public ITbSame1SameEnum2InterfaceInterface
+class TBSAME1API_API UAbstractTbSame1SameEnum2Interface : public UGameInstanceSubsystem, public ITbSame1SameEnum2Interface
 {
 	GENERATED_BODY()
 

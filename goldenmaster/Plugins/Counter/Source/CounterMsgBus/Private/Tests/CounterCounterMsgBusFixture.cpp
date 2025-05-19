@@ -42,7 +42,7 @@ FCounterCounterMsgBusFixture::~FCounterCounterMsgBusFixture()
 	CleanUp();
 }
 
-TScriptInterface<ICounterCounterInterface> FCounterCounterMsgBusFixture::GetImplementation()
+TScriptInterface<ICounterCounter> FCounterCounterMsgBusFixture::GetImplementation()
 {
 	return testImplementation;
 }

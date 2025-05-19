@@ -26,7 +26,7 @@ limitations under the License.
  * Abstract UAbstractTestbed2ManyParamInterface
  */
 UCLASS(Abstract, Blueprintable, NotBlueprintType)
-class TESTBED2API_API UAbstractTestbed2ManyParamInterface : public UGameInstanceSubsystem, public ITestbed2ManyParamInterfaceInterface
+class TESTBED2API_API UAbstractTestbed2ManyParamInterface : public UGameInstanceSubsystem, public ITestbed2ManyParamInterface
 {
 	GENERATED_BODY()
 

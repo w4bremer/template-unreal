@@ -6,7 +6,7 @@ class TbEnumEnumInterfaceTracer
 {
 public:
 	TbEnumEnumInterfaceTracer();
-	static void capture_state(UObject* Object, ITbEnumEnumInterfaceInterface* obj);
+	static void capture_state(UObject* Object, ITbEnumEnumInterface* obj);
 	static void trace_callSetProp0(ETbEnumEnum0 InProp0);
 	static void trace_callSetProp1(ETbEnumEnum1 InProp1);
 	static void trace_callSetProp2(ETbEnumEnum2 InProp2);

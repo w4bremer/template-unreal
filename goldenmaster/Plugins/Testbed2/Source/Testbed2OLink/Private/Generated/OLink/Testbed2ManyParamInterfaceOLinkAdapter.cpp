@@ -52,7 +52,7 @@ void UTestbed2ManyParamInterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTestbed2ManyParamInterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService)
+void UTestbed2ManyParamInterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService)
 {
 	// unsubscribe from old backend
 	if (BackendService != nullptr)
@@ -192,7 +192,7 @@ void UTestbed2ManyParamInterfaceOLinkAdapter::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UTestbed2ManyParamInterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2ManyParamInterfaceInterface> InService)
+void UTestbed2ManyParamInterfaceOLinkAdapter::setBackendService(TScriptInterface<ITestbed2ManyParamInterface> InService)
 {
 }
 

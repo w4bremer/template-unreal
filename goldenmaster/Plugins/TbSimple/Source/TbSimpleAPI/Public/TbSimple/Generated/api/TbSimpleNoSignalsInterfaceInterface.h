@@ -31,7 +31,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTbSimpleNoSignalsInterfacePropIntChangedDel
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTbSimpleNoSignalsInterfacePropIntChangedDelegateBP, int32, PropInt);
 
 /**
- * Class UTbSimpleNoSignalsInterfaceInterfaceSignals
+ * Class UTbSimpleNoSignalsInterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -65,19 +65,19 @@ public:
 };
 
 /**
- * Interface UTbSimpleNoSignalsInterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTbSimpleNoSignalsInterface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTbSimpleNoSignalsInterfaceInterface : public UInterface
+class UTbSimpleNoSignalsInterface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITbSimpleNoSignalsInterfaceInterface
+ * Interface ITbSimpleNoSignalsInterface
  */
-class TBSIMPLEAPI_API ITbSimpleNoSignalsInterfaceInterface
+class TBSIMPLEAPI_API ITbSimpleNoSignalsInterface
 {
 	GENERATED_BODY()
 

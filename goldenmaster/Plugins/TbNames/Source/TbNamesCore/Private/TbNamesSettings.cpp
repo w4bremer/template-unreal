@@ -51,7 +51,7 @@ void UTbNamesSettings::ValidateSettingsPostEngineInit()
 	}
 }
 
-TScriptInterface<ITbNamesNamEsInterface> UTbNamesSettings::GetITbNamesNamEsInterfaceForLogging(FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbNamesNamEs> UTbNamesSettings::GetITbNamesNamEsForLogging(FSubsystemCollectionBase& Collection)
 {
 	UTbNamesSettings* TbNamesSettings = GetMutableDefault<UTbNamesSettings>();
 

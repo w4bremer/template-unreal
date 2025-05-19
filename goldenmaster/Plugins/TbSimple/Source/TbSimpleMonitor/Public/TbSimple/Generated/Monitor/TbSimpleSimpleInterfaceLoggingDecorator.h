@@ -35,7 +35,7 @@ public:
 	virtual ~UTbSimpleSimpleInterfaceLoggingDecorator();
 
 	UFUNCTION(BlueprintCallable, Category = "ApiGear|TbSimple|SimpleInterface")
-	void setBackendService(TScriptInterface<ITbSimpleSimpleInterfaceInterface> InService);
+	void setBackendService(TScriptInterface<ITbSimpleSimpleInterface> InService);
 
 	// subsystem
 	void Initialize(FSubsystemCollectionBase& Collection) override;
@@ -96,7 +96,7 @@ public:
 private:
 	/** The connection to the service backend. */
 	UPROPERTY(VisibleAnywhere, Category = "ApiGear|TbSimple|SimpleInterface")
-	TScriptInterface<ITbSimpleSimpleInterfaceInterface> BackendService;
+	TScriptInterface<ITbSimpleSimpleInterface> BackendService;
 
 	// signals
 	UFUNCTION(Category = "ApiGear|TbSimple|SimpleInterface", BlueprintInternalUseOnly)

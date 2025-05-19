@@ -22,18 +22,18 @@ limitations under the License.
 #include "Testbed1StructInterfaceBPInterface.generated.h"
 
 /**
- * Interface UTestbed1StructInterfaceBPInterface only for Unreal Engine's reflection system
+ * Interface UTestbed1StructInterfaceBP only for Unreal Engine's reflection system
  */
 UINTERFACE(Blueprintable, MinimalAPI)
-class UTestbed1StructInterfaceBPInterface : public UInterface
+class UTestbed1StructInterfaceBP : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITestbed1StructInterfaceBPInterface
+ * Interface ITestbed1StructInterfaceBP
  */
-class TESTBED1API_API ITestbed1StructInterfaceBPInterface
+class TESTBED1API_API ITestbed1StructInterfaceBP
 {
 	GENERATED_BODY()
 

@@ -25,7 +25,7 @@ class RemoteRegistry;
 } // namespace ApiGear
 
 /** @brief handles the adaption between the service implementation and the OLink protocol
- * takes an object of the type I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface
+ * takes an object of the type I{{Camel .Module.Name}}{{Camel .Interface.Name}}
  * and holds the corresponding {{$Iface}}OLinkSource OLink source object
  */
 UCLASS(BlueprintType)
@@ -41,7 +41,7 @@ public:
 	void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "{{$Category}}")
-	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> InService);
+	void setBackendService(TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> InService);
 
 	UFUNCTION(BlueprintCallable, Category = "{{$Category}}")
 	void setOLinkHost(TSoftObjectPtr<UOLinkHost> InHost);
@@ -70,7 +70,7 @@ private:
 
 	/** Holds the service backend, can be exchanged with different implementation during runtime */
 	UPROPERTY(VisibleAnywhere, Category = "{{$Category}}")
-	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}Interface> BackendService;
+	TScriptInterface<I{{Camel .Module.Name}}{{Camel .Interface.Name}}> BackendService;
 
 	/** Holds the registry */
 	TSharedPtr<ApiGear::ObjectLink::RemoteRegistry> Registry;

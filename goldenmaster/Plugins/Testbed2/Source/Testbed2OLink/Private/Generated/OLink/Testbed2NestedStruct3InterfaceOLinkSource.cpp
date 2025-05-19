@@ -48,7 +48,7 @@ Testbed2NestedStruct3InterfaceOLinkSource::Testbed2NestedStruct3InterfaceOLinkSo
 {
 }
 
-void Testbed2NestedStruct3InterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed2NestedStruct3InterfaceInterface> InService)
+void Testbed2NestedStruct3InterfaceOLinkSource::setBackendService(TScriptInterface<ITestbed2NestedStruct3Interface> InService)
 {
 	// only set if interface is implemented
 	if (InService.GetInterface() == nullptr)

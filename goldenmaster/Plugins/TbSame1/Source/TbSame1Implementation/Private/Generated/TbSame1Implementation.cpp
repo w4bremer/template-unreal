@@ -29,19 +29,19 @@ limitations under the License.
 
 void FTbSame1ImplementationModule::StartupModule()
 {
-	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameStruct1InterfaceInterface>
+	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameStruct1Interface>
 		{
 		return Cast<UTbSame1SameStruct1InterfaceImplementation>(Collection.InitializeDependency(UTbSame1SameStruct1InterfaceImplementation::StaticClass()));
 	});
-	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameStruct2InterfaceInterface>
+	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameStruct2Interface>
 		{
 		return Cast<UTbSame1SameStruct2InterfaceImplementation>(Collection.InitializeDependency(UTbSame1SameStruct2InterfaceImplementation::StaticClass()));
 	});
-	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameEnum1InterfaceInterface>
+	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameEnum1Interface>
 		{
 		return Cast<UTbSame1SameEnum1InterfaceImplementation>(Collection.InitializeDependency(UTbSame1SameEnum1InterfaceImplementation::StaticClass()));
 	});
-	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameEnum2InterfaceInterface>
+	FTbSame1ModuleFactory::RegisterFactory(TbSame1LocalBackendIdentifier, [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame1SameEnum2Interface>
 		{
 		return Cast<UTbSame1SameEnum2InterfaceImplementation>(Collection.InitializeDependency(UTbSame1SameEnum2InterfaceImplementation::StaticClass()));
 	});

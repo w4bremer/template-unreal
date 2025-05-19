@@ -224,7 +224,7 @@ FTbSimpleSimpleArrayInterfaceImplFixture::~FTbSimpleSimpleArrayInterfaceImplFixt
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> FTbSimpleSimpleArrayInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleSimpleArrayInterface> FTbSimpleSimpleArrayInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

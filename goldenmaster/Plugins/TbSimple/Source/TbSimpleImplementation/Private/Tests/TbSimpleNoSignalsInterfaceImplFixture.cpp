@@ -74,7 +74,7 @@ FTbSimpleNoSignalsInterfaceImplFixture::~FTbSimpleNoSignalsInterfaceImplFixture(
 	CleanUp();
 }
 
-TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> FTbSimpleNoSignalsInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITbSimpleNoSignalsInterface> FTbSimpleNoSignalsInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }

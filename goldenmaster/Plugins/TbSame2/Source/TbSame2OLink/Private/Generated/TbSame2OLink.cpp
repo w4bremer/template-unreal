@@ -29,19 +29,19 @@ limitations under the License.
 
 void FTbSame2OLinkModule::StartupModule()
 {
-	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameStruct1InterfaceInterface>
+	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameStruct1Interface>
 		{
 		return Cast<UTbSame2SameStruct1InterfaceOLinkClient>(Collection.InitializeDependency(UTbSame2SameStruct1InterfaceOLinkClient::StaticClass()));
 	});
-	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameStruct2InterfaceInterface>
+	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameStruct2Interface>
 		{
 		return Cast<UTbSame2SameStruct2InterfaceOLinkClient>(Collection.InitializeDependency(UTbSame2SameStruct2InterfaceOLinkClient::StaticClass()));
 	});
-	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameEnum1InterfaceInterface>
+	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameEnum1Interface>
 		{
 		return Cast<UTbSame2SameEnum1InterfaceOLinkClient>(Collection.InitializeDependency(UTbSame2SameEnum1InterfaceOLinkClient::StaticClass()));
 	});
-	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameEnum2InterfaceInterface>
+	FTbSame2ModuleFactory::RegisterFactory(TEXT("olink"), [](FSubsystemCollectionBase& Collection) -> TScriptInterface<ITbSame2SameEnum2Interface>
 		{
 		return Cast<UTbSame2SameEnum2InterfaceOLinkClient>(Collection.InitializeDependency(UTbSame2SameEnum2InterfaceOLinkClient::StaticClass()));
 	});

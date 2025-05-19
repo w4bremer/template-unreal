@@ -25,13 +25,13 @@ limitations under the License.
 const FString TbSimpleLocalBackendIdentifier = "Local";
 
 class FSubsystemCollectionBase;
-class ITbSimpleVoidInterfaceInterface;
-class ITbSimpleSimpleInterfaceInterface;
-class ITbSimpleSimpleArrayInterfaceInterface;
-class ITbSimpleNoPropertiesInterfaceInterface;
-class ITbSimpleNoOperationsInterfaceInterface;
-class ITbSimpleNoSignalsInterfaceInterface;
-class ITbSimpleEmptyInterfaceInterface;
+class ITbSimpleVoidInterface;
+class ITbSimpleSimpleInterface;
+class ITbSimpleSimpleArrayInterface;
+class ITbSimpleNoPropertiesInterface;
+class ITbSimpleNoOperationsInterface;
+class ITbSimpleNoSignalsInterface;
+class ITbSimpleEmptyInterface;
 
 /**
  * Implements the settings for the TbSimple plugin.
@@ -54,13 +54,13 @@ public:
 	/** Choose the olink connection to use */
 	UPROPERTY(EditAnywhere, config, Category = OLinkConnectionSetup)
 	FString OLinkConnectionIdentifier;
-	static TScriptInterface<ITbSimpleVoidInterfaceInterface> GetITbSimpleVoidInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleSimpleInterfaceInterface> GetITbSimpleSimpleInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleSimpleArrayInterfaceInterface> GetITbSimpleSimpleArrayInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoPropertiesInterfaceInterface> GetITbSimpleNoPropertiesInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoOperationsInterfaceInterface> GetITbSimpleNoOperationsInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleNoSignalsInterfaceInterface> GetITbSimpleNoSignalsInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
-	static TScriptInterface<ITbSimpleEmptyInterfaceInterface> GetITbSimpleEmptyInterfaceInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleVoidInterface> GetITbSimpleVoidInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleSimpleInterface> GetITbSimpleSimpleInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleSimpleArrayInterface> GetITbSimpleSimpleArrayInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoPropertiesInterface> GetITbSimpleNoPropertiesInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoOperationsInterface> GetITbSimpleNoOperationsInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleNoSignalsInterface> GetITbSimpleNoSignalsInterfaceForLogging(FSubsystemCollectionBase& Collection);
+	static TScriptInterface<ITbSimpleEmptyInterface> GetITbSimpleEmptyInterfaceForLogging(FSubsystemCollectionBase& Collection);
 
 	/** Choose the heartbeat interval in milliseconds for the msgbus connection on the service side.
 	 * On the service side this adjusts the heartbeat between client and service. The clients will receive the value from service.

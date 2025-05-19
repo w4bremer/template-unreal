@@ -11,7 +11,7 @@
 #include "Testbed1StructArray2InterfaceImplFixture.generated.h"
 
 class FTestbed1StructArray2InterfaceImplFixture;
-class ITestbed1StructArray2InterfaceInterface;
+class ITestbed1StructArray2Interface;
 
 UCLASS()
 class UTestbed1StructArray2InterfaceImplHelper : public UObject
@@ -64,14 +64,14 @@ public:
 	~FTestbed1StructArray2InterfaceImplFixture();
 
 	UGameInstance* GetGameInstance();
-	TScriptInterface<ITestbed1StructArray2InterfaceInterface> GetImplementation();
+	TScriptInterface<ITestbed1StructArray2Interface> GetImplementation();
 	TSoftObjectPtr<UTestbed1StructArray2InterfaceImplHelper> GetHelper();
 
 private:
 	void CleanUp();
 
 	TSoftObjectPtr<UGameInstance> GameInstance;
-	TScriptInterface<ITestbed1StructArray2InterfaceInterface> testImplementation;
+	TScriptInterface<ITestbed1StructArray2Interface> testImplementation;
 	TSoftObjectPtr<UTestbed1StructArray2InterfaceImplHelper> Helper;
 };
 

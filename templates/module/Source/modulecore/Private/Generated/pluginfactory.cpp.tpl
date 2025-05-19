@@ -34,7 +34,7 @@ DEFINE_LOG_CATEGORY(Log{{$mclass}});
 
 {{- range .Module.Interfaces }}
 {{- $class := printf "%s%s" $ModuleName (Camel .Name)}}
-{{- $iclass := printf "I%sInterface" $class }}
+{{- $iclass := printf "I%s" $class }}
 {{- $DisplayName := printf "%s%s" $ModuleName (Camel .Name) }}
 
 bool {{$mclass}}::RegisterFactory(FString TypeIdentifier, F{{$class}}FactoryFunction FactoryFunction)
@@ -50,7 +50,7 @@ bool {{$mclass}}::RegisterFactory(FString TypeIdentifier, F{{$class}}FactoryFunc
 	return true;
 }
 
-TScriptInterface<I{{$class}}Interface> {{$mclass}}::Get{{$class}}Implementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<I{{$class}}> {{$mclass}}::Get{{$class}}Implementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if ({{$class}}Factories.Contains(UniqueImplementationIdentifier))
 	{

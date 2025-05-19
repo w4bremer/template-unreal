@@ -38,7 +38,7 @@ bool FTbEnumModuleFactory::RegisterFactory(FString TypeIdentifier, FTbEnumEnumIn
 	return true;
 }
 
-TScriptInterface<ITbEnumEnumInterfaceInterface> FTbEnumModuleFactory::GetTbEnumEnumInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
+TScriptInterface<ITbEnumEnumInterface> FTbEnumModuleFactory::GetTbEnumEnumInterfaceImplementation(FString UniqueImplementationIdentifier, FSubsystemCollectionBase& Collection)
 {
 	if (TbEnumEnumInterfaceFactories.Contains(UniqueImplementationIdentifier))
 	{

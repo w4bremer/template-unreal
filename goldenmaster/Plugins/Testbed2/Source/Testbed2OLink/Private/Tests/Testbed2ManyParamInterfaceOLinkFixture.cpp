@@ -42,7 +42,7 @@ FTestbed2ManyParamInterfaceOLinkFixture::~FTestbed2ManyParamInterfaceOLinkFixtur
 	CleanUp();
 }
 
-TScriptInterface<ITestbed2ManyParamInterfaceInterface> FTestbed2ManyParamInterfaceOLinkFixture::GetImplementation()
+TScriptInterface<ITestbed2ManyParamInterface> FTestbed2ManyParamInterfaceOLinkFixture::GetImplementation()
 {
 	return testImplementation;
 }

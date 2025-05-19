@@ -37,7 +37,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTestbed2NestedStruct2InterfaceProp2ChangedD
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTestbed2NestedStruct2InterfaceProp2ChangedDelegateBP, const FTestbed2NestedStruct2&, Prop2);
 
 /**
- * Class UTestbed2NestedStruct2InterfaceInterfaceSignals
+ * Class UTestbed2NestedStruct2InterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -93,19 +93,19 @@ public:
 };
 
 /**
- * Interface UTestbed2NestedStruct2InterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTestbed2NestedStruct2Interface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTestbed2NestedStruct2InterfaceInterface : public UInterface
+class UTestbed2NestedStruct2Interface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITestbed2NestedStruct2InterfaceInterface
+ * Interface ITestbed2NestedStruct2Interface
  */
-class TESTBED2API_API ITestbed2NestedStruct2InterfaceInterface
+class TESTBED2API_API ITestbed2NestedStruct2Interface
 {
 	GENERATED_BODY()
 

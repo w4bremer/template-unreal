@@ -49,7 +49,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FTestbed1StructArray2InterfacePropEnumChange
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTestbed1StructArray2InterfacePropEnumChangedDelegateBP, const FTestbed1StructEnumWithArray&, PropEnum);
 
 /**
- * Class UTestbed1StructArray2InterfaceInterfaceSignals
+ * Class UTestbed1StructArray2InterfaceSignals
  * Contains delegates for properties and signals
  * this is needed since we cannot declare delegates on an UInterface
  */
@@ -160,19 +160,19 @@ public:
 };
 
 /**
- * Interface UTestbed1StructArray2InterfaceInterface only for Unreal Engine's reflection system
+ * Interface UTestbed1StructArray2Interface only for Unreal Engine's reflection system
  */
 // Note: meta=(CannotImplementInterfaceInBlueprint) is equal to NotBlueprintable and is only needed for UE 4.27
 UINTERFACE(NotBlueprintable, MinimalAPI, meta = (CannotImplementInterfaceInBlueprint))
-class UTestbed1StructArray2InterfaceInterface : public UInterface
+class UTestbed1StructArray2Interface : public UInterface
 {
 	GENERATED_BODY()
 };
 
 /**
- * Interface ITestbed1StructArray2InterfaceInterface
+ * Interface ITestbed1StructArray2Interface
  */
-class TESTBED1API_API ITestbed1StructArray2InterfaceInterface
+class TESTBED1API_API ITestbed1StructArray2Interface
 {
 	GENERATED_BODY()
 

@@ -132,7 +132,7 @@ FTestbed1StructInterfaceImplFixture::~FTestbed1StructInterfaceImplFixture()
 	CleanUp();
 }
 
-TScriptInterface<ITestbed1StructInterfaceInterface> FTestbed1StructInterfaceImplFixture::GetImplementation()
+TScriptInterface<ITestbed1StructInterface> FTestbed1StructInterfaceImplFixture::GetImplementation()
 {
 	return testImplementation;
 }
