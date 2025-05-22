@@ -33,7 +33,7 @@ UTbSimpleSimpleInterfaceLoggingDecorator::~UTbSimpleSimpleInterfaceLoggingDecora
 void UTbSimpleSimpleInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleSimpleInterfaceForLogging(Collection));
+	// setBackendService(UTbSimpleSettings::GetITbSimpleSimpleInterfaceForLogging(Collection));
 }
 
 void UTbSimpleSimpleInterfaceLoggingDecorator::Deinitialize()

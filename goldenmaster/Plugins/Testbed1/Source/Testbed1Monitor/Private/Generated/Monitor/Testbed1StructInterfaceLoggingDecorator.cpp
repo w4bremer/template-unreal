@@ -33,7 +33,7 @@ UTestbed1StructInterfaceLoggingDecorator::~UTestbed1StructInterfaceLoggingDecora
 void UTestbed1StructInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTestbed1Settings::GetITestbed1StructInterfaceForLogging(Collection));
+	// setBackendService(UTestbed1Settings::GetITestbed1StructInterfaceForLogging(Collection));
 }
 
 void UTestbed1StructInterfaceLoggingDecorator::Deinitialize()

@@ -123,7 +123,7 @@ void {{$Class}}OLinkSpec::Define()
 			{{- end }}
 			TestValue = createTest{{ $type }}Array();
 			{{- end }}
-			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 			TestValue = createTest{{ ueType "" . }}();
 			{{- else }}
 			TestValue = {{ ueTestValue "" . }};
@@ -146,7 +146,7 @@ void {{$Class}}OLinkSpec::Define()
 		{{- end }}
 		TestValue = createTest{{ $type }}Array();
 		{{- end }}
-		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 		TestValue = createTest{{ ueType "" . }}();
 		{{- else }}
 		TestValue = {{ ueTestValue "" . }};
@@ -177,7 +177,7 @@ void {{$Class}}OLinkSpec::Define()
 			{{- end }}
 			TestValue = createTest{{ $type }}Array();
 			{{- end }}
-			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 			TestValue = createTest{{ ueType "" . }}();
 			{{- else }}
 			TestValue = {{ ueTestValue "" . }};
@@ -199,7 +199,7 @@ void {{$Class}}OLinkSpec::Define()
 		{{- end }}
 		TestValue = createTest{{ $type }}Array();
 		{{- end }}
-		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 		TestValue = createTest{{ ueType "" . }}();
 		{{- else }}
 		TestValue = {{ ueTestValue "" . }};
@@ -239,7 +239,7 @@ void {{$Class}}OLinkSpec::Define()
 				{{- end }}
 				TestValue = createTest{{ $type }}Array();
 				{{- end }}
-				{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+				{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 				TestValue = createTest{{ ueType "" . }}();
 				{{- else }}
 				TestValue = {{ ueTestValue "" . }};
@@ -272,7 +272,7 @@ void {{$Class}}OLinkSpec::Define()
 		{{- end }}
 		TestValue = createTest{{ $type }}Array();
 		{{- end }}
-		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 		TestValue = createTest{{ ueType "" . }}();
 		{{- else }}
 		TestValue = {{ ueTestValue "" . }};
@@ -332,7 +332,7 @@ void {{$Class}}OLinkSpec::Define()
 			{{- end }}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = createTest{{ $type }}Array();
 			{{- end }}
-			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = createTest{{ ueType "" . }}();
 			{{- else }}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = {{ ueTestValue "" . }};
@@ -359,7 +359,7 @@ void {{$Class}}OLinkSpec::Define()
 		{{- end }}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = createTest{{ $type }}Array();
 		{{- end }}
-		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
+		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = createTest{{ ueType "" . }}();
 		{{- else }}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = {{ ueTestValue "" . }};

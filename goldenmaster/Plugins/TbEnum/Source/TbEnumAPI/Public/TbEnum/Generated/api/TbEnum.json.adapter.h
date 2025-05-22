@@ -15,5 +15,10 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbEnumEnumInter
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbEnumEnumInterface>& p)
 {
-	j = nlohmann::json{{"prop0", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp0()}, {"prop1", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp2()}, {"prop3", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp3()}};
+	j = nlohmann::json{
+		{"prop0", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp0()},
+		{"prop1", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp2()},
+		{"prop3", Cast<ITbEnumEnumInterface>(p.GetObject())->GetProp3()}
+	};
 }

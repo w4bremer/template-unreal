@@ -42,7 +42,7 @@ void UTbRefInterfacesParentIfImplHelper::LocalIfPropertyCb(const TScriptInterfac
 {
 	TScriptInterface<ITbRefInterfacesSimpleLocalIf> TestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
 	// use different test value
-	TestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+	TestValue = nullptr;
 	Spec->TestEqual(TEXT("Delegate parameter should be the same value as set by the setter"), InLocalIf, TestValue);
 	if (TSharedPtr<FTbRefInterfacesParentIfImplFixture> PinnedImplFixture = ImplFixture.Pin())
 	{
@@ -55,7 +55,7 @@ void UTbRefInterfacesParentIfImplHelper::ImportedIfPropertyCb(const TScriptInter
 {
 	TScriptInterface<ITbRefInterfacesImportCounter> TestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
 	// use different test value
-	TestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
+	TestValue = nullptr;
 	Spec->TestEqual(TEXT("Delegate parameter should be the same value as set by the setter"), InImportedIf, TestValue);
 	if (TSharedPtr<FTbRefInterfacesParentIfImplFixture> PinnedImplFixture = ImplFixture.Pin())
 	{
@@ -67,7 +67,7 @@ void UTbRefInterfacesParentIfImplHelper::ImportedIfPropertyCb(const TScriptInter
 void UTbRefInterfacesParentIfImplHelper::LocalIfSignalSignalCb(const TScriptInterface<ITbRefInterfacesSimpleLocalIf>& InParam)
 {
 	// known test value
-	TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+	TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = nullptr;
 	Spec->TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 	testDoneDelegate.Execute();
 }
@@ -75,7 +75,7 @@ void UTbRefInterfacesParentIfImplHelper::LocalIfSignalSignalCb(const TScriptInte
 void UTbRefInterfacesParentIfImplHelper::ImportedIfSignalSignalCb(const TScriptInterface<ITbRefInterfacesImportCounter>& InParam)
 {
 	// known test value
-	TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
+	TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = nullptr;
 	Spec->TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 	testDoneDelegate.Execute();
 }

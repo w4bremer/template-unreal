@@ -179,7 +179,9 @@ void {{$Class}}ImplSpec::Define()
 			{{- end }}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = createTest{{ $type }}Array();
 			{{- end }}
-			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
+			{{- else if (eq .KindType "interface")}}
+			{{ueType "" .}} {{ueVar "" .}}TestValue = ImplFixture->GetGameInstance()->GetSubsystem<{{ $Class }}Implementation>();
+			{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = createTest{{ ueType "" . }}();
 			{{- else }}
 			{{ueType "" .}} {{ueVar "" .}}TestValue = {{ ueTestValue "" . }};
@@ -206,7 +208,9 @@ void {{$Class}}ImplSpec::Define()
 		{{- end }}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = createTest{{ $type }}Array();
 		{{- end }}
-		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum")) (not (eq .KindType "interface"))}}
+		{{- else if (eq .KindType "interface")}}
+		{{ ueType "" . }} {{ueVar "" .}}TestValue = ImplFixture->GetGameInstance()->GetSubsystem<{{ $Class }}Implementation>();
+		{{- else if and (not .IsPrimitive) (not (eq .KindType "enum"))}}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = createTest{{ ueType "" . }}();
 		{{- else }}
 		{{ ueType "" . }} {{ueVar "" .}}TestValue = {{ ueTestValue "" . }};

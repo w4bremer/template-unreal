@@ -137,7 +137,12 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed1StructI
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed1StructInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropInt()}, {"propFloat", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropFloat()}, {"propString", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropString()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropInt()},
+		{"propFloat", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropFloat()},
+		{"propString", Cast<ITestbed1StructInterface>(p.GetObject())->GetPropString()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed1StructArrayInterface>& p)
@@ -151,7 +156,13 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed1StructA
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed1StructArrayInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropInt()}, {"propFloat", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropFloat()}, {"propString", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropString()}, {"propEnum", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropEnum()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropInt()},
+		{"propFloat", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropFloat()},
+		{"propString", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropString()},
+		{"propEnum", Cast<ITestbed1StructArrayInterface>(p.GetObject())->GetPropEnum()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed1StructArray2Interface>& p)
@@ -165,5 +176,11 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed1StructA
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed1StructArray2Interface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropInt()}, {"propFloat", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropFloat()}, {"propString", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropString()}, {"propEnum", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropEnum()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropInt()},
+		{"propFloat", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropFloat()},
+		{"propString", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropString()},
+		{"propEnum", Cast<ITestbed1StructArray2Interface>(p.GetObject())->GetPropEnum()}
+	};
 }

@@ -33,7 +33,7 @@ UTbSimpleNoSignalsInterfaceLoggingDecorator::~UTbSimpleNoSignalsInterfaceLogging
 void UTbSimpleNoSignalsInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleNoSignalsInterfaceForLogging(Collection));
+	// setBackendService(UTbSimpleSettings::GetITbSimpleNoSignalsInterfaceForLogging(Collection));
 }
 
 void UTbSimpleNoSignalsInterfaceLoggingDecorator::Deinitialize()

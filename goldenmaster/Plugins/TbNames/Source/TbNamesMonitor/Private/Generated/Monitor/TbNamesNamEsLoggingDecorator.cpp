@@ -33,7 +33,7 @@ UTbNamesNamEsLoggingDecorator::~UTbNamesNamEsLoggingDecorator() = default;
 void UTbNamesNamEsLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbNamesSettings::GetITbNamesNamEsForLogging(Collection));
+	// setBackendService(UTbNamesSettings::GetITbNamesNamEsForLogging(Collection));
 }
 
 void UTbNamesNamEsLoggingDecorator::Deinitialize()

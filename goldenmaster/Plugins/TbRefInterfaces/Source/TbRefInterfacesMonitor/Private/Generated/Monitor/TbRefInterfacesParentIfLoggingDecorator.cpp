@@ -33,7 +33,7 @@ UTbRefInterfacesParentIfLoggingDecorator::~UTbRefInterfacesParentIfLoggingDecora
 void UTbRefInterfacesParentIfLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbRefInterfacesSettings::GetITbRefInterfacesParentIfForLogging(Collection));
+	// setBackendService(UTbRefInterfacesSettings::GetITbRefInterfacesParentIfForLogging(Collection));
 }
 
 void UTbRefInterfacesParentIfLoggingDecorator::Deinitialize()

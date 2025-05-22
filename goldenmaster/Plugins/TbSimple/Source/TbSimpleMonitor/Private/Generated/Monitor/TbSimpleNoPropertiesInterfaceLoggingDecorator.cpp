@@ -33,7 +33,7 @@ UTbSimpleNoPropertiesInterfaceLoggingDecorator::~UTbSimpleNoPropertiesInterfaceL
 void UTbSimpleNoPropertiesInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleNoPropertiesInterfaceForLogging(Collection));
+	// setBackendService(UTbSimpleSettings::GetITbSimpleNoPropertiesInterfaceForLogging(Collection));
 }
 
 void UTbSimpleNoPropertiesInterfaceLoggingDecorator::Deinitialize()

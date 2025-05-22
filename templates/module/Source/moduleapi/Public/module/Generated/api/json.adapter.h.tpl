@@ -13,6 +13,8 @@
 //{{ printf "%#v" . }}
 {{- $ImportModuleName := Camel .Name -}}
 {{/* {{- range . }} */}}
+#include "{{$ImportModuleName}}/Generated/api/{{$ImportModuleName}}_data.h"
+#include "{{$ImportModuleName}}/Generated/api/{{$ImportModuleName}}.json.adapter.h"
 #include "{{$ImportModuleName}}/Generated/api/{{$ImportModuleName}}_apig.h"
 {{/* {{- end }} */}}
 {{- end }}
@@ -45,12 +47,14 @@ static void to_json(nlohmann::json& j, const {{$class}}& p)
 {{- end }}
 
 {{- range .Module.Interfaces }}
-{{- $class := printf "I%s%s" $ModuleName .Name }}
+{{- $class := printf "I%s%s" $ModuleName (Camel .Name) }}
 
 static void from_json(const nlohmann::json& j, TScriptInterface<{{$class}}>& p)
 {
 {{- range .Properties}}
+	{{- if (not .IsReadOnly)}}
 	Cast<{{$class}}>(p.GetObject())->Set{{Camel .Name}}(j.at("{{.Name}}").get<{{ueType "" .}}>());
+	{{- end }}
 {{- end }}
 }
 
@@ -58,9 +62,11 @@ static void to_json(nlohmann::json& j, const TScriptInterface<{{$class}}>& p)
 {
 	j = nlohmann::json{
 {{- range $idx, $elem := .Properties }}
-	{{- if $idx}}, {{ end -}}
-	{"{{.Name}}", Cast<{{$class}}>(p.GetObject())->Get{{Camel .Name}}()}
-{{- end -}}
+		{{- if (not .IsReadOnly)}}
+	{{- if $idx}},{{ end }}
+		{"{{.Name}}", Cast<{{$class}}>(p.GetObject())->Get{{Camel .Name}}()}
+		{{- end }}
+{{- end }}
 	};
 }
 {{- end }}

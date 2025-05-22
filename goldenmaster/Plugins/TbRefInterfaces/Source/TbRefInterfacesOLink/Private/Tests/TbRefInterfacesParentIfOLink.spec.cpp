@@ -133,13 +133,13 @@ void UTbRefInterfacesParentIfOLinkSpec::Define()
 		TbRefInterfacesParentIfSignals->OnLocalIfSignalSignal.AddLambda([this, TestDone](const TScriptInterface<ITbRefInterfacesSimpleLocalIf>& InParam)
 			{
 			// known test value
-			TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = createTestTScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+			TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = nullptr;
 			TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 			TestDone.Execute();
 		});
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = createTestTScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = nullptr;
 		TbRefInterfacesParentIfSignals->BroadcastLocalIfSignalSignal(ParamTestValue);
 	});
 
@@ -149,13 +149,13 @@ void UTbRefInterfacesParentIfOLinkSpec::Define()
 		TbRefInterfacesParentIfSignals->OnImportedIfSignalSignal.AddLambda([this, TestDone](const TScriptInterface<ITbRefInterfacesImportCounter>& InParam)
 			{
 			// known test value
-			TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = createTestTScriptInterface<ITbRefInterfacesImportCounter>();
+			TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = nullptr;
 			TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 			TestDone.Execute();
 		});
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = createTestTScriptInterface<ITbRefInterfacesImportCounter>();
+		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = nullptr;
 		TbRefInterfacesParentIfSignals->BroadcastImportedIfSignalSignal(ParamTestValue);
 	});
 }

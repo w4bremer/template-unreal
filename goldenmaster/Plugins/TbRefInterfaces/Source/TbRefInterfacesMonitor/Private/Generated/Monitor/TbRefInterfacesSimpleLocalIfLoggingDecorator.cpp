@@ -33,7 +33,7 @@ UTbRefInterfacesSimpleLocalIfLoggingDecorator::~UTbRefInterfacesSimpleLocalIfLog
 void UTbRefInterfacesSimpleLocalIfLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbRefInterfacesSettings::GetITbRefInterfacesSimpleLocalIfForLogging(Collection));
+	// setBackendService(UTbRefInterfacesSettings::GetITbRefInterfacesSimpleLocalIfForLogging(Collection));
 }
 
 void UTbRefInterfacesSimpleLocalIfLoggingDecorator::Deinitialize()

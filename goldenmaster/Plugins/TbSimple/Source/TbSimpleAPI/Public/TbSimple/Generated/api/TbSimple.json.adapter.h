@@ -17,7 +17,8 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleVoidInt
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleVoidInterface>& p)
 {
-	j = nlohmann::json{};
+	j = nlohmann::json{
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleSimpleInterface>& p)
@@ -34,7 +35,16 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleSimpleI
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleSimpleInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt()}, {"propInt32", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt32()}, {"propInt64", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt64()}, {"propFloat", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat()}, {"propFloat32", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat32()}, {"propFloat64", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat64()}, {"propString", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropString()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt()},
+		{"propInt32", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt32()},
+		{"propInt64", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropInt64()},
+		{"propFloat", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat()},
+		{"propFloat32", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat32()},
+		{"propFloat64", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropFloat64()},
+		{"propString", Cast<ITbSimpleSimpleInterface>(p.GetObject())->GetPropString()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleSimpleArrayInterface>& p)
@@ -47,12 +57,20 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleSimpleA
 	Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->SetPropFloat32(j.at("propFloat32").get<TArray<float>>());
 	Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->SetPropFloat64(j.at("propFloat64").get<TArray<double>>());
 	Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->SetPropString(j.at("propString").get<TArray<FString>>());
-	Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->SetPropReadOnlyString(j.at("propReadOnlyString").get<FString>());
 }
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleSimpleArrayInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt()}, {"propInt32", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt32()}, {"propInt64", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt64()}, {"propFloat", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat()}, {"propFloat32", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat32()}, {"propFloat64", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat64()}, {"propString", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropString()}, {"propReadOnlyString", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropReadOnlyString()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt()},
+		{"propInt32", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt32()},
+		{"propInt64", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropInt64()},
+		{"propFloat", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat()},
+		{"propFloat32", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat32()},
+		{"propFloat64", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropFloat64()},
+		{"propString", Cast<ITbSimpleSimpleArrayInterface>(p.GetObject())->GetPropString()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoPropertiesInterface>& p)
@@ -61,7 +79,8 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoPrope
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleNoPropertiesInterface>& p)
 {
-	j = nlohmann::json{};
+	j = nlohmann::json{
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoOperationsInterface>& p)
@@ -72,7 +91,10 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoOpera
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleNoOperationsInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITbSimpleNoOperationsInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITbSimpleNoOperationsInterface>(p.GetObject())->GetPropInt()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITbSimpleNoOperationsInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITbSimpleNoOperationsInterface>(p.GetObject())->GetPropInt()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoSignalsInterface>& p)
@@ -83,7 +105,10 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleNoSigna
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleNoSignalsInterface>& p)
 {
-	j = nlohmann::json{{"propBool", Cast<ITbSimpleNoSignalsInterface>(p.GetObject())->GetPropBool()}, {"propInt", Cast<ITbSimpleNoSignalsInterface>(p.GetObject())->GetPropInt()}};
+	j = nlohmann::json{
+		{"propBool", Cast<ITbSimpleNoSignalsInterface>(p.GetObject())->GetPropBool()},
+		{"propInt", Cast<ITbSimpleNoSignalsInterface>(p.GetObject())->GetPropInt()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleEmptyInterface>& p)
@@ -92,5 +117,6 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSimpleEmptyIn
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSimpleEmptyInterface>& p)
 {
-	j = nlohmann::json{};
+	j = nlohmann::json{
+	};
 }

@@ -33,7 +33,7 @@ UTbSimpleEmptyInterfaceLoggingDecorator::~UTbSimpleEmptyInterfaceLoggingDecorato
 void UTbSimpleEmptyInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleEmptyInterfaceForLogging(Collection));
+	// setBackendService(UTbSimpleSettings::GetITbSimpleEmptyInterfaceForLogging(Collection));
 }
 
 void UTbSimpleEmptyInterfaceLoggingDecorator::Deinitialize()

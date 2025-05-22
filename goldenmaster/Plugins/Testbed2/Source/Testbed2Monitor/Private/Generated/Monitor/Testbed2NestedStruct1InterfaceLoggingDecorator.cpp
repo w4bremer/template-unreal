@@ -33,7 +33,7 @@ UTestbed2NestedStruct1InterfaceLoggingDecorator::~UTestbed2NestedStruct1Interfac
 void UTestbed2NestedStruct1InterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTestbed2Settings::GetITestbed2NestedStruct1InterfaceForLogging(Collection));
+	// setBackendService(UTestbed2Settings::GetITestbed2NestedStruct1InterfaceForLogging(Collection));
 }
 
 void UTestbed2NestedStruct1InterfaceLoggingDecorator::Deinitialize()

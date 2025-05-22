@@ -33,7 +33,7 @@ UCounterCounterLoggingDecorator::~UCounterCounterLoggingDecorator() = default;
 void UCounterCounterLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UCounterSettings::GetICounterCounterForLogging(Collection));
+	// setBackendService(UCounterSettings::GetICounterCounterForLogging(Collection));
 }
 
 void UCounterCounterLoggingDecorator::Deinitialize()

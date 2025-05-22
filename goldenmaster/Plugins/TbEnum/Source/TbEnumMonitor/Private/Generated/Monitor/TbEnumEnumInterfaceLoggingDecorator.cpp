@@ -33,7 +33,7 @@ UTbEnumEnumInterfaceLoggingDecorator::~UTbEnumEnumInterfaceLoggingDecorator() = 
 void UTbEnumEnumInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbEnumSettings::GetITbEnumEnumInterfaceForLogging(Collection));
+	// setBackendService(UTbEnumSettings::GetITbEnumEnumInterfaceForLogging(Collection));
 }
 
 void UTbEnumEnumInterfaceLoggingDecorator::Deinitialize()

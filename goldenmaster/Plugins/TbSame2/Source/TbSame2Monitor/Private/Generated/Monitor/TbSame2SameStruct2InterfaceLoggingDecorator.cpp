@@ -33,7 +33,7 @@ UTbSame2SameStruct2InterfaceLoggingDecorator::~UTbSame2SameStruct2InterfaceLoggi
 void UTbSame2SameStruct2InterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSame2Settings::GetITbSame2SameStruct2InterfaceForLogging(Collection));
+	// setBackendService(UTbSame2Settings::GetITbSame2SameStruct2InterfaceForLogging(Collection));
 }
 
 void UTbSame2SameStruct2InterfaceLoggingDecorator::Deinitialize()

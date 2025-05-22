@@ -33,7 +33,7 @@ UTbRefInterfacesImportCounterLoggingDecorator::~UTbRefInterfacesImportCounterLog
 void UTbRefInterfacesImportCounterLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbRefInterfacesImportSettings::GetITbRefInterfacesImportCounterForLogging(Collection));
+	// setBackendService(UTbRefInterfacesImportSettings::GetITbRefInterfacesImportCounterForLogging(Collection));
 }
 
 void UTbRefInterfacesImportCounterLoggingDecorator::Deinitialize()

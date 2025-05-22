@@ -33,7 +33,7 @@ UTbSimpleSimpleArrayInterfaceLoggingDecorator::~UTbSimpleSimpleArrayInterfaceLog
 void UTbSimpleSimpleArrayInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceForLogging(Collection));
+	// setBackendService(UTbSimpleSettings::GetITbSimpleSimpleArrayInterfaceForLogging(Collection));
 }
 
 void UTbSimpleSimpleArrayInterfaceLoggingDecorator::Deinitialize()

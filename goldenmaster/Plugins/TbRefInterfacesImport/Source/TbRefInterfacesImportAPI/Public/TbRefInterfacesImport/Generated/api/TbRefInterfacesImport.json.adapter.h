@@ -11,5 +11,6 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbRefInterfaces
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbRefInterfacesImportCounter>& p)
 {
-	j = nlohmann::json{};
+	j = nlohmann::json{
+	};
 }

@@ -33,7 +33,7 @@ UTestbed2ManyParamInterfaceLoggingDecorator::~UTestbed2ManyParamInterfaceLogging
 void UTestbed2ManyParamInterfaceLoggingDecorator::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	setBackendService(UTestbed2Settings::GetITestbed2ManyParamInterfaceForLogging(Collection));
+	// setBackendService(UTestbed2Settings::GetITestbed2ManyParamInterfaceForLogging(Collection));
 }
 
 void UTestbed2ManyParamInterfaceLoggingDecorator::Deinitialize()

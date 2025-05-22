@@ -80,13 +80,13 @@ void UTbRefInterfacesParentIfImplSpec::Define()
 		TbRefInterfacesParentIfSignals->OnLocalIfSignalSignal.AddLambda([this, TestDone](const TScriptInterface<ITbRefInterfacesSimpleLocalIf>& InParam)
 			{
 			// known test value
-			TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+			TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = ImplFixture->GetGameInstance()->GetSubsystem<UTbRefInterfacesParentIfImplementation>();
 			TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 			TestDone.Execute();
 		});
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = ImplFixture->GetGameInstance()->GetSubsystem<UTbRefInterfacesParentIfImplementation>();
 		TbRefInterfacesParentIfSignals->BroadcastLocalIfSignalSignal(ParamTestValue);
 	});
 
@@ -97,7 +97,7 @@ void UTbRefInterfacesParentIfImplSpec::Define()
 		TbRefInterfacesParentIfSignals->OnLocalIfSignalSignalBP.AddDynamic(ImplFixture->GetHelper().Get(), &UTbRefInterfacesParentIfImplHelper::LocalIfSignalSignalCb);
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = TScriptInterface<ITbRefInterfacesSimpleLocalIf>();
+		TScriptInterface<ITbRefInterfacesSimpleLocalIf> ParamTestValue = nullptr;
 		TbRefInterfacesParentIfSignals->BroadcastLocalIfSignalSignal(ParamTestValue);
 	});
 
@@ -107,13 +107,13 @@ void UTbRefInterfacesParentIfImplSpec::Define()
 		TbRefInterfacesParentIfSignals->OnImportedIfSignalSignal.AddLambda([this, TestDone](const TScriptInterface<ITbRefInterfacesImportCounter>& InParam)
 			{
 			// known test value
-			TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
+			TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = ImplFixture->GetGameInstance()->GetSubsystem<UTbRefInterfacesParentIfImplementation>();
 			TestEqual(TEXT("Parameter should be the same value as sent by the signal"), InParam, ParamTestValue);
 			TestDone.Execute();
 		});
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
+		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = ImplFixture->GetGameInstance()->GetSubsystem<UTbRefInterfacesParentIfImplementation>();
 		TbRefInterfacesParentIfSignals->BroadcastImportedIfSignalSignal(ParamTestValue);
 	});
 
@@ -124,7 +124,7 @@ void UTbRefInterfacesParentIfImplSpec::Define()
 		TbRefInterfacesParentIfSignals->OnImportedIfSignalSignalBP.AddDynamic(ImplFixture->GetHelper().Get(), &UTbRefInterfacesParentIfImplHelper::ImportedIfSignalSignalCb);
 
 		// use different test value
-		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = TScriptInterface<ITbRefInterfacesImportCounter>();
+		TScriptInterface<ITbRefInterfacesImportCounter> ParamTestValue = nullptr;
 		TbRefInterfacesParentIfSignals->BroadcastImportedIfSignalSignal(ParamTestValue);
 	});
 }

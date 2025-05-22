@@ -97,7 +97,12 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2ManyPar
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2ManyParamInterface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp2()}, {"prop3", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp3()}, {"prop4", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp4()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp2()},
+		{"prop3", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp3()},
+		{"prop4", Cast<ITestbed2ManyParamInterface>(p.GetObject())->GetProp4()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct1Interface>& p)
@@ -107,7 +112,9 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedS
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct1Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct1Interface>(p.GetObject())->GetProp1()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITestbed2NestedStruct1Interface>(p.GetObject())->GetProp1()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct2Interface>& p)
@@ -118,7 +125,10 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedS
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct2Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp2()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITestbed2NestedStruct2Interface>(p.GetObject())->GetProp2()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedStruct3Interface>& p)
@@ -130,5 +140,9 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITestbed2NestedS
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITestbed2NestedStruct3Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp2()}, {"prop3", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp3()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp2()},
+		{"prop3", Cast<ITestbed2NestedStruct3Interface>(p.GetObject())->GetProp3()}
+	};
 }

@@ -39,7 +39,9 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameStru
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSame1SameStruct1Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITbSame1SameStruct1Interface>(p.GetObject())->GetProp1()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITbSame1SameStruct1Interface>(p.GetObject())->GetProp1()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameStruct2Interface>& p)
@@ -50,7 +52,10 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameStru
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSame1SameStruct2Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITbSame1SameStruct2Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITbSame1SameStruct2Interface>(p.GetObject())->GetProp2()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITbSame1SameStruct2Interface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITbSame1SameStruct2Interface>(p.GetObject())->GetProp2()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameEnum1Interface>& p)
@@ -60,7 +65,9 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameEnum
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSame1SameEnum1Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITbSame1SameEnum1Interface>(p.GetObject())->GetProp1()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITbSame1SameEnum1Interface>(p.GetObject())->GetProp1()}
+	};
 }
 
 static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameEnum2Interface>& p)
@@ -71,5 +78,8 @@ static void from_json(const nlohmann::json& j, TScriptInterface<ITbSame1SameEnum
 
 static void to_json(nlohmann::json& j, const TScriptInterface<ITbSame1SameEnum2Interface>& p)
 {
-	j = nlohmann::json{{"prop1", Cast<ITbSame1SameEnum2Interface>(p.GetObject())->GetProp1()}, {"prop2", Cast<ITbSame1SameEnum2Interface>(p.GetObject())->GetProp2()}};
+	j = nlohmann::json{
+		{"prop1", Cast<ITbSame1SameEnum2Interface>(p.GetObject())->GetProp1()},
+		{"prop2", Cast<ITbSame1SameEnum2Interface>(p.GetObject())->GetProp2()}
+	};
 }

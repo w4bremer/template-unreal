@@ -48,7 +48,7 @@ void {{$Class}}::Initialize(FSubsystemCollectionBase& Collection)
 	Super::Initialize(Collection);
 
 {{- $Service := printf "I%s" $Iface }}
-	setBackendService(U{{$ModuleName}}Settings::Get{{$Service}}ForLogging(Collection));
+	// setBackendService(U{{$ModuleName}}Settings::Get{{$Service}}ForLogging(Collection));
 }
 
 void {{$Class}}::Deinitialize()
